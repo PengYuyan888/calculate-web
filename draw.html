@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: sans-serif; background: #f5f5f5; padding: 20px; }
+  .wrap { display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 0 auto; }
+  .card { border: 1px solid #ccc; border-radius: 8px; padding: 14px 16px; background: #fff; }
+  .ttl { font-size: 13px; font-weight: 500; color: #222; margin-bottom: 10px;
+         padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; }
+  .sub { font-size: 11px; color: #666; margin-left: 8px; font-weight: 400; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ══════════════════════════════════════════════════
+     剖面图（横截面）
+     关键尺寸：lb=900mm · h=2000mm · 内排距墙250mm
+     立杆 x坐标：内排152/166，外排430/444（间距278px≈lb=900）
+     节点方块 y坐标：56,116,176,236,296（间距60px≈h=2000）
+     连墙件在第2步（y=121）位置
+══════════════════════════════════════════════════ -->
+<div class="card">
+<div class="ttl">剖面图（横截面）<span class="sub">lb=900mm · h=2000mm · 内排距墙250mm</span></div>
+<svg width="100%" viewBox="0 0 680 360" style="display:block;background:#fff">
+<defs>
+  <pattern id="w1" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#666" stroke-width="1.4"/>
+  </pattern>
+</defs>
+
+<!-- 墙体填充 -->
+<rect x="22" y="20" width="58" height="310" fill="url(#w1)" stroke="#444" stroke-width="1.2"/>
+<text x="51" y="345" font-size="11" fill="#444" text-anchor="middle">墙体</text>
+
+<!-- 墙面虚线（内排与墙体之间的界面） -->
+<line x1="80" y1="18" x2="80" y2="335" stroke="#aaa" stroke-width="0.7" stroke-dasharray="5,3"/>
+
+<!-- 内排立杆（双线表示Φ48.3钢管截面） -->
+<line x1="152" y1="20" x2="152" y2="320" stroke="#222" stroke-width="2.2"/>
+<line x1="166" y1="20" x2="166" y2="320" stroke="#222" stroke-width="2.2"/>
+<!-- 内排节点方块（盘扣节点） -->
+<rect x="145" y="56"  width="28" height="9" rx="1" fill="#444"/>
+<rect x="145" y="116" width="28" height="9" rx="1" fill="#444"/>
+<rect x="145" y="176" width="28" height="9" rx="1" fill="#444"/>
+<rect x="145" y="236" width="28" height="9" rx="1" fill="#444"/>
+<rect x="145" y="296" width="28" height="9" rx="1" fill="#444"/>
+
+<!-- 外排立杆（双线） -->
+<line x1="430" y1="20" x2="430" y2="320" stroke="#222" stroke-width="2.2"/>
+<line x1="444" y1="20" x2="444" y2="320" stroke="#222" stroke-width="2.2"/>
+<!-- 外排节点方块 -->
+<rect x="423" y="56"  width="28" height="9" rx="1" fill="#444"/>
+<rect x="423" y="116" width="28" height="9" rx="1" fill="#444"/>
+<rect x="423" y="176" width="28" height="9" rx="1" fill="#444"/>
+<rect x="423" y="236" width="28" height="9" rx="1" fill="#444"/>
+<rect x="423" y="296" width="28" height="9" rx="1" fill="#444"/>
+
+<!-- 横向横杆（蓝色矩形条，连接内外排，Φ48.3×2.5） -->
+<rect x="166" y="57"  width="264" height="8" rx="2" fill="#4a8fc1"/>
+<rect x="166" y="117" width="264" height="8" rx="2" fill="#4a8fc1"/>
+<rect x="166" y="177" width="264" height="8" rx="2" fill="#4a8fc1"/>
+<rect x="166" y="237" width="264" height="8" rx="2" fill="#4a8fc1"/>
+<rect x="166" y="297" width="264" height="8" rx="2" fill="#4a8fc1"/>
+<!-- 横杆名称标注 -->
+<text x="298" y="53" font-size="10" fill="#4a8fc1" text-anchor="middle">横杆 Φ48.3×2.5</text>
+
+<!-- 连墙件：从墙体穿出，水平延伸到内排立杆节点（第2步位置） -->
+<line x1="22" y1="121" x2="152" y2="121" stroke="#cc2222" stroke-width="3" stroke-linecap="round"/>
+<!-- 墙内锚板 -->
+<rect x="20" y="114" width="10" height="14" fill="#cc2222" rx="1"/>
+<!-- 节点处扣件（×形） -->
+<line x1="145" y1="113" x2="173" y2="130" stroke="#cc2222" stroke-width="2"/>
+<line x1="173" y1="113" x2="145" y2="130" stroke="#cc2222" stroke-width="2"/>
+<rect x="141" y="111" width="30" height="20" fill="none" stroke="#cc2222" stroke-width="1.8" rx="1"/>
+<!-- 连墙件标注引线 -->
+<line x1="80" y1="108" x2="140" y2="116" stroke="#cc2222" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="78" y="106" font-size="10" fill="#cc2222" text-anchor="end">连墙件（穿墙锚固）</text>
+
+<!-- 构件名称标注 -->
+<text x="152" y="14" font-size="10" fill="#333" text-anchor="middle">内排立杆 Φ48.3×3.2</text>
+<text x="437" y="14" font-size="10" fill="#333" text-anchor="middle">外排立杆 Φ48.3×3.2</text>
+
+<!-- 标注线：h=2000（第1步到第2步） -->
+<line x1="510" y1="60"  x2="510" y2="120" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="504" y1="60"  x2="516" y2="60"  stroke="#1a7c34" stroke-width="1"/>
+<line x1="504" y1="120" x2="516" y2="120" stroke="#1a7c34" stroke-width="1"/>
+<text x="518" y="94" font-size="11" fill="#1a7c34">h=2000</text>
+
+<!-- 标注线：lb=900（内排到外排） -->
+<line x1="152" y1="336" x2="444" y2="336" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="152" y1="330" x2="152" y2="342" stroke="#1a7c34" stroke-width="1"/>
+<line x1="444" y1="330" x2="444" y2="342" stroke="#1a7c34" stroke-width="1"/>
+<text x="298" y="350" font-size="11" fill="#1a7c34" text-anchor="middle">lb=900</text>
+
+<!-- 标注线：250（墙面到内排） -->
+<line x1="80"  y1="336" x2="152" y2="336" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="80"  y1="330" x2="80"  y2="342" stroke="#1a7c34" stroke-width="1"/>
+<text x="116" y="350" font-size="11" fill="#1a7c34" text-anchor="middle">250</text>
+</svg>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     立面图（正立面）
+     关键尺寸：Hs=22700mm · la=1500mm · h=2000mm
+     立杆 x坐标：80,173,266,359,452,545,638（间距93px≈la=1500）
+     水平杆 y坐标：24,60,96,132,168,204,240,276,312,348,384（间距36px≈h=2000）
+     外斜杆：隔3跨选1跨（跨0和跨4），在每步内布置1根斜杆，方向左下→右上
+     一步两跨连墙件：不在立面图中表示
+══════════════════════════════════════════════════ -->
+<div class="card">
+<div class="ttl">立面图（正立面）<span class="sub">Hs=22700mm · la=1500mm · h=2000mm · 10步6跨 · 外斜杆隔3跨选1跨、每步布1根</span></div>
+<svg width="100%" viewBox="0 0 680 440" style="display:block;background:#fff">
+
+<!-- 立杆（7根，6跨） -->
+<g stroke="#222" stroke-width="2.2" fill="none">
+  <line x1="80"  y1="24" x2="80"  y2="384"/>
+  <line x1="173" y1="24" x2="173" y2="384"/>
+  <line x1="266" y1="24" x2="266" y2="384"/>
+  <line x1="359" y1="24" x2="359" y2="384"/>
+  <line x1="452" y1="24" x2="452" y2="384"/>
+  <line x1="545" y1="24" x2="545" y2="384"/>
+  <line x1="638" y1="24" x2="638" y2="384"/>
+</g>
+
+<!-- 水平杆（11道，10步） -->
+<g stroke="#888" stroke-width="0.9" fill="none">
+  <line x1="80" y1="24"  x2="638" y2="24"/>
+  <line x1="80" y1="60"  x2="638" y2="60"/>
+  <line x1="80" y1="96"  x2="638" y2="96"/>
+  <line x1="80" y1="132" x2="638" y2="132"/>
+  <line x1="80" y1="168" x2="638" y2="168"/>
+  <line x1="80" y1="204" x2="638" y2="204"/>
+  <line x1="80" y1="240" x2="638" y2="240"/>
+  <line x1="80" y1="276" x2="638" y2="276"/>
+  <line x1="80" y1="312" x2="638" y2="312"/>
+  <line x1="80" y1="348" x2="638" y2="348"/>
+  <line x1="80" y1="384" x2="638" y2="384"/>
+</g>
+
+<!-- 节点方块（立杆与水平杆交叉处，7列×11行） -->
+<g fill="#444">
+  <!-- 列1 x=80，节点x偏移-6，宽12高12 -->
+  <rect x="74" y="18"  width="12" height="12" rx="1"/>
+  <rect x="74" y="54"  width="12" height="12" rx="1"/>
+  <rect x="74" y="90"  width="12" height="12" rx="1"/>
+  <rect x="74" y="126" width="12" height="12" rx="1"/>
+  <rect x="74" y="162" width="12" height="12" rx="1"/>
+  <rect x="74" y="198" width="12" height="12" rx="1"/>
+  <rect x="74" y="234" width="12" height="12" rx="1"/>
+  <rect x="74" y="270" width="12" height="12" rx="1"/>
+  <rect x="74" y="306" width="12" height="12" rx="1"/>
+  <rect x="74" y="342" width="12" height="12" rx="1"/>
+  <rect x="74" y="378" width="12" height="12" rx="1"/>
+  <!-- 列2 x=173 -->
+  <rect x="167" y="18"  width="12" height="12" rx="1"/>
+  <rect x="167" y="54"  width="12" height="12" rx="1"/>
+  <rect x="167" y="90"  width="12" height="12" rx="1"/>
+  <rect x="167" y="126" width="12" height="12" rx="1"/>
+  <rect x="167" y="162" width="12" height="12" rx="1"/>
+  <rect x="167" y="198" width="12" height="12" rx="1"/>
+  <rect x="167" y="234" width="12" height="12" rx="1"/>
+  <rect x="167" y="270" width="12" height="12" rx="1"/>
+  <rect x="167" y="306" width="12" height="12" rx="1"/>
+  <rect x="167" y="342" width="12" height="12" rx="1"/>
+  <rect x="167" y="378" width="12" height="12" rx="1"/>
+  <!-- 列3 x=266 -->
+  <rect x="260" y="18"  width="12" height="12" rx="1"/>
+  <rect x="260" y="54"  width="12" height="12" rx="1"/>
+  <rect x="260" y="90"  width="12" height="12" rx="1"/>
+  <rect x="260" y="126" width="12" height="12" rx="1"/>
+  <rect x="260" y="162" width="12" height="12" rx="1"/>
+  <rect x="260" y="198" width="12" height="12" rx="1"/>
+  <rect x="260" y="234" width="12" height="12" rx="1"/>
+  <rect x="260" y="270" width="12" height="12" rx="1"/>
+  <rect x="260" y="306" width="12" height="12" rx="1"/>
+  <rect x="260" y="342" width="12" height="12" rx="1"/>
+  <rect x="260" y="378" width="12" height="12" rx="1"/>
+  <!-- 列4 x=359 -->
+  <rect x="353" y="18"  width="12" height="12" rx="1"/>
+  <rect x="353" y="54"  width="12" height="12" rx="1"/>
+  <rect x="353" y="90"  width="12" height="12" rx="1"/>
+  <rect x="353" y="126" width="12" height="12" rx="1"/>
+  <rect x="353" y="162" width="12" height="12" rx="1"/>
+  <rect x="353" y="198" width="12" height="12" rx="1"/>
+  <rect x="353" y="234" width="12" height="12" rx="1"/>
+  <rect x="353" y="270" width="12" height="12" rx="1"/>
+  <rect x="353" y="306" width="12" height="12" rx="1"/>
+  <rect x="353" y="342" width="12" height="12" rx="1"/>
+  <rect x="353" y="378" width="12" height="12" rx="1"/>
+  <!-- 列5 x=452 -->
+  <rect x="446" y="18"  width="12" height="12" rx="1"/>
+  <rect x="446" y="54"  width="12" height="12" rx="1"/>
+  <rect x="446" y="90"  width="12" height="12" rx="1"/>
+  <rect x="446" y="126" width="12" height="12" rx="1"/>
+  <rect x="446" y="162" width="12" height="12" rx="1"/>
+  <rect x="446" y="198" width="12" height="12" rx="1"/>
+  <rect x="446" y="234" width="12" height="12" rx="1"/>
+  <rect x="446" y="270" width="12" height="12" rx="1"/>
+  <rect x="446" y="306" width="12" height="12" rx="1"/>
+  <rect x="446" y="342" width="12" height="12" rx="1"/>
+  <rect x="446" y="378" width="12" height="12" rx="1"/>
+  <!-- 列6 x=545 -->
+  <rect x="539" y="18"  width="12" height="12" rx="1"/>
+  <rect x="539" y="54"  width="12" height="12" rx="1"/>
+  <rect x="539" y="90"  width="12" height="12" rx="1"/>
+  <rect x="539" y="126" width="12" height="12" rx="1"/>
+  <rect x="539" y="162" width="12" height="12" rx="1"/>
+  <rect x="539" y="198" width="12" height="12" rx="1"/>
+  <rect x="539" y="234" width="12" height="12" rx="1"/>
+  <rect x="539" y="270" width="12" height="12" rx="1"/>
+  <rect x="539" y="306" width="12" height="12" rx="1"/>
+  <rect x="539" y="342" width="12" height="12" rx="1"/>
+  <rect x="539" y="378" width="12" height="12" rx="1"/>
+  <!-- 列7 x=638 -->
+  <rect x="632" y="18"  width="12" height="12" rx="1"/>
+  <rect x="632" y="54"  width="12" height="12" rx="1"/>
+  <rect x="632" y="90"  width="12" height="12" rx="1"/>
+  <rect x="632" y="126" width="12" height="12" rx="1"/>
+  <rect x="632" y="162" width="12" height="12" rx="1"/>
+  <rect x="632" y="198" width="12" height="12" rx="1"/>
+  <rect x="632" y="234" width="12" height="12" rx="1"/>
+  <rect x="632" y="270" width="12" height="12" rx="1"/>
+  <rect x="632" y="306" width="12" height="12" rx="1"/>
+  <rect x="632" y="342" width="12" height="12" rx="1"/>
+  <rect x="632" y="378" width="12" height="12" rx="1"/>
+</g>
+
+<!-- 外斜杆：隔3跨选1跨（跨0和跨4），每步布1根，方向：左立杆步底→右立杆步顶（左下→右上）
+     跨0：x=80（左立杆）→x=173（右立杆）
+     跨4：x=452（左立杆）→x=545（右立杆） -->
+<g stroke="#cc2222" stroke-width="1.8" fill="none">
+  <!-- 跨0，10步斜杆 -->
+  <line x1="80"  y1="60"  x2="173" y2="24"/>
+  <line x1="80"  y1="96"  x2="173" y2="60"/>
+  <line x1="80"  y1="132" x2="173" y2="96"/>
+  <line x1="80"  y1="168" x2="173" y2="132"/>
+  <line x1="80"  y1="204" x2="173" y2="168"/>
+  <line x1="80"  y1="240" x2="173" y2="204"/>
+  <line x1="80"  y1="276" x2="173" y2="240"/>
+  <line x1="80"  y1="312" x2="173" y2="276"/>
+  <line x1="80"  y1="348" x2="173" y2="312"/>
+  <line x1="80"  y1="384" x2="173" y2="348"/>
+  <!-- 跨4（隔3跨后），10步斜杆 -->
+  <line x1="452" y1="60"  x2="545" y2="24"/>
+  <line x1="452" y1="96"  x2="545" y2="60"/>
+  <line x1="452" y1="132" x2="545" y2="96"/>
+  <line x1="452" y1="168" x2="545" y2="132"/>
+  <line x1="452" y1="204" x2="545" y2="168"/>
+  <line x1="452" y1="240" x2="545" y2="204"/>
+  <line x1="452" y1="276" x2="545" y2="240"/>
+  <line x1="452" y1="312" x2="545" y2="276"/>
+  <line x1="452" y1="348" x2="545" y2="312"/>
+  <line x1="452" y1="384" x2="545" y2="348"/>
+</g>
+<!-- 外斜杆名称标注 -->
+<text x="126" y="14" font-size="10" fill="#cc2222" text-anchor="middle">外斜杆（每步1根）</text>
+<text x="498" y="14" font-size="10" fill="#cc2222" text-anchor="middle">外斜杆（每步1根）</text>
+
+<!-- 标注：总高 Hs=22700 -->
+<line x1="54" y1="24"  x2="54" y2="384" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="48" y1="24"  x2="60" y2="24"  stroke="#1a7c34" stroke-width="1"/>
+<line x1="48" y1="384" x2="60" y2="384" stroke="#1a7c34" stroke-width="1"/>
+<text x="14" y="208" font-size="11" fill="#1a7c34" text-anchor="middle"
+      transform="rotate(-90,14,208)">Hs=22700</text>
+
+<!-- 标注：步距 h=2000（第1步） -->
+<line x1="54" y1="24" x2="54" y2="60" stroke="#1a7c34" stroke-width="0.8"/>
+<line x1="48" y1="60" x2="60" y2="60" stroke="#1a7c34" stroke-width="0.9"/>
+<text x="30" y="46" font-size="10" fill="#1a7c34" text-anchor="middle">h=2000</text>
+
+<!-- 标注：纵距 la=1500（第1跨） -->
+<line x1="80"  y1="402" x2="173" y2="402" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="80"  y1="396" x2="80"  y2="408" stroke="#1a7c34" stroke-width="1"/>
+<line x1="173" y1="396" x2="173" y2="408" stroke="#1a7c34" stroke-width="1"/>
+<text x="126" y="418" font-size="11" fill="#1a7c34" text-anchor="middle">la=1500</text>
+
+<!-- 尺寸说明 -->
+<text x="359" y="432" font-size="10" fill="#888" text-anchor="middle">
+  6跨×1500=9000 · 10步×2000=20000 · h1=1500+h2=500=2000 · 总高=22000≈22700mm
+</text>
+</svg>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     平面图（俯视）
+     关键尺寸：la=1500mm · lb=900mm · 内排距墙250mm
+     立杆 x坐标：60,153,246,339,432,525,618（间距93px≈la=1500）
+     内排立杆 y=83（距墙面56+27=83），高36px
+     外排立杆 y=161（与内排间距78px≈lb=900），高36px
+     纵向水平杆：内排y=96/106，外排y=174/184（红色双线）
+     横向横杆：x=立杆中心，y=119~161（蓝色竖线）
+     连墙件（一步两跨）：立杆1、3、5、7处穿墙
+══════════════════════════════════════════════════ -->
+<div class="card">
+<div class="ttl">平面图（俯视）<span class="sub">la=1500mm · lb=900mm · 内排距墙250mm · 连墙件一步两跨</span></div>
+<svg width="100%" viewBox="0 0 680 290" style="display:block;background:#fff">
+<defs>
+  <pattern id="w2" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#666" stroke-width="1.4"/>
+  </pattern>
+</defs>
+
+<!-- 墙体（顶部填充条） -->
+<rect x="18" y="18" width="644" height="38" fill="url(#w2)" stroke="#444" stroke-width="1.2"/>
+<text x="340" y="43" font-size="11" fill="#333" text-anchor="middle">墙体（混凝土结构）</text>
+<!-- 墙面线 -->
+<line x1="18" y1="56" x2="662" y2="56" stroke="#444" stroke-width="1.4"/>
+
+<!-- 纵向水平杆（红色双线，代表纵向杆件贯穿整个立面） -->
+<!-- 内排纵向水平杆 -->
+<line x1="18" y1="96"  x2="662" y2="96"  stroke="#cc2222" stroke-width="2"/>
+<line x1="18" y1="106" x2="662" y2="106" stroke="#cc2222" stroke-width="2"/>
+<!-- 外排纵向水平杆 -->
+<line x1="18" y1="174" x2="662" y2="174" stroke="#cc2222" stroke-width="2"/>
+<line x1="18" y1="184" x2="662" y2="184" stroke="#cc2222" stroke-width="2"/>
+<!-- 纵向水平杆名称 -->
+<text x="670" y="101" font-size="9" fill="#cc2222">内排纵向</text>
+<text x="670" y="111" font-size="9" fill="#cc2222">水平杆</text>
+<text x="670" y="178" font-size="9" fill="#cc2222">外排纵向</text>
+<text x="670" y="188" font-size="9" fill="#cc2222">水平杆</text>
+
+<!-- 内排立杆（蓝色矩形截面，7根） -->
+<g fill="#1a5fa8">
+  <rect x="60"  y="83" width="22" height="36" rx="2"/>
+  <rect x="153" y="83" width="22" height="36" rx="2"/>
+  <rect x="246" y="83" width="22" height="36" rx="2"/>
+  <rect x="339" y="83" width="22" height="36" rx="2"/>
+  <rect x="432" y="83" width="22" height="36" rx="2"/>
+  <rect x="525" y="83" width="22" height="36" rx="2"/>
+  <rect x="618" y="83" width="22" height="36" rx="2"/>
+</g>
+<!-- 外排立杆（蓝色矩形截面，7根） -->
+<g fill="#1a5fa8">
+  <rect x="60"  y="161" width="22" height="36" rx="2"/>
+  <rect x="153" y="161" width="22" height="36" rx="2"/>
+  <rect x="246" y="161" width="22" height="36" rx="2"/>
+  <rect x="339" y="161" width="22" height="36" rx="2"/>
+  <rect x="432" y="161" width="22" height="36" rx="2"/>
+  <rect x="525" y="161" width="22" height="36" rx="2"/>
+  <rect x="618" y="161" width="22" height="36" rx="2"/>
+</g>
+<!-- 构件名称标注 -->
+<text x="31" y="101" font-size="9" fill="#1a5fa8" text-anchor="middle">内排</text>
+<text x="31" y="111" font-size="9" fill="#1a5fa8" text-anchor="middle">立杆</text>
+<text x="31" y="175" font-size="9" fill="#1a5fa8" text-anchor="middle">外排</text>
+<text x="31" y="185" font-size="9" fill="#1a5fa8" text-anchor="middle">立杆</text>
+
+<!-- 横向横杆（蓝色竖向短线，连接内排到外排） -->
+<g stroke="#4a8fc1" stroke-width="4" stroke-linecap="round">
+  <line x1="71"  y1="119" x2="71"  y2="161"/>
+  <line x1="164" y1="119" x2="164" y2="161"/>
+  <line x1="257" y1="119" x2="257" y2="161"/>
+  <line x1="350" y1="119" x2="350" y2="161"/>
+  <line x1="443" y1="119" x2="443" y2="161"/>
+  <line x1="536" y1="119" x2="536" y2="161"/>
+  <line x1="629" y1="119" x2="629" y2="161"/>
+</g>
+<!-- 横向横杆名称（引线标注第1根） -->
+<line x1="140" y1="143" x2="164" y2="140" stroke="#4a8fc1" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="138" y="143" font-size="9" fill="#4a8fc1" text-anchor="end">横向横杆</text>
+
+<!-- 连墙件（一步两跨：立杆1、3、5、7，即x=71,257,443,629）
+     从内排立杆向上穿入墙体 -->
+<!-- 穿墙短杆 -->
+<g stroke="#cc2222" stroke-width="2.8" stroke-linecap="round">
+  <line x1="71"  y1="56" x2="71"  y2="83"/>
+  <line x1="257" y1="56" x2="257" y2="83"/>
+  <line x1="443" y1="56" x2="443" y2="83"/>
+  <line x1="629" y1="56" x2="629" y2="83"/>
+</g>
+<!-- 墙内锚板 -->
+<g fill="#cc2222">
+  <rect x="64"  y="20" width="14" height="8" rx="1"/>
+  <rect x="250" y="20" width="14" height="8" rx="1"/>
+  <rect x="436" y="20" width="14" height="8" rx="1"/>
+  <rect x="622" y="20" width="14" height="8" rx="1"/>
+</g>
+<!-- 节点处扣件圆圈 -->
+<g fill="none" stroke="#cc2222" stroke-width="1.8">
+  <circle cx="71"  cy="83" r="7"/>
+  <circle cx="257" cy="83" r="7"/>
+  <circle cx="443" cy="83" r="7"/>
+  <circle cx="629" cy="83" r="7"/>
+</g>
+<!-- 连墙件标注引线 -->
+<line x1="155" y1="38" x2="71"  y2="56" stroke="#cc2222" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="158" y="37" font-size="10" fill="#cc2222">连墙件（锚入墙体，一步两跨）</text>
+
+<!-- 标注：纵距 la=1500 -->
+<line x1="60"  y1="236" x2="153" y2="236" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="60"  y1="230" x2="60"  y2="242" stroke="#1a7c34" stroke-width="1"/>
+<line x1="153" y1="230" x2="153" y2="242" stroke="#1a7c34" stroke-width="1"/>
+<text x="106" y="252" font-size="11" fill="#1a7c34" text-anchor="middle">la=1500</text>
+
+<!-- 标注：横距 lb=900 -->
+<line x1="655" y1="101" x2="655" y2="179" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="649" y1="101" x2="661" y2="101" stroke="#1a7c34" stroke-width="1"/>
+<line x1="649" y1="179" x2="661" y2="179" stroke="#1a7c34" stroke-width="1"/>
+<text x="663" y="144" font-size="11" fill="#1a7c34">lb=900</text>
+
+<!-- 标注：内排距墙 250 -->
+<line x1="655" y1="56"  x2="655" y2="101" stroke="#1a7c34" stroke-width="0.9"/>
+<line x1="649" y1="56"  x2="661" y2="56"  stroke="#1a7c34" stroke-width="1"/>
+<text x="663" y="82" font-size="11" fill="#1a7c34">250</text>
+
+<!-- 图例说明 -->
+<text x="340" y="272" font-size="10" fill="#888" text-anchor="middle">
+  蓝色矩形=立杆截面(Φ48.3×3.2) · 红色双线=纵向水平杆 · 蓝色竖线=横向横杆 · 红圆+竖杆=连墙件
+</text>
+</svg>
+</div>
+
+</div>
+</body>
+</html>
