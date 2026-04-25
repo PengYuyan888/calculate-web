@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+numpy
+matplotlib
+docxtpl
+python-docx
+httpx
+sqlalchemy>=2.0
+alembic
+psycopg2-binary
+passlib[bcrypt]
+python-jose[cryptography]
+python-dotenv

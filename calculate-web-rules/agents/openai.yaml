@@ -1,0 +1,4 @@
+interface:
+  display_name: "Calculate Web Rules"
+  short_description: "Enforce calculate-web project change rules"
+  default_prompt: "Use $calculate-web-rules to handle this calculate-web project task under the required delivery and change constraints."

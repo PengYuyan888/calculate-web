@@ -36,6 +36,7 @@ class BasicInfo(BaseModel):
         default=1.0,
         description="结构重要性系数 γ0，通常取 1.0 或 1.1。",
     )
+    # 前端已移除“架体离地高度”输入项；保留该字段仅为兼容历史请求数据，不参与当前后端验算。
     scaffold_clearance_m: float = Field(
         default=0.0,
         ge=0,
@@ -74,6 +75,7 @@ class GeometryParams(BaseModel):
         "ONE_STEP_TWO_SPAN",
         "TWO_STEP_THREE_SPAN",
         "TWO_STEP_TWO_SPAN",
+        "THREE_STEP_THREE_SPAN",
     ] = Field(
         default="ONE_STEP_TWO_SPAN",
         description="连墙件布置方式编码，用于验算计算长度、控制面积与风荷载分配。",
@@ -112,18 +114,16 @@ class GeometryParams(BaseModel):
 class MaterialLoadParams(BaseModel):
     """材料与荷载参数组。"""
 
-    vertical_tube_spec: Literal[
-        "Q355_PHI48X3_25",
-        "Q355_PHI48X3_0",
-        "Q235_PHI48X3_25",
-    ] = Field(
-        default="Q355_PHI48X3_25",
-        description="立杆钢管规格编码，后端根据编码关联截面面积、惯性矩与截面模量等物理属性。",
+    vertical_tube_spec: Literal["standard_b", "heavy_z"] = Field(
+        default="standard_b",
+        description="盘扣立杆类型：standard_b=标准型B型，heavy_z=重型Z型",
     )
     horizontal_tube_spec: Literal[
         "Q355_PHI48X3_25",
         "Q355_PHI48X3_0",
+        "Q355_PHI48X2_75",
         "Q235_PHI48X3_25",
+        "Q235_PHI48X2_75",
     ] = Field(
         default="Q355_PHI48X3_25",
         description="水平杆钢管规格编码，后端根据编码关联物理属性，保留以兼容现有逻辑。",
@@ -207,29 +207,27 @@ class MaterialLoadParams(BaseModel):
         ge=1,
         description="同时作业层数，用于施工活荷载最不利组合计算。",
     )
-    construction_live_load_kn_m2: float = Field(
+    construction_live_load_kn_m2: Literal[1.0, 2.0, 3.0] = Field(
         default=3.0,
-        ge=0,
-        description="施工均布活荷载标准值，单位 kN/㎡。",
+        description="施工均布活荷载标准值，单位 kN/㎡；1.0=防护脚手架，2.0=装修脚手架，3.0=砌筑作业脚手架，依据规范表4.2.5。",
     )
-    basic_wind_pressure_w0_kn_m2: float = Field(
-        default=0.3,
+    basic_wind_pressure_w0_kn_m2: Optional[float] = Field(
+        default=None,
         ge=0,
-        description="基本风压 w0，单位 kN/㎡，MVP 中也作为部分风荷载验算的简化输入。",
+        description="基本风压 w0，单位 kN/㎡；可手动输入，也可由项目所在地自动反查后回填。",
     )
     terrain_roughness_category: Literal["A", "B", "C", "D"] = Field(
         default="C",
         description="地面粗糙度类别，用于风荷载高度变化系数取值。",
     )
-    wind_shape_factor: float = Field(
+    wind_shape_factor: Literal[1.0, 1.3] = Field(
         default=1.3,
-        gt=0,
-        description="风荷载体型系数，反映脚手架迎风形体对风压的放大影响。",
+        description="风荷载体型系数；1.0=建筑墙体已砌筑，1.3=建筑墙体未砌筑。",
     )
-    wind_height_factor_muz: float = Field(
-        default=1.052,
+    wind_height_factor_muz: Optional[float] = Field(
+        default=None,
         gt=0,
-        description="风荷载高度变化系数 μz，用于真实风荷载标准值计算。",
+        description="风荷载高度变化系数 μz；可手动输入，也可由项目所在地海拔与搭设高度自动推导。",
     )
 
 
@@ -240,14 +238,30 @@ class WallTieParams(BaseModel):
         default="ONE_STEP_TWO_SPAN",
         description="连墙件布置方式，推荐与 geometry_params.tie_member_layout 保持一致。",
     )
+    wall_tie_connection_type: Literal[
+        "anchor_bolt", "embedded_tube", "clamp_column"
+    ] = Field(
+        default="anchor_bolt",
+        description="连墙件连接方式：anchor_bolt=预埋螺栓式，embedded_tube=预埋短钢管式，clamp_column=钢管抱柱式",
+    )
     connection_type: str = Field(
         default="EXPANSION_BOLT",
-        description="连墙件与主体结构连接方式；EXPANSION_BOLT 代表膨胀螺栓。",
+        description="连墙件与主体结构连接方式的兼容字段；允许旧值 EXPANSION_BOLT/CHEMICAL_BOLT/EMBEDDED 或新值 anchor_bolt/embedded_tube/clamp_column。",
     )
-    calculation_length_l0_mm: int = Field(
-        default=1500,
+    calculation_length_l0_mm: float = Field(
+        default=1500.0,
         gt=0,
         description="连墙件计算长度 l0，单位 mm，用于稳定性与长细比验算。",
+    )
+    anchor_depth_mm: float = Field(
+        default=150.0,
+        gt=0,
+        description="锚固/预埋深度，单位mm",
+    )
+    bolt_diameter_mm: Optional[float] = Field(
+        default=20.0,
+        gt=0,
+        description="螺栓直径，单位mm，仅预埋螺栓式使用",
     )
     section_type: str = Field(
         default="TUBE",
@@ -256,6 +270,14 @@ class WallTieParams(BaseModel):
     model: str = Field(
         default="Φ48x3.2",
         description="连墙件型号或截面规格，用于材料查表与截面验算。",
+    )
+    wall_tie_tube_spec: Optional[str] = Field(
+        default="Φ48×3.25",
+        description="连墙件钢管规格，仅短钢管式和抱柱式使用",
+    )
+    fastener_type: Optional[str] = Field(
+        default="双扣件",
+        description="扣件类型：单扣件/双扣件",
     )
     fastener_connection_type: str = Field(
         default="DOUBLE",
@@ -273,7 +295,7 @@ class WallTieParams(BaseModel):
     )
     concrete_grade: str = Field(
         default="C30",
-        description="主体结构混凝土强度等级，用于锚固承载力及局部承压验算。",
+        description="混凝土强度等级，如C20/C25/C30/C35/C40",
     )
     allowable_bond_strength_n_mm2: float = Field(
         default=1.5,
@@ -285,6 +307,14 @@ class WallTieParams(BaseModel):
 class FoundationParams(BaseModel):
     """地基基础参数组。"""
 
+    foundation_hardened: Literal["yes", "no"] = Field(
+        default="yes",
+        description="外架基础是否硬化：yes=是，no=否",
+    )
+    adjustable_base_type: Literal["B", "Z"] = Field(
+        default="B",
+        description="可调底座类型：B=B型100kN，Z=Z型140kN",
+    )
     soil_type: Literal[
         "COMPACTED_FILL",
         "CLAY",
@@ -301,15 +331,24 @@ class FoundationParams(BaseModel):
         gt=0,
         description="地基承载力特征值 fg，单位 kPa。",
     )
-    sole_plate_area_m2: float = Field(
-        default=0.05,
-        gt=0,
-        description="垫板底面积，单位 ㎡，用于地基平均压力计算。",
+    base_plate_area_m2: Optional[float] = Field(
+        default=None,
+        description="垫板底面积，单位㎡；由后端根据 foundation_hardened 自动计算。",
     )
-    adjustable_base_capacity_kn: float = Field(
-        default=100.0,
-        gt=0,
-        description="可调底座承载力设计值，单位 kN，用于底座承载力验算。",
+    adjustable_base_capacity_kn: Optional[float] = Field(
+        default=None,
+        description="可调底座承载力设计值，单位kN；由后端根据 adjustable_base_type 自动赋值。",
+    )
+
+
+class LocationInfo(BaseModel):
+    """项目所在地信息。"""
+
+    province: str = Field(description="省份名称，如“北京市”。")
+    city: str = Field(description="城市名称，如“北京”。")
+    code: Optional[str] = Field(
+        default=None,
+        description="6 位官方行政区划代码，优先用于精确匹配风参数参考数据。",
     )
 
 
@@ -339,6 +378,59 @@ class CalculationCheckRequest(BaseModel):
     foundation_params: FoundationParams = Field(
         default_factory=FoundationParams,
         description="地基基础参数分组。",
+    )
+    location_info: Optional[LocationInfo] = Field(
+        default=None,
+        description="项目所在地信息；传入后端后可自动补算基本风压与风压高度变化系数。",
+    )
+
+
+class WindParamsResolveRequest(BaseModel):
+    """风参数解析请求体。"""
+
+    province: str = Field(description="省份名称，如“北京市”。")
+    city: str = Field(description="城市名称，如“北京”。")
+    code: Optional[str] = Field(
+        default=None,
+        description="6 位官方行政区划代码；优先用于定位目标城市，若该城市缺少风参数则继续按模糊或就近规则解析。",
+    )
+    roughness: Literal["A", "B", "C", "D"] = Field(
+        description="地面粗糙度类别。",
+    )
+    erection_height_hs_m: float = Field(
+        gt=0,
+        description="脚手架搭设高度 Hs，单位 m。",
+    )
+
+
+class WindParamsResolveResponse(BaseModel):
+    """风参数解析响应体。"""
+
+    w0_kn_m2: float = Field(description="重现期 10 年基本风压，单位 kN/㎡。")
+    altitude_m: float = Field(description="城市参考海拔，单位 m。")
+    effective_height_m: float = Field(
+        description="离海平面有效高度，单位 m。",
+    )
+    wind_height_factor_muz: float = Field(
+        description="按附录 A 表 A.0.1 计算得到的风压高度变化系数 μz。",
+    )
+    matched_city: str = Field(
+        description="实际命中风参数参考数据的城市名称。",
+    )
+    match_type: Literal[
+        "exact",
+        "fuzzy",
+        "nearby_same_province",
+        "nearby_national",
+    ] = Field(
+        description="匹配方式：exact / fuzzy / nearby_same_province / nearby_national。",
+    )
+    distance_km: Optional[float] = Field(
+        default=None,
+        description="就近匹配时的球面距离，单位 km；精确或模糊匹配时为 null。",
+    )
+    is_fallback: bool = Field(
+        description="若 match_type 不为 exact，则为 true。",
     )
 
 
@@ -373,6 +465,12 @@ class ResultSummary(BaseModel):
     max_deflection_mm: Optional[float] = Field(
         default=None,
         description="最大挠度，单位 mm。",
+    )
+
+
+    deflection_limit_mm: Optional[float] = Field(
+        default=None,
+        description="本次横杆验算使用的挠度限值，单位mm",
     )
 
 

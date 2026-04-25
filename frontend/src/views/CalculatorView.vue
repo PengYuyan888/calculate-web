@@ -1,16 +1,10 @@
 <script setup>
-import { computed, onMounted, reactive, ref, watch } from 'vue'
+import { onMounted, reactive, ref, watch } from 'vue'
 import { calculate, getReportUrl } from '../api/scaffold.js'
 import NavBar from '../components/NavBar.vue'
 import LeftPanel from '../components/LeftPanel.vue'
 import DiagramView from '../components/DiagramView.vue'
 import ResultPanel from '../components/ResultPanel.vue'
-
-const tieLayoutMap = {
-  ONE_STEP_TWO_SPAN: '一步两跨',
-  TWO_STEP_TWO_SPAN: '两步两跨',
-  TWO_STEP_THREE_SPAN: '两步三跨'
-}
 
 const loading = ref(false)
 const result = ref(null)
@@ -43,7 +37,7 @@ const form = reactive({
     diagonal_brace_layout: '每隔3跨一设'
   },
   material_load_params: {
-    vertical_tube_spec: 'Q355_PHI48X3_25',
+    vertical_tube_spec: 'standard_b',
     horizontal_tube_spec: 'Q355_PHI48X3_25',
     pole_model: 'B-LG-300',
     pole_tube_spec: 'Φ48.3×3.2',
@@ -73,6 +67,7 @@ const form = reactive({
     layout: 'ONE_STEP_TWO_SPAN',
     connection_type: 'EXPANSION_BOLT',
     calculation_length_l0_mm: 1500,
+    anchor_depth_mm: 150,
     section_type: 'TUBE',
     model: 'Φ48×3.2',
     fastener_connection_type: 'DOUBLE',
@@ -86,20 +81,12 @@ const form = reactive({
     bearing_capacity_fg_kpa: 120,
     sole_plate_area_m2: 0.25,
     adjustable_base_capacity_kn: 100
+  },
+  location_info: {
+    province: '',
+    city: ''
   }
 })
-
-const planSubtitle = computed(
-  () => `纵距 ${Number(form.geometry_params.longitudinal_spacing_la_m).toFixed(1)}m，双排立杆平面布置`
-)
-
-const sectionSubtitle = computed(
-  () => `横距 ${Number(form.geometry_params.transverse_spacing_lb_m).toFixed(1)}m，步距 ${Number(form.geometry_params.step_height_h_m).toFixed(1)}m`
-)
-
-const elevationSubtitle = computed(
-  () => tieLayoutMap[form.geometry_params.tie_member_layout] || form.geometry_params.tie_member_layout
-)
 
 watch(
   () => form.geometry_params.tie_member_layout,
@@ -124,7 +111,11 @@ async function handleSubmit() {
       geometry_params: { ...form.geometry_params },
       material_load_params: { ...form.material_load_params },
       wall_tie_params: { ...form.wall_tie_params },
-      foundation_params: { ...form.foundation_params }
+      foundation_params: { ...form.foundation_params },
+      location_info:
+        form.location_info.province && form.location_info.city
+          ? { ...form.location_info }
+          : null
     }
 
     const res = await calculate(payload)
@@ -192,7 +183,6 @@ onMounted(() => {
                   <span class="diagram-dot diagram-dot--blue"></span>
                   <div>
                     <h3>平面图</h3>
-                    <p>{{ planSubtitle }}</p>
                   </div>
                 </div>
               </div>
@@ -216,7 +206,6 @@ onMounted(() => {
                   <span class="diagram-dot diagram-dot--green"></span>
                   <div>
                     <h3>剖面图</h3>
-                    <p>{{ sectionSubtitle }}</p>
                   </div>
                 </div>
               </div>
@@ -242,7 +231,6 @@ onMounted(() => {
                   <span class="diagram-dot diagram-dot--brown"></span>
                   <div>
                     <h3>立面图</h3>
-                    <p>{{ elevationSubtitle }}</p>
                   </div>
                 </div>
               </div>
@@ -283,7 +271,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   background: #f0f2f5;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .calculator-body {
@@ -298,14 +286,15 @@ onMounted(() => {
   flex: 0 0 25%;
   min-width: 280px;
   min-height: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .right-panel {
   flex: 1;
   min-width: 0;
   min-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   background: #f0f2f5;
@@ -340,8 +329,8 @@ onMounted(() => {
 }
 
 .result-area {
-  flex: 1;
-  overflow: hidden;
+  flex-shrink: 0;
+  overflow: visible;
   min-height: 0;
   padding: 4px 10px 12px 10px;
   box-sizing: border-box;
@@ -404,13 +393,7 @@ onMounted(() => {
   font-weight: 600;
   color: #2f3440;
   line-height: 1.2;
-  margin-bottom: 2px;
-}
-
-.diagram-card p {
-  font-size: 11px;
-  color: #8a9099;
-  line-height: 1.35;
+  margin-bottom: 0;
 }
 
 .diagram-body {
@@ -423,6 +406,6 @@ onMounted(() => {
   border: 1px dashed #e8e8e8;
   border-radius: 6px;
   background: #fafafa;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 </style>

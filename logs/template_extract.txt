@@ -1,0 +1,301 @@
+PARAGRAPHS
+P0: 盘扣式脚手架计算书
+P1:     计算依据：
+P2:     1、《建筑施工承插型盘扣式钢管脚手架安全技术标准》JGJ/T 231-2021
+P3:     2、《建筑地基基础设计规范》GB50007-2011
+P4:     3、《建筑结构荷载规范》GB50009-2012
+P5:     4、《钢结构设计标准》GB50017-2017
+P6:     5、《施工脚手架通用规范》GB 55023-2022
+P7:     6、《钢结构通用规范》GB 55006-2021
+P8:     7、《工程结构通用规范》GB 55001-2021
+P9:     8、《建筑与市政地基基础通用规范》GB55003-2021
+P10:  一、脚手架参数
+P14:  二、荷载设计
+P15: 三、横向横杆验算
+P16: 1. 承载能力极限状态：
+P17: 线荷载设计值：q = b(1.3×Gkjb+1.5×Qkjj) = {{ req.material_load_params.single_plank_width_b_mm / 1000 }}×(1.3×{{ req.material_load_params.plank_self_weight_kn_m2 }} + 1.5×{{ req.material_load_params.construction_live_load_kn_m2 }}) = {{ "%.3f" % hl.line_load_design_kn_m }} kN/m 
+P18: 支座反力：R = q×la / j = {{ "%.3f" % hl.line_load_design_kn_m }}×{{ req.geometry_params.longitudinal_spacing_la_m }} / {{ req.material_load_params.hook_count_per_side_j }} = {{ "%.3f" % hl.hook_reaction_design_k }} kN
+P19: 横杆自重设计值：q1 = 1.3×m2 = {{ "%.3f" % hl.self_weight_design_kn_m }} kN/m
+P20: 2. 抗弯与挠度验算
+P21: Mmax = {{ "%.3f" % hl.max_bending_moment_kn_m }} kN·m {% if hl.sigma_n_mm2 <= hl.allowable_stress_n_mm2 %}
+P22: 抗弯应力：σ = {{ "%.2f" % hl.sigma_n_mm2 }} N/mm² ≤ [f]/γR = {{ hl.allowable_stress_n_mm2 }} N/mm²，满足要求！ {% else %}抗弯应力：σ = {{ "%.2f" % hl.sigma_n_mm2 }} N/mm² > [f]/γR = {{ hl.allowable_stress_n_mm2 }} N/mm²，不满足要求！！！{% endif %}
+P23: {% if hl.max_deflection_mm <= hl.deflection_limit_mm %}最大挠度：v = {{ "%.3f" % hl.max_deflection_mm }} mm ≤ [v] = {{ "%.2f" % hl.deflection_limit_mm }} mm，满足要求！ {% else %}最大挠度：v = {{ "%.3f" % hl.max_deflection_mm }} mm > [v] = {{ "%.2f" % hl.deflection_limit_mm }} mm，不满足要求！！！{% endif %}
+P24: 3. 盘扣节点连接盘的抗剪承载力验算
+P25: {% if hl.node_shear_design_kn <= hl.node_shear_limit_kn %}FR = γ0×R1 = 1.0×{{ "%.3f" % hl.node_shear_design_kn }} kN ≤ [Qb]/γR = {{ hl.node_shear_limit_kn }} kN，满足要求！ {% else %}FR = γ0×R1 = 1.0×{{ "%.3f" % hl.node_shear_design_kn }} kN > [Qb]/γR = {{ hl.node_shear_limit_kn }} kN，不满足要求！！！{% endif %}
+P26: 【横杆受力简图】
+P27: {{ img_force }}
+P28: 【弯矩图(kN·m)】
+P29: {{ img_moment }}
+P30: 【变形图(mm)】
+P31: {{ img_deflection }}
+P32: 四、荷载计算
+P33:     单立杆静荷载计算
+P34:     1、结构自重标准值NG1k
+P35:     (1)、立杆的自重标准值NG1k1
+P36:     立杆型号为{{ req.material_load_params.pole_model }}，单根立杆自重为m1={{ vs.m1_kn }}kN
+P37:     立杆1：NG1k1=m1×Hs1/3={{ vs.m1_kn }}×{{ "%.1f" % vs.hs_m }}/3={{ "%.3f" % vs.ng1k1_kn }}kN
+P38:     立杆2：NG1k1=m1×Hs2/3={{ vs.m1_kn }}×{{ "%.1f" % vs.hs_m }}/3={{ "%.3f" % vs.ng1k1_kn }}kN
+P39:     (2)、纵向横杆的自重标准值NG1k2
+P40:     纵向横杆型号为{{ req.material_load_params.ledger_model }}，单根纵向横杆自重为m2={{ vs.m2_kn }}kN
+P41:     立杆1：步数n1=[(Hs1-h1-h2)/h]取整=[( {{ "%.1f" % vs.hs_m }}-{{ req.geometry_params.guardrail_top_height_h1_m }}-{{ req.geometry_params.sweeping_rod_height_h2_mm }}/1000)/{{ req.geometry_params.step_height_h_m }}]取整={{ vs.step_count_n }}
+P42:     NG1k2=m2×(n1+1)={{ vs.m2_kn }}×({{ vs.step_count_n }}+1)={{ "%.3f" % vs.ng1k2_inner_kn }}kN
+P43:     立杆2：步数n2=[(Hs2-h1-h2)/h]取整=[( {{ "%.1f" % vs.hs_m }}-{{ req.geometry_params.guardrail_top_height_h1_m }}-{{ req.geometry_params.sweeping_rod_height_h2_mm }}/1000)/{{ req.geometry_params.step_height_h_m }}]取整={{ vs.step_count_n }}
+P44:     NG1k2=m2×(n2+1)={{ vs.m2_kn }}×({{ vs.step_count_n }}+1)={{ "%.3f" % vs.ng1k2_inner_kn }}kN
+P45:     (3)、横向横杆的自重标准值NG1k3
+P46:     根据横向横杆型号及依次横距计算出单根横杆自重代入计算：
+P47:     立杆1: NG1k3=({{ vs.step_count_n }}+1)×{{ vs.m3_kn }}/2={{ "%.3f" % vs.ng1k3_kn }}kN
+P48:     立杆2: NG1k3=({{ vs.step_count_n }}+1)×{{ vs.m3_kn }}/2={{ "%.3f" % vs.ng1k3_kn }}kN
+P49:     (4)、外斜杆的自重标准值NG1k4
+P50:     外斜杆型号为{{ req.material_load_params.brace_model }}，单根外斜杆自重为m4={{ vs.m4_kn }}kN
+P51:     立杆2：NG1k4=m4×n2/2={{ vs.m4_kn }}×{{ vs.step_count_n }}/2={{ "%.3f" % vs.ng1k4_kn }}kN
+P52:     结构自重标准值NG1k总计
+P53:     立杆1：NG1k= NG1k1+ NG1k2+ NG1k3 ={{ "%.3f" % vs.ng1k1_kn }}+{{ "%.3f" % vs.ng1k2_inner_kn }}+{{ "%.3f" % vs.ng1k3_kn }}={{ "%.3f" % vs.ng1k_inner_kn }}kN
+P54:     立杆2：NG1k= NG1k1+ NG1k2+ NG1k3 + NG1k4={{ "%.3f" % vs.ng1k1_kn }}+{{ "%.3f" % vs.ng1k2_inner_kn }}+{{ "%.3f" % vs.ng1k3_kn }}+{{ "%.3f" % vs.ng1k4_kn }}={{ "%.3f" % vs.ng1k_outer_kn }}kN
+P55:     2、构配件自重标准值NG2k
+P56:     (1)、脚手板的自重标准值NG2k1
+P57:     立杆1：NG2k1=(n1+1)×la×lb×Gkjb/2=({{ vs.step_count_n }}+1)×{{ req.geometry_params.longitudinal_spacing_la_m }}×{{ req.geometry_params.transverse_spacing_lb_m }}×{{ req.material_load_params.plank_self_weight_kn_m2 }}/2={{ "%.3f" % vs.ng2k_inner_kn }}kN
+P58:     立杆2：NG2k1=(n2+1)×la×lb×Gkjb/2=({{ vs.step_count_n }}+1)×{{ req.geometry_params.longitudinal_spacing_la_m }}×{{ req.geometry_params.transverse_spacing_lb_m }}×{{ req.material_load_params.plank_self_weight_kn_m2 }}/2={{ "%.3f" % vs.ng2k_inner_kn }}kN
+P59:     {{ req.material_load_params.plank_laying_method }}
+P60:     (2)、栏杆挡脚板的自重标准值NG2k2
+P61:     立杆2：NG2k2=(n2+1)×la×Gkdb=({{ vs.step_count_n }}+1)×{{ req.geometry_params.longitudinal_spacing_la_m }}×{{ req.material_load_params.toe_board_self_weight_kn_m }}={{ "%.3f" % vs.ng2k2_kn }}kN
+P62:     {{ req.material_load_params.toe_board_laying_method }}
+P63:     (3)、围护材料的自重标准值NG2k3
+P64:     立杆2：NG2k3=Gkmw×la×Hs={{ req.material_load_params.safety_net_self_weight_kn_m2 }}×{{ req.geometry_params.longitudinal_spacing_la_m }}×{{ "%.1f" % vs.hs_m }}={{ "%.3f" % vs.ng2k3_kn }}kN
+P65:     构配件自重标准值NG2k总计
+P66:     立杆1：NG2k= NG2k1={{ "%.3f" % vs.ng2k_inner_kn }}kN
+P67:     立杆2：NG2k= NG2k1+ NG2k2+ NG2k3={{ "%.3f" % vs.ng2k_inner_kn }}+{{ "%.3f" % vs.ng2k2_kn }}+{{ "%.3f" % vs.ng2k3_kn }}={{ "%.3f" % vs.ng2k_outer_kn }}kN
+P68:     单立杆施工活荷载计算
+P69:     立杆1：NQ1k=la×lb×(njj×Qkjj)/2={{ req.geometry_params.longitudinal_spacing_la_m }}×{{ req.geometry_params.transverse_spacing_lb_m }}×({{ req.material_load_params.working_layer_count }}×{{ req.material_load_params.construction_live_load_kn_m2 }})/2={{ "%.3f" % vs.nq1k_kn }}kN
+P70:     立杆2：NQ1k=la×lb×(njj×Qkjj)/2={{ req.geometry_params.longitudinal_spacing_la_m }}×{{ req.geometry_params.transverse_spacing_lb_m }}×({{ req.material_load_params.working_layer_count }}×{{ req.material_load_params.construction_live_load_kn_m2 }})/2={{ "%.3f" % vs.nq1k_kn }}kN
+P71:     单立杆轴向力：
+P72:     立杆1：N1=1.3×(NG1k+NG2k)+0.9×1.5×NQ1k=1.3×({{ "%.3f" % vs.ng1k_inner_kn }}+{{ "%.3f" % vs.ng2k_inner_kn }})+0.9×1.5×{{ "%.3f" % vs.nq1k_kn }}={{ "%.3f" % vs.n1_kn }}kN
+P73:     立杆2：N2=1.3×(NG1k+NG2k)+0.9×1.5×NQ1k=1.3×({{ "%.3f" % vs.ng1k_outer_kn }}+{{ "%.3f" % vs.ng2k_outer_kn }})+0.9×1.5×{{ "%.3f" % vs.nq1k_kn }}={{ "%.3f" % vs.n2_kn }}kN
+P74:     立杆最大轴力设计值N=max(N1,N2)=max({{ "%.3f" % vs.n1_kn }},{{ "%.3f" % vs.n2_kn }})={{ "%.3f" % vs.axial_force_design_kn }}kN
+P75:  五、立杆稳定性验算
+P76:  1、立杆长细比验算
+P77:     l0=μ×h={{ vs.mu }}×{{ vs.h_m }}={{ "%.3f" % vs.effective_length_m }}m
+P78:     长细比λ=l0/i={{ "%.3f" % vs.effective_length_m }}×1000/{{ vs.radius_of_gyration_mm }}={{ "%.1f" % vs.lambda_val }}
+P79: {% if vs.lambda_val <= vs.lambda_limit %}满足要求！{% else %}不满足要求！！！{% endif %}
+P80:     查表得，φ={{ vs.phi }}
+P81:   2、立杆稳定性验算
+P82:     Mw=0.9×1.5×ωk×la×h²/10=0.9×1.5×{{ "%.3f" % vs.wk_kn_m2 }}×{{ vs.la_m }}×{{ vs.h_m }}²/10={{ "%.3f" % vs.wind_bending_moment_kn_m }}kN·m
+P83:     σ = γ0 [N/(φA) + Mw/W] = {{ req.basic_info.importance_factor }} × [ {{ "%.2f" % vs.axial_force_design_kn }} × 1000 / ({{ "%.3f" % vs.phi }} × {{ vs.area_mm2 }}) + {{ "%.3f" % vs.wind_bending_moment_kn_m }} × 10⁶ / {{ vs.w_section_mm3 }} ] = {{ "%.3f" % vs.sigma_n_mm2 }} N/mm²
+P84: {% if vs.sigma_n_mm2 <= vs.allowable_stress_n_mm2 %}    σ = {{ "%.3f" % vs.sigma_n_mm2 }} N/mm² ≤ [f]/γR = {{ vs.allowable_stress_n_mm2 }} N/mm²，满足要求！{% else %}
+P85:     σ = {{ "%.3f" % vs.sigma_n_mm2 }} N/mm² > [f]/γR = {{ vs.allowable_stress_n_mm2 }} N/mm²，不满足要求！！！{% endif %}
+P86: 六、连墙件承载力验算
+P87:     Nlw=1.5×ωk×Aw=1.5×{{ "%.3f" % wt.wk_kn_m2 }}×{{ "%.3f" % wt.windward_area_aw_m2 }}={{ "%.3f" % wt.nlw_kn }}kN
+P88:     长细比λ=l0/i={{ req.wall_tie_params.calculation_length_l0_mm }}/{{ vs.radius_of_gyration_mm }}={{ "%.2f" % (req.wall_tie_params.calculation_length_l0_mm / vs.radius_of_gyration_mm) }}，查《规范》JGJ/T 231-2021表C得，φ={{ wt.phi }}
+P89:     连墙件约束脚手架平面外变形所产生的轴向力N0，取3kN。
+P90:     {% if wt.sigma_n_mm2 <= wt.allowable_stress_n_mm2 %}(Nlw+N0)/(φAc)=({{ "%.3f" % wt.nlw_kn }}+3)×10³/({{ wt.phi }}×{{ wt.area_c_mm2 }})={{ "%.3f" % wt.sigma_n_mm2 }}N/mm²≤[f]/γR={{ wt.allowable_stress_n_mm2 }}/1={{ wt.allowable_stress_n_mm2 }}N/mm²，满足要求！{% else %}(Nlw+N0)/(φAc)={{ "%.3f" % wt.sigma_n_mm2 }}N/mm²>[f]/γR={{ wt.allowable_stress_n_mm2 }}N/mm²，不满足要求！！！{% endif %}
+P91:     螺栓粘结力锚固强度计算
+P92:     螺栓锚固深度:h≥(Nlw+N0)/(πd[τb])=({{ "%.3f" % wt.nlw_kn }}+3)×10³/(3.14×{{ req.wall_tie_params.bolt_diameter_d_mm }}×{{ req.wall_tie_params.allowable_bond_strength_n_mm2 }})={{ "%.3f" % wt.required_anchor_depth_mm }}mm
+P93:     {% if wt.bolt_tension_sigma_n_mm2 <= req.wall_tie_params.bolt_tensile_strength_n_mm2 %}σ=(Nlw+N0)/(π×d²/4)=({{ "%.3f" % wt.nlw_kn }}+3)×10³/(3.14×{{ req.wall_tie_params.bolt_diameter_d_mm }}²/4)={{ "%.3f" % wt.bolt_tension_sigma_n_mm2 }}N/mm²≤[ft]={{ req.wall_tie_params.bolt_tensile_strength_n_mm2 }}N/mm²，满足要求！{% else %}σ={{ "%.3f" % wt.bolt_tension_sigma_n_mm2 }}N/mm²>[ft]={{ req.wall_tie_params.bolt_tensile_strength_n_mm2 }}N/mm²，不满足要求！！！{% endif %}
+P94:     混凝土局部承压计算如下
+P95:     混凝土的局部挤压强度设计值：fcc=0.95fc=0.95×{{ "%.1f" % wt.fc_n_mm2 }}={{ "%.3f" % wt.fcc_n_mm2 }}N/mm²
+P96:     {% if wt.nt_kn * 1000 <= wt.local_bearing_capacity_n %}(Nlw+N0)={{ "%.3f" % wt.nt_kn }}×1000={{ (wt.nt_kn * 1000) | int }}N≤(b²-πd²/4)fcc={{ "%.3f" % wt.local_bearing_capacity_n }}N，满足要求！{% else %}(Nlw+N0)={{ (wt.nt_kn * 1000) | int }}N>(b²-πd²/4)fcc={{ "%.3f" % wt.local_bearing_capacity_n }}N，不满足要求！！！{% endif %}
+P97:     注：锚板边长b一般按经验确定，不作计算，此处b=5d=5×{{ req.wall_tie_params.bolt_diameter_d_mm }}={{ 5 * req.wall_tie_params.bolt_diameter_d_mm }}mm
+P98:     fc为混凝土轴心抗压强度设计值
+P99:     连墙件与脚手架连接扣件抗滑承载力验算:
+P100:     {% if wt.nt_kn <= wt.slip_resistance_kn %}Nlw+N0={{ "%.3f" % wt.nlw_kn }}+3={{ "%.3f" % wt.nt_kn }}kN≤[抗滑]={{ wt.slip_resistance_kn }}kN，满足要求！{% else %}Nlw+N0={{ "%.3f" % wt.nt_kn }}kN>[抗滑]={{ wt.slip_resistance_kn }}kN，不满足要求！！！{% endif %}
+P101: 七、可调底座承载力验算
+P102:     由立杆稳定性一节可知可调底座最大受力：
+P103:     Rmax=γ0×N={{ req.basic_info.importance_factor }}×{{ "%.3f" % vs.axial_force_design_kn }}={{ "%.3f" % fd.reaction_base_kn }}kN≤[N]/γR={{ fd.adjustable_base_limit_kn }}/1={{ fd.adjustable_base_limit_kn }}kN
+P104:     {% if fd.reaction_base_kn <= fd.adjustable_base_limit_kn %}满足要求！{% else %}不满足要求！！！{% endif %}
+
+TABLES
+TABLE 0
+R0: ['脚手架安全等级', '{{ cn.safety_level }}', '结构重要性系数γ0', '{{ req.basic_info.importance_factor }}']
+R1: ['立杆纵向间距la(m)', '{{ req.geometry_params.longitudinal_spacing_la_m }}', '立杆步距h(m)', '{{ req.geometry_params.step_height_h_m }}']
+R2: ['顶部防护栏杆高h1(m)', '{{ req.geometry_params.guardrail_top_height_h1_m }}', '纵横向扫地杆距立杆底h2(mm)', '{{ req.geometry_params.sweeping_rod_height_h2_mm }}']
+R3: ['架体离地高度(m)', '{{ req.basic_info.scaffold_clearance_m }}', '脚手架搭设排数', '{{ req.geometry_params.row_count }}']
+R4: ['承载力设计值调整系数γR', '1', '', '']
+TABLE 1
+R0: ['立杆排号', '立杆依次横距lb(m)', '立杆搭设高度Hs(m)']
+R1: ['1 (内排)', '{{ req.geometry_params.inner_pole_to_wall_m }}', '{{ req.geometry_params.erection_height_hs_m }}']
+R2: ['2 (外排)', '{{ req.geometry_params.transverse_spacing_lb_m }}', '{{ req.geometry_params.erection_height_hs_m }}']
+TABLE 2
+R0: ['脚手板类型', '{{ cn.plank_type }}', '脚手板自重标准值Gkjb(kN/m²)', '{{ req.material_load_params.plank_self_weight_kn_m2 }}']
+R1: ['脚手板铺设方式', '{{ req.material_load_params.plank_laying_method }}', '安全网自重标准值Gkmw(kN/m²)', '{{ req.material_load_params.safety_net_self_weight_kn_m2 }}']
+R2: ['挡脚板类型', '{{ req.material_load_params.toe_board_type }}', '栏杆与挡脚板自重Gkdb(kN/m)', '{{ req.material_load_params.toe_board_self_weight_kn_m }}']
+R3: ['挡脚板铺设方式', '{{ req.material_load_params.toe_board_laying_method }}', '单块脚手板宽度b(mm)', '{{ req.material_load_params.single_plank_width_b_mm }}']
+R4: ['单块脚手板一侧爪钩数量j', '{{ req.material_load_params.hook_count_per_side_j }}', '爪钩间距s(mm)', '{{ req.material_load_params.hook_spacing_s_mm }}']
+R5: ['作业层数njj', '{{ req.material_load_params.working_layer_count }}', '活荷载标准值Qkjj(kN/m²)', '{{ req.material_load_params.construction_live_load_kn_m2 }}']
+R6: ['风荷载标准值ωk(kN/m²)', '连墙件: {{ "%.3f" % wt.wk_kn_m2 }} | 立杆: {{ "%.3f" % vs.wk_kn_m2 }}', '基本风压ω0(kN/m²)', '{{ req.material_load_params.basic_wind_pressure_w0_kn_m2 }}']
+R7: ['风荷载高度变化系数μz', '连墙件: {{ wt.muz }}，立杆: {{ vs.muz }}', '风荷载体型系数μs', '{{ req.material_load_params.wind_shape_factor }}']
+TABLE 3
+R0: ['立杆型号', '{{ req.material_load_params.pole_model }}', '立杆钢管类型', '{{ req.material_load_params.pole_tube_spec }}']
+R1: ['纵横向水平杆型号', '{{ req.material_load_params.ledger_model }}', '纵横向水平杆钢管类型', '{{ req.material_load_params.ledger_tube_spec }}']
+R2: ['外斜杆型号', '{{ req.material_load_params.brace_model }}', '外斜杆材料形式', '{{ req.material_load_params.brace_material_form }}']
+R3: ['外斜杆布置', '{{ req.geometry_params.diagonal_brace_layout }}', '外斜杆钢管截面类型', '{{ req.material_load_params.brace_tube_spec }}']
+TABLE 4
+R0: ['立杆型号', '{{ req.material_load_params.pole_model }}', '立杆钢管类型', '{{ req.material_load_params.pole_tube_spec }}']
+R1: ['纵横向水平杆型号', '{{ req.material_load_params.ledger_model }}', '纵横向水平杆钢管类型', '{{ req.material_load_params.ledger_tube_spec }}']
+R2: ['外斜杆型号', '{{ req.material_load_params.brace_model }}', '外斜杆材料形式', '{{ req.material_load_params.brace_material_form }}']
+R3: ['外斜杆布置', '{{ req.geometry_params.diagonal_brace_layout }}', '外斜杆钢管截面类型', '{{ req.material_load_params.brace_tube_spec }}']
+TABLE 5
+R0: ['立杆钢管类型', '{{ req.material_load_params.pole_tube_spec }}', '立杆截面抵抗矩W(mm3)', '{{ vs.w_section_mm3 }}']
+R1: ['立杆截面回转半径i(mm)', '{{ vs.radius_of_gyration_mm }}', '立杆抗压强度设计值[f](N/mm2)', '{{ vs.allowable_stress_n_mm2 }}']
+R2: ['立杆截面面积A(mm2)', '{{ vs.area_mm2 }}', '连墙件布置方式', '{{ vs.mu_desc }}']
+R3: ['立杆计算长度系数μ', '{{ vs.mu }}', '{{ vs.mu }}', '{{ vs.mu }}']
+TABLE 6
+R0: ['连墙件布置方式', '{{ wt.tie_member_layout_cn }}', '连墙件连接方式', '{{ cn.connection_type }}']
+R1: ['连墙件计算长度l0(mm)', '{{ req.wall_tie_params.calculation_length_l0_mm }}', '连墙件截面类型', '{{ cn.section_type }}']
+R2: ['连墙件型号', '{{ req.wall_tie_params.model }}', '扣件抗滑承载力设计值（kN）', '{{ wt.slip_resistance_kn }}']
+R3: ['连墙件截面面积Ac(mm2)', '{{ wt.area_c_mm2 }}', '连墙件截面回转半径i(mm)', '{{ vs.radius_of_gyration_mm }}']
+R4: ['连墙件抗压强度设计值[f](N/mm2)', '{{ wt.allowable_stress_n_mm2 }}', '连墙件与脚手架扣件连接方式', '{{ cn.fastener_connection_type }}']
+R5: ['螺栓直径d(mm)', '{{ req.wall_tie_params.bolt_diameter_d_mm }}', '螺栓抗拉强度设计值[ft](N/mm2)', '{{ req.wall_tie_params.bolt_tensile_strength_n_mm2 }}']
+R6: ['混凝土与螺栓表面的容许粘结强度τb(N/mm2)', '{{ req.wall_tie_params.allowable_bond_strength_n_mm2 }}', '混凝土强度等级', '{{ req.wall_tie_params.concrete_grade }}']
+TABLE 7
+R0: ['可调底座承载力设计值[N](kN)', '{{ fd.adjustable_base_limit_kn }}']
+
+VARS
+"%.1f" % vs.hs_m
+"%.1f" % vs.lambda_val
+"%.1f" % wt.fc_n_mm2
+"%.2f" % (req.wall_tie_params.calculation_length_l0_mm / vs.radius_of_gyration_mm)
+"%.2f" % hl.deflection_limit_mm
+"%.2f" % hl.sigma_n_mm2
+"%.2f" % vs.axial_force_design_kn
+"%.3f" % </w:t></w:r><w:r w:rsidR="00B959F3" w:rsidRPr="00B959F3"><w:rPr><w:rFonts w:ascii="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/><w:color w:val="000000"/><w:sz w:val="24"/></w:rPr><w:lastRenderedPageBreak/><w:t>vs.ng1k4_kn
+"%.3f" % </w:t></w:r><w:r w:rsidR="00B959F3" w:rsidRPr="00B959F3"><w:rPr><w:rFonts w:ascii="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/><w:color w:val="000000"/><w:sz w:val="24"/></w:rPr><w:lastRenderedPageBreak/><w:t>vs.nq1k_kn
+"%.3f" % </w:t></w:r><w:r w:rsidR="00B959F3" w:rsidRPr="00B959F3"><w:rPr><w:rFonts w:ascii="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/><w:color w:val="000000"/><w:sz w:val="24"/></w:rPr><w:lastRenderedPageBreak/><w:t>wt.nlw_kn
+"%.3f" % </w:t></w:r><w:r w:rsidRPr="0015785C"><w:rPr><w:rFonts w:ascii="Times New Roman" w:eastAsia="Times New Roman" w:hAnsi="Times New Roman"/><w:color w:val="000000"/><w:sz w:val="24"/><w:lang w:val="en-GB"/></w:rPr><w:lastRenderedPageBreak/><w:t>vs.sigma_n_mm2
+"%.3f" % fd.reaction_base_kn
+"%.3f" % hl.hook_reaction_design_k
+"%.3f" % hl.line_load_design_kn_m
+"%.3f" % hl.max_bending_moment_kn_m
+"%.3f" % hl.max_deflection_mm
+"%.3f" % hl.node_shear_design_kn
+"%.3f" % hl.self_weight_design_kn_m
+"%.3f" % vs.axial_force_design_kn
+"%.3f" % vs.effective_length_m
+"%.3f" % vs.n1_kn
+"%.3f" % vs.n2_kn
+"%.3f" % vs.ng1k1_kn
+"%.3f" % vs.ng1k2_inner_kn
+"%.3f" % vs.ng1k3_kn
+"%.3f" % vs.ng1k4_kn
+"%.3f" % vs.ng1k_inner_kn
+"%.3f" % vs.ng1k_outer_kn
+"%.3f" % vs.ng2k2_kn
+"%.3f" % vs.ng2k3_kn
+"%.3f" % vs.ng2k_inner_kn
+"%.3f" % vs.ng2k_outer_kn
+"%.3f" % vs.nq1k_kn
+"%.3f" % vs.phi
+"%.3f" % vs.sigma_n_mm2
+"%.3f" % vs.wind_bending_moment_kn_m
+"%.3f" % vs.wk_kn_m2
+"%.3f" % wt.bolt_tension_sigma_n_mm2
+"%.3f" % wt.fcc_n_mm2
+"%.3f" % wt.local_bearing_capacity_n
+"%.3f" % wt.nlw_kn
+"%.3f" % wt.nt_kn
+"%.3f" % wt.required_anchor_depth_mm
+"%.3f" % wt.sigma_n_mm2
+"%.3f" % wt.windward_area_aw_m2
+"%.3f" % wt.wk_kn_m2
+(wt.nt_kn * 1000) | int
+5 * req.wall_tie_params.bolt_diameter_d_mm
+cn.connection_type
+cn.fastener_connection_type
+cn.plank_type
+cn.safety_level
+cn.section_type
+fd.adjustable_base_limit_kn
+hl.allowable_stress_n_mm2
+hl.node_shear_limit_kn
+img_deflection
+img_force
+img_moment
+req.basic_info.importance_factor
+req.basic_info.scaffold_clearance_m
+req.geometry_params.diagonal_brace_layout
+req.geometry_params.erection_height_hs_m
+req.geometry_params.guardrail_top_height_h1_m
+req.geometry_params.inner_pole_to_wall_m
+req.geometry_params.longitudinal_spacing_la_m
+req.geometry_params.row_count
+req.geometry_params.step_height_h_m
+req.geometry_params.sweeping_rod_height_h2_mm
+req.geometry_params.transverse_spacing_lb_m
+req.material_load_params.basic_wind_pressure_w0_kn_m2
+req.material_load_params.brace_material_form
+req.material_load_params.brace_model
+req.material_load_params.brace_tube_spec
+req.material_load_params.construction_live_load_kn_m2
+req.material_load_params.hook_count_per_side_j
+req.material_load_params.hook_spacing_s_mm
+req.material_load_params.ledger_model
+req.material_load_params.ledger_tube_spec
+req.material_load_params.plank_laying_method
+req.material_load_params.plank_self_weight_kn_m2
+req.material_load_params.pole_model
+req.material_load_params.pole_tube_spec
+req.material_load_params.safety_net_self_weight_kn_m2
+req.material_load_params.single_plank_width_b_mm
+req.material_load_params.single_plank_width_b_mm / 1000
+req.material_load_params.toe_board_laying_method
+req.material_load_params.toe_board_self_weight_kn_m
+req.material_load_params.toe_board_type
+req.material_load_params.wind_shape_factor
+req.material_load_params.working_layer_count
+req.wall_tie_params.allowable_bond_strength_n_mm2
+req.wall_tie_params.bolt_diameter_d_mm
+req.wall_tie_params.bolt_tensile_strength_n_mm2
+req.wall_tie_params.calculation_length_l0_mm
+req.wall_tie_params.concrete_grade
+req.wall_tie_params.model
+vs.allowable_stress_n_mm2
+vs.area_mm2
+vs.h_m
+vs.la_m
+vs.m1_kn
+vs.m2_kn
+vs.m3_kn
+vs.m4_kn
+vs.mu
+vs.mu_desc
+vs.muz
+vs.phi
+vs.radius_of_gyration_mm
+vs.step_count_n
+vs.w_section_mm3
+wt.allowable_stress_n_mm2
+wt.area_c_mm2
+wt.muz
+wt.phi
+wt.slip_resistance_kn
+wt.tie_member_layout_cn
+
+JINJA_TAGS
+{% if hl.sigma_n_mm2 &lt;= hl.allowable_stress_n_mm2 %}
+{% else %}
+{% endif %}
+{% if hl.max_deflection_mm &lt;= hl.deflection_limit_mm %}
+{% else %}
+{% endif %}
+{% if hl.node_shear_design_kn &lt;= hl.node_shear_limit_kn %}
+{% else %}
+{% endif %}
+{% if vs.lambda_val &lt;= vs.lambda_limit %}
+{% else %}
+{% endif %}
+{% if vs.sigma_n_mm2 &lt;= vs.allowable_stress_n_mm2 %}
+{% else %}
+{% endif %}
+{% if wt.sigma_n_mm2 &lt;= wt.allowable_stress_n_mm2 %}
+{% else %}
+{% endif %}
+{% if wt.bolt_tension_sigma_n_mm2 &lt;= req.wall_tie_params.bolt_tensile_strength_n_mm2 %}
+{% else %}
+{% endif %}
+{% if wt.nt_kn * 1000 &lt;= wt.local_bearing_capacity_n %}
+{% else %}
+{% endif %}
+{% if wt.nt_kn &lt;= wt.slip_resistance_kn %}
+{% else %}
+{% endif %}
+{% if fd.reaction_base_kn &lt;= fd.adjustable_base_limit_kn %}
+{% else %}
+{% endif %}

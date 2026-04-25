@@ -37,25 +37,19 @@ const props = defineProps({
 })
 
 const pxPerMeter = 100
+
 const tieLayoutLabelMap = {
   ONE_STEP_TWO_SPAN: '一步两跨',
   TWO_STEP_TWO_SPAN: '两步两跨',
-  TWO_STEP_THREE_SPAN: '两步三跨'
+  TWO_STEP_THREE_SPAN: '两步三跨',
+  THREE_STEP_THREE_SPAN: '三步三跨'
 }
-const braceIntervalMap = {
-  每隔1跨一设: 1,
-  隔1布1: 1,
-  每隔2跨一设: 3,
-  隔2布1: 3,
-  每隔3跨一设: 4,
-  隔3布1: 4,
-  每隔4跨一设: 5,
-  隔4布1: 5
-}
+
 const tieSpanIntervalMap = {
   ONE_STEP_TWO_SPAN: 2,
   TWO_STEP_TWO_SPAN: 2,
-  TWO_STEP_THREE_SPAN: 3
+  TWO_STEP_THREE_SPAN: 3,
+  THREE_STEP_THREE_SPAN: 3
 }
 
 const instance = getCurrentInstance()
@@ -82,31 +76,44 @@ function pointsToString(points) {
   return points.map(([x, y]) => `${x},${y}`).join(' ')
 }
 
-function createHorizontalBreakLine(x1, x2, y, direction) {
-  const mid = (x1 + x2) / 2
-  const peakY = direction === 'up' ? y - 14 : y + 14
+function generateTopBreak(x1, x2, y) {
+  const xMid = (x1 + x2) / 2
   return pointsToString([
     [x1, y],
     [x1 + 40, y],
-    [mid, peakY],
-    [mid + 20, y],
+    [xMid - 5, y - 6],
+    [xMid + 5, y],
     [x2, y]
   ])
 }
 
-function createVerticalBreakLine(x, y1, y2) {
-  const midY = (y1 + y2) / 2
+function generateBottomBreak(x1, x2, y) {
+  const xMid = (x1 + x2) / 2
+  return pointsToString([
+    [x1, y],
+    [x1 + 40, y],
+    [xMid - 5, y + 6],
+    [xMid + 5, y],
+    [x2, y]
+  ])
+}
+
+function generateRightBreak(x, y1, y2) {
+  const yMid = (y1 + y2) / 2
   return pointsToString([
     [x, y1],
-    [x, midY - 10],
-    [x + 14, midY],
-    [x, midY + 10],
+    [x, yMid - 5],
+    [x + 6, yMid],
+    [x, yMid + 5],
     [x, y2]
   ])
 }
 
 const wallPatternId = computed(() => `wall-hatch-${instanceId}-${props.type}`)
-const tieLayoutLabel = computed(() => tieLayoutLabelMap[props.tieMemberLayout] || props.tieMemberLayout || '一步两跨')
+
+const tieLayoutLabel = computed(
+  () => tieLayoutLabelMap[props.tieMemberLayout] || props.tieMemberLayout || '一步两跨'
+)
 
 const sectionData = computed(() => {
   const wallFaceX = 50
@@ -124,7 +131,6 @@ const sectionData = computed(() => {
   const bottomDimY = breakBotY + 28
   const wallGapDimY = breakBotY + 54
   const stepDimX = outerX + 34
-  const heightDimX = outerX + 72
   const labelX = outerX + 44
   const labelY = tieY - 16
 
@@ -139,8 +145,8 @@ const sectionData = computed(() => {
     wallFaceX,
     breakTopY,
     breakBotY,
-    breakTopPoints: createHorizontalBreakLine(breakX1, breakX2, breakTopY, 'up'),
-    breakBottomPoints: createHorizontalBreakLine(breakX1, breakX2, breakBotY, 'down'),
+    breakTopPoints: generateTopBreak(breakX1, breakX2, breakTopY),
+    breakBottomPoints: generateBottomBreak(breakX1, breakX2, breakBotY),
     poles: [
       { key: 'inner', x: innerX },
       { key: 'outer', x: outerX }
@@ -200,14 +206,6 @@ const sectionData = computed(() => {
       labelY: (nodeYs[0] + nodeYs[1]) / 2 + 4,
       text: toMmLabel(props.h, 'h')
     },
-    hsDimension: {
-      x: heightDimX,
-      y1: breakTopY,
-      y2: breakBotY,
-      labelX: heightDimX + 8,
-      labelY: (breakTopY + breakBotY) / 2 + 4,
-      text: toMmLabel(props.hs, 'hs')
-    },
     lbDimension: {
       x1: innerX,
       x2: outerX,
@@ -239,11 +237,22 @@ const elevationData = computed(() => {
   const breakTopY = startY - 20
   const breakBotY = startY + displaySteps * stepPx + 20
   const lastPoleX = poleXs[poleXs.length - 1]
-  const braceInterval = braceIntervalMap[props.diagonalBrace] || 4
+  const intervalMap = {
+    满设: 1,
+    隔1布1: 2,
+    每隔1跨一设: 2,
+    隔2布1: 3,
+    每隔2跨一设: 3,
+    隔3布1: 4,
+    每隔3跨一设: 4,
+    隔4布1: 5,
+    每隔4跨一设: 5
+  }
+  const interval = intervalMap[props.diagonalBrace] || 4
   const braceSpans = []
 
   for (let index = 0; index < displaySpans; index += 1) {
-    if (index % braceInterval === 0) {
+    if (index % interval === 0) {
       braceSpans.push(index)
     }
   }
@@ -260,8 +269,8 @@ const elevationData = computed(() => {
 
   return {
     viewBox: `0 0 ${startX + displaySpans * spanPx + 120} ${breakBotY + 60}`,
-    breakTopPoints: createHorizontalBreakLine(startX - 24, lastPoleX + 24, breakTopY, 'up'),
-    breakBottomPoints: createHorizontalBreakLine(startX - 24, lastPoleX + 24, breakBotY, 'down'),
+    breakTopPoints: generateTopBreak(startX - 24, lastPoleX + 24, breakTopY),
+    breakBottomPoints: generateBottomBreak(startX - 24, lastPoleX + 24, breakBotY),
     breakTopY,
     breakBotY,
     poles: poleXs.map((x, index) => ({ key: index, x })),
@@ -328,8 +337,10 @@ const planData = computed(() => {
       height: wallFaceY - 18
     },
     wallFaceY,
+    innerY,
+    outerY,
     breakX,
-    breakPoints: createVerticalBreakLine(breakX, 18, outerY + 30),
+    breakPoints: generateRightBreak(breakX, 18, outerY + 30),
     poleXs,
     longitudinalRods: [
       { key: 'inner-top', y: innerY - 3 },
@@ -418,7 +429,13 @@ const planData = computed(() => {
     preserveAspectRatio="xMidYMid meet"
   >
     <defs>
-      <pattern :id="wallPatternId" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <pattern
+        :id="wallPatternId"
+        width="8"
+        height="8"
+        patternUnits="userSpaceOnUse"
+        patternTransform="rotate(45)"
+      >
         <line x1="0" y1="0" x2="0" y2="8" stroke="#d2d2d2" stroke-width="2" />
       </pattern>
     </defs>
@@ -455,6 +472,7 @@ const planData = computed(() => {
       stroke-width="2.2"
       stroke-linejoin="round"
     />
+
     <template v-for="pole in sectionData.poles" :key="pole.key">
       <line
         :x1="pole.x - 3"
@@ -473,6 +491,7 @@ const planData = computed(() => {
         stroke-width="2"
       />
     </template>
+
     <rect
       v-for="node in sectionData.nodeBlocks"
       :key="node.key"
@@ -483,6 +502,7 @@ const planData = computed(() => {
       rx="1.5"
       fill="#444444"
     />
+
     <rect
       v-for="ledger in sectionData.ledgers"
       :key="ledger.key"
@@ -493,6 +513,7 @@ const planData = computed(() => {
       rx="2"
       fill="#4a8fc1"
     />
+
     <rect
       :x="sectionData.tieMember.anchor.x"
       :y="sectionData.tieMember.anchor.y"
@@ -539,139 +560,108 @@ const planData = computed(() => {
       连墙件
     </text>
 
-    <line
-      :x1="sectionData.hDimension.x"
-      :x2="sectionData.hDimension.x"
-      :y1="sectionData.hDimension.y1"
-      :y2="sectionData.hDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.hDimension.x - 5"
-      :x2="sectionData.hDimension.x + 5"
-      :y1="sectionData.hDimension.y1"
-      :y2="sectionData.hDimension.y1"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.hDimension.x - 5"
-      :x2="sectionData.hDimension.x + 5"
-      :y1="sectionData.hDimension.y2"
-      :y2="sectionData.hDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="sectionData.hDimension.labelX"
-      :y="sectionData.hDimension.labelY"
-      fill="#444444"
-      font-size="11"
-    >
-      {{ sectionData.hDimension.text }}
-    </text>
+    <g class="dimensions">
+      <line
+        :x1="sectionData.hDimension.x"
+        :x2="sectionData.hDimension.x"
+        :y1="sectionData.hDimension.y1"
+        :y2="sectionData.hDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="sectionData.hDimension.x - 5"
+        :x2="sectionData.hDimension.x + 5"
+        :y1="sectionData.hDimension.y1"
+        :y2="sectionData.hDimension.y1"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="sectionData.hDimension.x - 5"
+        :x2="sectionData.hDimension.x + 5"
+        :y1="sectionData.hDimension.y2"
+        :y2="sectionData.hDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="sectionData.hDimension.labelX"
+        :y="sectionData.hDimension.labelY"
+        fill="#444444"
+        font-size="11"
+      >
+        {{ sectionData.hDimension.text }}
+      </text>
 
-    <line
-      :x1="sectionData.hsDimension.x"
-      :x2="sectionData.hsDimension.x"
-      :y1="sectionData.hsDimension.y1"
-      :y2="sectionData.hsDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.hsDimension.x - 5"
-      :x2="sectionData.hsDimension.x + 5"
-      :y1="sectionData.hsDimension.y1"
-      :y2="sectionData.hsDimension.y1"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.hsDimension.x - 5"
-      :x2="sectionData.hsDimension.x + 5"
-      :y1="sectionData.hsDimension.y2"
-      :y2="sectionData.hsDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="sectionData.hsDimension.labelX"
-      :y="sectionData.hsDimension.labelY"
-      fill="#444444"
-      font-size="11"
-    >
-      {{ sectionData.hsDimension.text }}
-    </text>
+      <line
+        :x1="sectionData.lbDimension.x1"
+        :x2="sectionData.lbDimension.x2"
+        :y1="sectionData.lbDimension.y"
+        :y2="sectionData.lbDimension.y"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="sectionData.lbDimension.x1"
+        :x2="sectionData.lbDimension.x1"
+        :y1="sectionData.lbDimension.y - 5"
+        :y2="sectionData.lbDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="sectionData.lbDimension.x2"
+        :x2="sectionData.lbDimension.x2"
+        :y1="sectionData.lbDimension.y - 5"
+        :y2="sectionData.lbDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="sectionData.lbDimension.labelX"
+        :y="sectionData.lbDimension.labelY"
+        fill="#444444"
+        font-size="11"
+        text-anchor="middle"
+      >
+        {{ sectionData.lbDimension.text }}
+      </text>
 
-    <line
-      :x1="sectionData.lbDimension.x1"
-      :x2="sectionData.lbDimension.x2"
-      :y1="sectionData.lbDimension.y"
-      :y2="sectionData.lbDimension.y"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.lbDimension.x1"
-      :x2="sectionData.lbDimension.x1"
-      :y1="sectionData.lbDimension.y - 5"
-      :y2="sectionData.lbDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.lbDimension.x2"
-      :x2="sectionData.lbDimension.x2"
-      :y1="sectionData.lbDimension.y - 5"
-      :y2="sectionData.lbDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="sectionData.lbDimension.labelX"
-      :y="sectionData.lbDimension.labelY"
-      fill="#444444"
-      font-size="11"
-      text-anchor="middle"
-    >
-      {{ sectionData.lbDimension.text }}
-    </text>
-
-    <line
-      :x1="sectionData.wallGapDimension.x1"
-      :x2="sectionData.wallGapDimension.x2"
-      :y1="sectionData.wallGapDimension.y"
-      :y2="sectionData.wallGapDimension.y"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.wallGapDimension.x1"
-      :x2="sectionData.wallGapDimension.x1"
-      :y1="sectionData.wallGapDimension.y - 5"
-      :y2="sectionData.wallGapDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="sectionData.wallGapDimension.x2"
-      :x2="sectionData.wallGapDimension.x2"
-      :y1="sectionData.wallGapDimension.y - 5"
-      :y2="sectionData.wallGapDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="sectionData.wallGapDimension.labelX"
-      :y="sectionData.wallGapDimension.labelY"
-      fill="#444444"
-      font-size="11"
-      text-anchor="middle"
-    >
-      {{ sectionData.wallGapDimension.text }}
-    </text>
+      <line
+        :x1="sectionData.wallGapDimension.x1"
+        :x2="sectionData.wallGapDimension.x2"
+        :y1="sectionData.wallGapDimension.y"
+        :y2="sectionData.wallGapDimension.y"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="sectionData.wallGapDimension.x1"
+        :x2="sectionData.wallGapDimension.x1"
+        :y1="sectionData.wallGapDimension.y - 5"
+        :y2="sectionData.wallGapDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="sectionData.wallGapDimension.x2"
+        :x2="sectionData.wallGapDimension.x2"
+        :y1="sectionData.wallGapDimension.y - 5"
+        :y2="sectionData.wallGapDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="sectionData.wallGapDimension.labelX"
+        :y="sectionData.wallGapDimension.labelY"
+        fill="#444444"
+        font-size="11"
+        text-anchor="middle"
+      >
+        {{ sectionData.wallGapDimension.text }}
+      </text>
+    </g>
   </svg>
 
   <svg
@@ -696,6 +686,7 @@ const planData = computed(() => {
       stroke-width="2.2"
       stroke-linejoin="round"
     />
+
     <line
       v-for="pole in elevationData.poles"
       :key="`pole-${pole.key}`"
@@ -706,6 +697,7 @@ const planData = computed(() => {
       stroke="#222222"
       stroke-width="2.5"
     />
+
     <line
       v-for="level in elevationData.levels"
       :key="`level-${level.key}`"
@@ -716,6 +708,7 @@ const planData = computed(() => {
       stroke="#888888"
       stroke-width="1"
     />
+
     <line
       v-for="brace in elevationData.braces"
       :key="brace.key"
@@ -727,6 +720,7 @@ const planData = computed(() => {
       stroke-width="2"
       stroke-linecap="round"
     />
+
     <rect
       v-for="node in elevationData.nodes"
       :key="node.key"
@@ -738,72 +732,74 @@ const planData = computed(() => {
       rx="1.5"
     />
 
-    <line
-      :x1="elevationData.hDimension.x"
-      :x2="elevationData.hDimension.x"
-      :y1="elevationData.hDimension.y1"
-      :y2="elevationData.hDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="elevationData.hDimension.x - 5"
-      :x2="elevationData.hDimension.x + 5"
-      :y1="elevationData.hDimension.y1"
-      :y2="elevationData.hDimension.y1"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="elevationData.hDimension.x - 5"
-      :x2="elevationData.hDimension.x + 5"
-      :y1="elevationData.hDimension.y2"
-      :y2="elevationData.hDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="elevationData.hDimension.labelX"
-      :y="elevationData.hDimension.labelY"
-      fill="#444444"
-      font-size="11"
-    >
-      {{ elevationData.hDimension.text }}
-    </text>
+    <g class="dimensions">
+      <line
+        :x1="elevationData.hDimension.x"
+        :x2="elevationData.hDimension.x"
+        :y1="elevationData.hDimension.y1"
+        :y2="elevationData.hDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="elevationData.hDimension.x - 5"
+        :x2="elevationData.hDimension.x + 5"
+        :y1="elevationData.hDimension.y1"
+        :y2="elevationData.hDimension.y1"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="elevationData.hDimension.x - 5"
+        :x2="elevationData.hDimension.x + 5"
+        :y1="elevationData.hDimension.y2"
+        :y2="elevationData.hDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="elevationData.hDimension.labelX"
+        :y="elevationData.hDimension.labelY"
+        fill="#444444"
+        font-size="11"
+      >
+        {{ elevationData.hDimension.text }}
+      </text>
 
-    <line
-      :x1="elevationData.laDimension.x1"
-      :x2="elevationData.laDimension.x2"
-      :y1="elevationData.laDimension.y"
-      :y2="elevationData.laDimension.y"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="elevationData.laDimension.x1"
-      :x2="elevationData.laDimension.x1"
-      :y1="elevationData.laDimension.y - 5"
-      :y2="elevationData.laDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="elevationData.laDimension.x2"
-      :x2="elevationData.laDimension.x2"
-      :y1="elevationData.laDimension.y - 5"
-      :y2="elevationData.laDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="elevationData.laDimension.labelX"
-      :y="elevationData.laDimension.labelY"
-      fill="#444444"
-      font-size="11"
-      text-anchor="middle"
-    >
-      {{ elevationData.laDimension.text }}
-    </text>
+      <line
+        :x1="elevationData.laDimension.x1"
+        :x2="elevationData.laDimension.x2"
+        :y1="elevationData.laDimension.y"
+        :y2="elevationData.laDimension.y"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="elevationData.laDimension.x1"
+        :x2="elevationData.laDimension.x1"
+        :y1="elevationData.laDimension.y - 5"
+        :y2="elevationData.laDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="elevationData.laDimension.x2"
+        :x2="elevationData.laDimension.x2"
+        :y1="elevationData.laDimension.y - 5"
+        :y2="elevationData.laDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="elevationData.laDimension.labelX"
+        :y="elevationData.laDimension.labelY"
+        fill="#444444"
+        font-size="11"
+        text-anchor="middle"
+      >
+        {{ elevationData.laDimension.text }}
+      </text>
+    </g>
   </svg>
 
   <svg
@@ -815,7 +811,13 @@ const planData = computed(() => {
     preserveAspectRatio="xMidYMid meet"
   >
     <defs>
-      <pattern :id="wallPatternId" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <pattern
+        :id="wallPatternId"
+        width="8"
+        height="8"
+        patternUnits="userSpaceOnUse"
+        patternTransform="rotate(45)"
+      >
         <line x1="0" y1="0" x2="0" y2="8" stroke="#d2d2d2" stroke-width="2" />
       </pattern>
     </defs>
@@ -845,17 +847,20 @@ const planData = computed(() => {
       stroke-width="2.2"
       stroke-linejoin="round"
     />
-    <line
-      v-for="rod in planData.longitudinalRods"
-      :key="rod.key"
-      x1="18"
-      :x2="planData.breakX"
-      :y1="rod.y"
-      :y2="rod.y"
-      stroke="#cc2222"
-      stroke-width="2.2"
-      stroke-linecap="round"
-    />
+
+    <g class="longitudinal-ledgers-plan" stroke="#222">
+      <line
+        v-for="rod in planData.longitudinalRods"
+        :key="rod.key"
+        x1="18"
+        :x2="planData.breakX"
+        :y1="rod.y"
+        :y2="rod.y"
+        stroke-width="2.2"
+        stroke-linecap="round"
+      />
+    </g>
+
     <line
       v-for="ledger in planData.crossLedgers"
       :key="ledger.key"
@@ -867,6 +872,7 @@ const planData = computed(() => {
       stroke-width="3.5"
       stroke-linecap="round"
     />
+
     <rect
       v-for="pole in planData.poles"
       :key="pole.key"
@@ -877,40 +883,46 @@ const planData = computed(() => {
       fill="#1a5fa8"
       rx="1.5"
     />
-    <template v-for="tie in planData.tieMembers" :key="tie.key">
-      <rect
-        :x="tie.anchor.x"
-        :y="tie.anchor.y"
-        :width="tie.anchor.width"
-        :height="tie.anchor.height"
-        fill="#cc2222"
-        rx="1.5"
-      />
-      <line
-        :x1="tie.x"
-        :x2="tie.x"
-        :y1="planData.wallFaceY"
-        :y2="planData.longitudinalRods[3].y"
-        stroke="#cc2222"
-        stroke-width="2.5"
-      />
-      <circle
-        :cx="tie.x"
-        :cy="planData.longitudinalRods[0].y + 3"
-        r="7"
-        fill="#ffffff"
-        stroke="#cc2222"
-        stroke-width="2"
-      />
-      <circle
-        :cx="tie.x"
-        :cy="planData.longitudinalRods[2].y + 3"
-        r="7"
-        fill="#ffffff"
-        stroke="#cc2222"
-        stroke-width="2"
-      />
-    </template>
+
+    <g class="wall-tie-plan">
+      <template v-for="tie in planData.tieMembers" :key="tie.key">
+        <rect
+          :x="tie.anchor.x"
+          :y="tie.anchor.y"
+          :width="tie.anchor.width"
+          :height="tie.anchor.height"
+          fill="#cc2222"
+          rx="1.5"
+        />
+        <line
+          :x1="tie.x"
+          :x2="tie.x"
+          :y1="planData.wallFaceY"
+          :y2="planData.longitudinalRods[3].y"
+          stroke="#cc2222"
+          stroke-width="2.5"
+        />
+        <rect
+          :x="tie.x - 6"
+          :y="planData.innerY - 6"
+          width="12"
+          height="12"
+          fill="none"
+          stroke="#cc2222"
+          stroke-width="2"
+        />
+        <rect
+          :x="tie.x - 6"
+          :y="planData.outerY - 6"
+          width="12"
+          height="12"
+          fill="none"
+          stroke="#cc2222"
+          stroke-width="2"
+        />
+      </template>
+    </g>
+
     <polyline
       :points="planData.callout.linePoints"
       fill="none"
@@ -929,105 +941,107 @@ const planData = computed(() => {
       {{ planData.callout.text }}
     </text>
 
-    <line
-      :x1="planData.laDimension.x1"
-      :x2="planData.laDimension.x2"
-      :y1="planData.laDimension.y"
-      :y2="planData.laDimension.y"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="planData.laDimension.x1"
-      :x2="planData.laDimension.x1"
-      :y1="planData.laDimension.y - 5"
-      :y2="planData.laDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="planData.laDimension.x2"
-      :x2="planData.laDimension.x2"
-      :y1="planData.laDimension.y - 5"
-      :y2="planData.laDimension.y + 5"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="planData.laDimension.labelX"
-      :y="planData.laDimension.labelY"
-      fill="#444444"
-      font-size="11"
-      text-anchor="middle"
-    >
-      {{ planData.laDimension.text }}
-    </text>
+    <g class="dimensions">
+      <line
+        :x1="planData.laDimension.x1"
+        :x2="planData.laDimension.x2"
+        :y1="planData.laDimension.y"
+        :y2="planData.laDimension.y"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="planData.laDimension.x1"
+        :x2="planData.laDimension.x1"
+        :y1="planData.laDimension.y - 5"
+        :y2="planData.laDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="planData.laDimension.x2"
+        :x2="planData.laDimension.x2"
+        :y1="planData.laDimension.y - 5"
+        :y2="planData.laDimension.y + 5"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="planData.laDimension.labelX"
+        :y="planData.laDimension.labelY"
+        fill="#444444"
+        font-size="11"
+        text-anchor="middle"
+      >
+        {{ planData.laDimension.text }}
+      </text>
 
-    <line
-      :x1="planData.lbDimension.x"
-      :x2="planData.lbDimension.x"
-      :y1="planData.lbDimension.y1"
-      :y2="planData.lbDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="planData.lbDimension.x - 5"
-      :x2="planData.lbDimension.x + 5"
-      :y1="planData.lbDimension.y1"
-      :y2="planData.lbDimension.y1"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="planData.lbDimension.x - 5"
-      :x2="planData.lbDimension.x + 5"
-      :y1="planData.lbDimension.y2"
-      :y2="planData.lbDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="planData.lbDimension.labelX"
-      :y="planData.lbDimension.labelY"
-      fill="#444444"
-      font-size="11"
-    >
-      {{ planData.lbDimension.text }}
-    </text>
+      <line
+        :x1="planData.lbDimension.x"
+        :x2="planData.lbDimension.x"
+        :y1="planData.lbDimension.y1"
+        :y2="planData.lbDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="planData.lbDimension.x - 5"
+        :x2="planData.lbDimension.x + 5"
+        :y1="planData.lbDimension.y1"
+        :y2="planData.lbDimension.y1"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="planData.lbDimension.x - 5"
+        :x2="planData.lbDimension.x + 5"
+        :y1="planData.lbDimension.y2"
+        :y2="planData.lbDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="planData.lbDimension.labelX"
+        :y="planData.lbDimension.labelY"
+        fill="#444444"
+        font-size="11"
+      >
+        {{ planData.lbDimension.text }}
+      </text>
 
-    <line
-      :x1="planData.wallGapDimension.x"
-      :x2="planData.wallGapDimension.x"
-      :y1="planData.wallGapDimension.y1"
-      :y2="planData.wallGapDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="planData.wallGapDimension.x - 5"
-      :x2="planData.wallGapDimension.x + 5"
-      :y1="planData.wallGapDimension.y1"
-      :y2="planData.wallGapDimension.y1"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <line
-      :x1="planData.wallGapDimension.x - 5"
-      :x2="planData.wallGapDimension.x + 5"
-      :y1="planData.wallGapDimension.y2"
-      :y2="planData.wallGapDimension.y2"
-      stroke="#666666"
-      stroke-width="1.4"
-    />
-    <text
-      :x="planData.wallGapDimension.labelX"
-      :y="planData.wallGapDimension.labelY"
-      fill="#444444"
-      font-size="11"
-    >
-      {{ planData.wallGapDimension.text }}
-    </text>
+      <line
+        :x1="planData.wallGapDimension.x"
+        :x2="planData.wallGapDimension.x"
+        :y1="planData.wallGapDimension.y1"
+        :y2="planData.wallGapDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="planData.wallGapDimension.x - 5"
+        :x2="planData.wallGapDimension.x + 5"
+        :y1="planData.wallGapDimension.y1"
+        :y2="planData.wallGapDimension.y1"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <line
+        :x1="planData.wallGapDimension.x - 5"
+        :x2="planData.wallGapDimension.x + 5"
+        :y1="planData.wallGapDimension.y2"
+        :y2="planData.wallGapDimension.y2"
+        stroke="#666666"
+        stroke-width="1.4"
+      />
+      <text
+        :x="planData.wallGapDimension.labelX"
+        :y="planData.wallGapDimension.labelY"
+        fill="#444444"
+        font-size="11"
+      >
+        {{ planData.wallGapDimension.text }}
+      </text>
+    </g>
   </svg>
 </template>
 

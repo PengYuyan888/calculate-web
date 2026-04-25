@@ -1,3 +1,20 @@
+<script setup>
+import { useRouter } from 'vue-router'
+import { useAuth } from '../composables/useAuth.js'
+
+const router = useRouter()
+const { isLoggedIn, currentUsername, logout } = useAuth()
+
+function goLogin() {
+  router.push('/login')
+}
+
+function handleLogout() {
+  logout()
+  router.push('/login')
+}
+</script>
+
 <template>
   <header class="nav-bar">
     <div class="nav-bar__brand">
@@ -7,11 +24,17 @@
 
     <div class="nav-bar__actions">
       <nav class="nav-bar__links">
-        <a class="is-active" href="javascript:void(0)">计算</a>
-        <a href="javascript:void(0)">历史</a>
-        <a href="javascript:void(0)">规范</a>
+        <router-link to="/" active-class="is-active">计算</router-link>
+        <router-link to="/history" active-class="is-active">历史</router-link>
+        <router-link to="/specs" active-class="is-active">规范</router-link>
       </nav>
-      <button class="nav-bar__login" type="button">登录</button>
+      <button v-if="!isLoggedIn" class="nav-bar__login" type="button" @click="goLogin">
+        登录
+      </button>
+      <div v-else class="nav-bar__user">
+        <span class="nav-bar__username">你好，{{ currentUsername }}</span>
+        <button class="nav-bar__login" type="button" @click="handleLogout">退出</button>
+      </div>
     </div>
   </header>
 </template>
@@ -79,5 +102,16 @@
   color: #ffffff;
   font-size: 12px;
   cursor: pointer;
+}
+
+.nav-bar__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-bar__username {
+  color: #ffffff;
+  font-size: 12px;
 }
 </style>

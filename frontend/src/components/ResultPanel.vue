@@ -1,5 +1,10 @@
 <script setup>
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+import { useAuth } from '../composables/useAuth.js'
+
+const router = useRouter()
+const { isLoggedIn } = useAuth()
 
 const props = defineProps({
   loading: {
@@ -24,7 +29,12 @@ const summary = computed(() => props.result?.result_summary ?? null)
 const issueList = computed(() => (Array.isArray(props.result?.issues) ? props.result.issues : []))
 const maxUtilization = computed(() => Number(summary.value?.max_utilization_ratio ?? 0))
 const hasFailedResult = computed(() => props.result?.status === 'failed')
-const showFailureDetails = computed(() => Boolean(props.requestError) || hasFailedResult.value)
+const allPassed = computed(() => props.result?.status === 'success')
+const showFailureDetails = computed(
+  () =>
+    Boolean(props.requestError) ||
+    (!allPassed.value && (hasFailedResult.value || issueList.value.length > 0))
+)
 const failureTitle = computed(() => (props.requestError ? '请求失败' : '验算未通过'))
 const failureDescription = computed(() => {
   if (props.requestError) {
@@ -33,6 +43,19 @@ const failureDescription = computed(() => {
 
   return props.result?.message || '请根据错误详情调整参数后重新验算。'
 })
+
+function formatNumber(value, digits) {
+  const numeric = Number(value)
+  return Number.isFinite(numeric) ? numeric.toFixed(digits) : '--'
+}
+
+function goHistory() {
+  router.push('/history')
+}
+
+function goLogin() {
+  router.push('/login')
+}
 
 const metricCards = computed(() => [
   {
@@ -47,7 +70,7 @@ const metricCards = computed(() => [
     label: '最大应力(MPa)',
     value: summary.value ? Number(summary.value.max_stress_mpa ?? 0).toFixed(2) : '--',
     tone: '#222222',
-    note: '允许值 300.0 MPa'
+    note: `允许值 ${formatNumber(summary.value?.allowable_stress_mpa, 1)} MPa`
   },
   {
     key: 'axial',
@@ -61,7 +84,7 @@ const metricCards = computed(() => [
     label: '最大挠度(mm)',
     value: summary.value ? Number(summary.value.max_deflection_mm ?? 0).toFixed(3) : '--',
     tone: '#3B6D11',
-    note: '限值 6.0 mm'
+    note: `限值 ${formatNumber(summary.value?.deflection_limit_mm, 1)} mm`
   }
 ])
 
@@ -181,6 +204,16 @@ const statusTag = computed(() => {
               下载 Word 计算书
             </button>
           </a>
+          <div class="history-save-tip">
+            <template v-if="isLoggedIn">
+              <span>✓ 本次验算已自动保存至历史记录</span>
+              <button type="button" class="history-save-tip__link" @click="goHistory">查看历史</button>
+            </template>
+            <template v-else>
+              <span>登录后可自动保存验算历史</span>
+              <button type="button" class="history-save-tip__link" @click="goLogin">去登录</button>
+            </template>
+          </div>
         </template>
 
         <template v-else>
@@ -240,15 +273,16 @@ const statusTag = computed(() => {
 <style scoped>
 .result-panel {
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 0;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
 .metrics-row {
-  flex: 3;
+  flex: 0 0 auto;
   min-height: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr)) 120px;
@@ -349,6 +383,24 @@ const statusTag = computed(() => {
   cursor: pointer;
 }
 
+.history-save-tip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #888888;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.history-save-tip__link {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: #185fa5;
+  font-size: 10px;
+  cursor: pointer;
+}
+
 .action-skeleton {
   height: 20px;
   border-radius: 6px;
@@ -362,7 +414,7 @@ const statusTag = computed(() => {
 }
 
 .progress-row {
-  flex: 2;
+  flex: 0 0 auto;
   min-height: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -414,6 +466,11 @@ const statusTag = computed(() => {
 }
 
 .failure-panel {
+  position: static;
+  width: 100%;
+  max-height: 160px;
+  overflow-y: auto;
+  box-sizing: border-box;
   margin-top: 6px;
   padding: 10px 12px;
   border-radius: 8px;

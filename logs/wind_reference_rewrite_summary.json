@@ -1,0 +1,164 @@
+[
+  {
+    "station_name": "北京市",
+    "from": "110100",
+    "to": "110000",
+    "official_name": "北京市"
+  },
+  {
+    "station_name": "天津市",
+    "from": "120100",
+    "to": "120000",
+    "official_name": "天津市"
+  },
+  {
+    "station_name": "上海市",
+    "from": "310100",
+    "to": "310000",
+    "official_name": "上海市"
+  },
+  {
+    "station_name": "重庆市",
+    "from": "500100",
+    "to": "500000",
+    "official_name": "重庆市"
+  },
+  {
+    "station_name": "梁平",
+    "from": "500155",
+    "to": "500228",
+    "official_name": "梁平县"
+  },
+  {
+    "station_name": "长治县",
+    "from": "140400",
+    "to": "140421",
+    "official_name": "长治县"
+  },
+  {
+    "station_name": "漠河",
+    "from": "232701",
+    "to": "232723",
+    "official_name": "漠河县"
+  },
+  {
+    "station_name": "新林",
+    "from": "232763",
+    "to": "232700",
+    "official_name": "大兴安岭地区"
+  },
+  {
+    "station_name": "加格达奇",
+    "from": "232761",
+    "to": "232700",
+    "official_name": "大兴安岭地区"
+  },
+  {
+    "station_name": "嫩江",
+    "from": "231183",
+    "to": "231121",
+    "official_name": "嫩江县"
+  },
+  {
+    "station_name": "临安县天目山",
+    "from": "330112",
+    "to": "330185",
+    "official_name": "临安市"
+  },
+  {
+    "station_name": "玉环县坎门",
+    "from": "331083",
+    "to": "331021",
+    "official_name": "玉环县"
+  },
+  {
+    "station_name": "茫崖",
+    "from": "632803",
+    "to": "632800",
+    "official_name": "海西蒙古族藏族自治州"
+  },
+  {
+    "station_name": "冷湖",
+    "from": "632803",
+    "to": "632800",
+    "official_name": "海西蒙古族藏族自治州"
+  },
+  {
+    "station_name": "大柴旦",
+    "from": "632857",
+    "to": "632800",
+    "official_name": "海西蒙古族藏族自治州"
+  },
+  {
+    "station_name": "阿勒泰市",
+    "from": "654300",
+    "to": "654301",
+    "official_name": "阿勒泰市"
+  },
+  {
+    "station_name": "阿克苏市",
+    "from": "652900",
+    "to": "652901",
+    "official_name": "阿克苏市"
+  },
+  {
+    "station_name": "库车",
+    "from": "652902",
+    "to": "652923",
+    "official_name": "库车县"
+  },
+  {
+    "station_name": "儋县",
+    "from": "460400",
+    "to": "469003",
+    "official_name": "儋州市"
+  },
+  {
+    "station_name": "西沙岛",
+    "from": "460321",
+    "to": "469031",
+    "official_name": "西沙群岛"
+  },
+  {
+    "station_name": "珊瑚岛",
+    "from": "460321",
+    "to": "469031",
+    "official_name": "西沙群岛"
+  },
+  {
+    "station_name": "盘县",
+    "from": "520281",
+    "to": "520222",
+    "official_name": "盘县"
+  },
+  {
+    "station_name": "兴仁",
+    "from": "522302",
+    "to": "522322",
+    "official_name": "兴仁县"
+  },
+  {
+    "station_name": "班戈",
+    "from": "540627",
+    "to": "542428",
+    "official_name": "班戈县"
+  },
+  {
+    "station_name": "安多",
+    "from": "540624",
+    "to": "542425",
+    "official_name": "安多县"
+  },
+  {
+    "station_name": "那曲",
+    "from": "540600",
+    "to": "542400",
+    "official_name": "那曲地区"
+  },
+  {
+    "station_name": "索县",
+    "from": "540626",
+    "to": "542427",
+    "official_name": "索县"
+  }
+]

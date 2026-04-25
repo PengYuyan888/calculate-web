@@ -63,15 +63,9 @@ const stepCount = computed(() => {
         </div>
       </div>
 
-      <div class="form-row-2col">
-        <div class="field">
-          <label>架体离地高度(m)</label>
-          <input v-model.number="form.basic_info.scaffold_clearance_m" type="number" step="0.1">
-        </div>
-        <div class="field">
-          <label>计算日期</label>
-          <input v-model="form.basic_info.calculation_date" type="date">
-        </div>
+      <div class="field">
+        <label>编制日期</label>
+        <input v-model="form.basic_info.calculation_date" type="date">
       </div>
     </div>
 
@@ -141,6 +135,7 @@ const stepCount = computed(() => {
               <option value="ONE_STEP_TWO_SPAN">一步两跨</option>
               <option value="TWO_STEP_TWO_SPAN">两步两跨</option>
               <option value="TWO_STEP_THREE_SPAN">两步三跨</option>
+              <option value="THREE_STEP_THREE_SPAN">三步三跨</option>
             </select>
           </div>
         </div>

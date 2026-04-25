@@ -1,0 +1,6118 @@
+{
+  "provinces": [
+    {
+      "name": "北京市",
+      "code": "110000",
+      "cities": [
+        {
+          "name": "北京市",
+          "code": "110000",
+          "station_name": "北京市",
+          "altitude_m": 54.0,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 39.9,
+          "lng": 116.41
+        }
+      ]
+    },
+    {
+      "name": "天津市",
+      "code": "120000",
+      "cities": [
+        {
+          "name": "天津市",
+          "code": "120000",
+          "station_name": "天津市",
+          "altitude_m": 3.3,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 39.08,
+          "lng": 117.2
+        }
+      ]
+    },
+    {
+      "name": "河北省",
+      "code": "130000",
+      "cities": [
+        {
+          "name": "石家庄市",
+          "code": "130100",
+          "station_name": "石家庄市",
+          "altitude_m": 80.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 38.04,
+          "lng": 114.51
+        },
+        {
+          "name": "辛集市",
+          "code": "130181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.94,
+          "lng": 115.22
+        },
+        {
+          "name": "晋州市",
+          "code": "130183",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.03,
+          "lng": 115.04
+        },
+        {
+          "name": "新乐市",
+          "code": "130184",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.34,
+          "lng": 114.68
+        },
+        {
+          "name": "唐山市",
+          "code": "130200",
+          "station_name": "唐山市",
+          "altitude_m": 27.8,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 39.63,
+          "lng": 118.18
+        },
+        {
+          "name": "遵化市",
+          "code": "130281",
+          "station_name": "遵化",
+          "altitude_m": 54.9,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 40.19,
+          "lng": 117.97
+        },
+        {
+          "name": "迁安市",
+          "code": "130283",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.0,
+          "lng": 118.7
+        },
+        {
+          "name": "秦皇岛市",
+          "code": "130300",
+          "station_name": "秦皇岛市",
+          "altitude_m": 2.1,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 39.94,
+          "lng": 119.6
+        },
+        {
+          "name": "邯郸市",
+          "code": "130400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.63,
+          "lng": 114.54
+        },
+        {
+          "name": "武安市",
+          "code": "130481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.7,
+          "lng": 114.2
+        },
+        {
+          "name": "邢台市",
+          "code": "130500",
+          "station_name": "邢台市",
+          "altitude_m": 76.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 37.07,
+          "lng": 114.5
+        },
+        {
+          "name": "南宫市",
+          "code": "130581",
+          "station_name": "南宫市",
+          "altitude_m": 27.4,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 37.36,
+          "lng": 115.41
+        },
+        {
+          "name": "沙河市",
+          "code": "130582",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.85,
+          "lng": 114.5
+        },
+        {
+          "name": "保定市",
+          "code": "130600",
+          "station_name": "保定市",
+          "altitude_m": 17.2,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 38.87,
+          "lng": 115.46
+        },
+        {
+          "name": "涿州市",
+          "code": "130681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.49,
+          "lng": 115.97
+        },
+        {
+          "name": "定州市",
+          "code": "130682",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.52,
+          "lng": 114.99
+        },
+        {
+          "name": "安国市",
+          "code": "130683",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.42,
+          "lng": 115.33
+        },
+        {
+          "name": "高碑店市",
+          "code": "130684",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.33,
+          "lng": 115.87
+        },
+        {
+          "name": "张家口市",
+          "code": "130700",
+          "station_name": "张家口市",
+          "altitude_m": 724.2,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 40.82,
+          "lng": 114.89
+        },
+        {
+          "name": "承德市",
+          "code": "130800",
+          "station_name": "承德市",
+          "altitude_m": 377.2,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 40.95,
+          "lng": 117.96
+        },
+        {
+          "name": "沧州市",
+          "code": "130900",
+          "station_name": "沧州市",
+          "altitude_m": 9.6,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 38.3,
+          "lng": 116.84
+        },
+        {
+          "name": "泊头市",
+          "code": "130981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.16,
+          "lng": 116.57
+        },
+        {
+          "name": "任丘市",
+          "code": "130982",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.68,
+          "lng": 116.08
+        },
+        {
+          "name": "黄骅市",
+          "code": "130983",
+          "station_name": "黄骅",
+          "altitude_m": 6.6,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 38.37,
+          "lng": 117.33
+        },
+        {
+          "name": "河间市",
+          "code": "130984",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.45,
+          "lng": 116.1
+        },
+        {
+          "name": "廊坊市",
+          "code": "131000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.54,
+          "lng": 116.68
+        },
+        {
+          "name": "霸州市",
+          "code": "131081",
+          "station_name": "霸县",
+          "altitude_m": 9.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 39.13,
+          "lng": 116.39
+        },
+        {
+          "name": "三河市",
+          "code": "131082",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.97,
+          "lng": 116.99
+        },
+        {
+          "name": "衡水市",
+          "code": "131100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.74,
+          "lng": 115.67
+        },
+        {
+          "name": "深州市",
+          "code": "131182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.1,
+          "lng": 115.49
+        }
+      ]
+    },
+    {
+      "name": "山西省",
+      "code": "140000",
+      "cities": [
+        {
+          "name": "太原市",
+          "code": "140100",
+          "station_name": "太原市",
+          "altitude_m": 778.3,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 37.87,
+          "lng": 112.55
+        },
+        {
+          "name": "古交市",
+          "code": "140181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.91,
+          "lng": 112.18
+        },
+        {
+          "name": "大同市",
+          "code": "140200",
+          "station_name": "大同市",
+          "altitude_m": 1067.2,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 40.04,
+          "lng": 113.61
+        },
+        {
+          "name": "阳泉市",
+          "code": "140300",
+          "station_name": "阳泉市",
+          "altitude_m": 741.9,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 37.86,
+          "lng": 113.58
+        },
+        {
+          "name": "长治市",
+          "code": "140400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.2,
+          "lng": 113.12
+        },
+        {
+          "name": "潞城市",
+          "code": "140481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.33,
+          "lng": 113.23
+        },
+        {
+          "name": "晋城市",
+          "code": "140500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.49,
+          "lng": 112.85
+        },
+        {
+          "name": "高平市",
+          "code": "140581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.8,
+          "lng": 112.92
+        },
+        {
+          "name": "朔州市",
+          "code": "140600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.33,
+          "lng": 112.43
+        },
+        {
+          "name": "晋中市",
+          "code": "140700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.69,
+          "lng": 112.75
+        },
+        {
+          "name": "介休市",
+          "code": "140781",
+          "station_name": "介休",
+          "altitude_m": 743.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 37.03,
+          "lng": 111.92
+        },
+        {
+          "name": "运城市",
+          "code": "140800",
+          "station_name": "运城市",
+          "altitude_m": 376.0,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 35.03,
+          "lng": 111.01
+        },
+        {
+          "name": "永济市",
+          "code": "140881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.87,
+          "lng": 110.45
+        },
+        {
+          "name": "河津市",
+          "code": "140882",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.6,
+          "lng": 110.71
+        },
+        {
+          "name": "忻州市",
+          "code": "140900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.42,
+          "lng": 112.73
+        },
+        {
+          "name": "原平市",
+          "code": "140981",
+          "station_name": "原平",
+          "altitude_m": 828.2,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 38.73,
+          "lng": 112.72
+        },
+        {
+          "name": "临汾市",
+          "code": "141000",
+          "station_name": "临汾市",
+          "altitude_m": 449.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 36.09,
+          "lng": 111.52
+        },
+        {
+          "name": "侯马市",
+          "code": "141081",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.62,
+          "lng": 111.37
+        },
+        {
+          "name": "霍州市",
+          "code": "141082",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.57,
+          "lng": 111.76
+        },
+        {
+          "name": "吕梁市",
+          "code": "141100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.52,
+          "lng": 111.14
+        },
+        {
+          "name": "孝义市",
+          "code": "141181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.15,
+          "lng": 111.78
+        },
+        {
+          "name": "汾阳市",
+          "code": "141182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.26,
+          "lng": 111.77
+        }
+      ]
+    },
+    {
+      "name": "内蒙古自治区",
+      "code": "150000",
+      "cities": [
+        {
+          "name": "呼和浩特市",
+          "code": "150100",
+          "station_name": "呼和浩特市",
+          "altitude_m": 1063.0,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 40.84,
+          "lng": 111.75
+        },
+        {
+          "name": "包头市",
+          "code": "150200",
+          "station_name": "包头市",
+          "altitude_m": 1067.2,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 40.66,
+          "lng": 109.84
+        },
+        {
+          "name": "乌海市",
+          "code": "150300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.66,
+          "lng": 106.79
+        },
+        {
+          "name": "赤峰市",
+          "code": "150400",
+          "station_name": "赤峰市",
+          "altitude_m": 571.1,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 42.26,
+          "lng": 118.89
+        },
+        {
+          "name": "通辽市",
+          "code": "150500",
+          "station_name": "通辽",
+          "altitude_m": 178.5,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 43.65,
+          "lng": 122.24
+        },
+        {
+          "name": "霍林郭勒市",
+          "code": "150581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 45.53,
+          "lng": 119.66
+        },
+        {
+          "name": "鄂尔多斯市",
+          "code": "150600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.61,
+          "lng": 109.78
+        },
+        {
+          "name": "呼伦贝尔市",
+          "code": "150700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 49.21,
+          "lng": 119.77
+        },
+        {
+          "name": "满洲里市",
+          "code": "150781",
+          "station_name": "满洲里市",
+          "altitude_m": 661.7,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 49.6,
+          "lng": 117.38
+        },
+        {
+          "name": "牙克石市",
+          "code": "150782",
+          "station_name": "牙克石市图里河",
+          "altitude_m": 732.6,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 49.29,
+          "lng": 120.71
+        },
+        {
+          "name": "扎兰屯市",
+          "code": "150783",
+          "station_name": "扎兰屯市",
+          "altitude_m": 306.5,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 47.75,
+          "lng": 122.62
+        },
+        {
+          "name": "额尔古纳市",
+          "code": "150784",
+          "station_name": "额右旗拉布达林",
+          "altitude_m": 581.4,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 50.24,
+          "lng": 120.18
+        },
+        {
+          "name": "根河市",
+          "code": "150785",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 50.78,
+          "lng": 121.52
+        },
+        {
+          "name": "巴彦淖尔市",
+          "code": "150800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.74,
+          "lng": 107.39
+        },
+        {
+          "name": "乌兰察布市",
+          "code": "150900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.99,
+          "lng": 113.13
+        },
+        {
+          "name": "丰镇市",
+          "code": "150981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.44,
+          "lng": 113.11
+        },
+        {
+          "name": "乌兰浩特市",
+          "code": "152201",
+          "station_name": "乌兰浩特市",
+          "altitude_m": 274.7,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 46.07,
+          "lng": 122.09
+        },
+        {
+          "name": "阿尔山市",
+          "code": "152202",
+          "station_name": "科右翼前旗阿尔山",
+          "altitude_m": 1027.4,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 47.3,
+          "lng": 120.42
+        },
+        {
+          "name": "二连浩特市",
+          "code": "152501",
+          "station_name": "二连浩特市",
+          "altitude_m": 964.7,
+          "w0_10yr_kn_m2": 0.55,
+          "lat": 43.24,
+          "lng": 112.35
+        },
+        {
+          "name": "锡林浩特市",
+          "code": "152502",
+          "station_name": "锡林浩特市",
+          "altitude_m": 989.5,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 43.93,
+          "lng": 116.09
+        }
+      ]
+    },
+    {
+      "name": "辽宁省",
+      "code": "210000",
+      "cities": [
+        {
+          "name": "沈阳市",
+          "code": "210100",
+          "station_name": "沈阳市",
+          "altitude_m": 42.8,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 41.81,
+          "lng": 123.43
+        },
+        {
+          "name": "新民市",
+          "code": "210181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.99,
+          "lng": 122.84
+        },
+        {
+          "name": "大连市",
+          "code": "210200",
+          "station_name": "大连市",
+          "altitude_m": 91.5,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 38.91,
+          "lng": 121.61
+        },
+        {
+          "name": "瓦房店市",
+          "code": "210281",
+          "station_name": "瓦房店市",
+          "altitude_m": 29.3,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 39.63,
+          "lng": 121.98
+        },
+        {
+          "name": "庄河市",
+          "code": "210283",
+          "station_name": "庄河",
+          "altitude_m": 34.8,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 39.68,
+          "lng": 122.97
+        },
+        {
+          "name": "鞍山市",
+          "code": "210300",
+          "station_name": "鞍山市",
+          "altitude_m": 77.3,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 41.11,
+          "lng": 122.99
+        },
+        {
+          "name": "海城市",
+          "code": "210381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.88,
+          "lng": 122.69
+        },
+        {
+          "name": "抚顺市",
+          "code": "210400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.88,
+          "lng": 123.96
+        },
+        {
+          "name": "本溪市",
+          "code": "210500",
+          "station_name": "本溪市",
+          "altitude_m": 185.2,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 41.29,
+          "lng": 123.77
+        },
+        {
+          "name": "丹东市",
+          "code": "210600",
+          "station_name": "丹东市",
+          "altitude_m": 15.1,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 40.0,
+          "lng": 124.35
+        },
+        {
+          "name": "东港市",
+          "code": "210681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.86,
+          "lng": 124.15
+        },
+        {
+          "name": "凤城市",
+          "code": "210682",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.45,
+          "lng": 124.07
+        },
+        {
+          "name": "锦州市",
+          "code": "210700",
+          "station_name": "锦州市",
+          "altitude_m": 65.9,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 41.1,
+          "lng": 121.13
+        },
+        {
+          "name": "凌海市",
+          "code": "210781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.17,
+          "lng": 121.36
+        },
+        {
+          "name": "北镇市",
+          "code": "210782",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.55,
+          "lng": 122.06
+        },
+        {
+          "name": "营口市",
+          "code": "210800",
+          "station_name": "营口市",
+          "altitude_m": 3.3,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 40.67,
+          "lng": 122.24
+        },
+        {
+          "name": "盖州市",
+          "code": "210881",
+          "station_name": "盖县熊岳",
+          "altitude_m": 20.4,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 40.4,
+          "lng": 122.35
+        },
+        {
+          "name": "大石桥市",
+          "code": "210882",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.66,
+          "lng": 122.41
+        },
+        {
+          "name": "阜新市",
+          "code": "210900",
+          "station_name": "阜新市",
+          "altitude_m": 144.0,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 42.02,
+          "lng": 121.67
+        },
+        {
+          "name": "辽阳市",
+          "code": "211000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.27,
+          "lng": 123.24
+        },
+        {
+          "name": "灯塔市",
+          "code": "211081",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.43,
+          "lng": 123.34
+        },
+        {
+          "name": "盘锦市",
+          "code": "211100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.12,
+          "lng": 122.07
+        },
+        {
+          "name": "铁岭市",
+          "code": "211200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 42.22,
+          "lng": 123.73
+        },
+        {
+          "name": "调兵山市",
+          "code": "211281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 42.47,
+          "lng": 123.57
+        },
+        {
+          "name": "开原市",
+          "code": "211282",
+          "station_name": "开原",
+          "altitude_m": 98.2,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 42.55,
+          "lng": 124.04
+        },
+        {
+          "name": "朝阳市",
+          "code": "211300",
+          "station_name": "朝阳市",
+          "altitude_m": 169.2,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 41.5,
+          "lng": 120.39
+        },
+        {
+          "name": "北票市",
+          "code": "211381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.8,
+          "lng": 120.77
+        },
+        {
+          "name": "凌源市",
+          "code": "211382",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.25,
+          "lng": 119.4
+        },
+        {
+          "name": "葫芦岛市",
+          "code": "211400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.71,
+          "lng": 120.84
+        },
+        {
+          "name": "兴城市",
+          "code": "211481",
+          "station_name": "兴城市",
+          "altitude_m": 8.8,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 40.61,
+          "lng": 120.73
+        }
+      ]
+    },
+    {
+      "name": "吉林省",
+      "code": "220000",
+      "cities": [
+        {
+          "name": "长春市",
+          "code": "220100",
+          "station_name": "长春市",
+          "altitude_m": 236.8,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 43.82,
+          "lng": 125.32
+        },
+        {
+          "name": "榆树市",
+          "code": "220182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.84,
+          "lng": 126.53
+        },
+        {
+          "name": "德惠市",
+          "code": "220183",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.52,
+          "lng": 125.73
+        },
+        {
+          "name": "吉林市",
+          "code": "220200",
+          "station_name": "吉林市",
+          "altitude_m": 183.4,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 0.0,
+          "lng": 0.0
+        },
+        {
+          "name": "蛟河市",
+          "code": "220281",
+          "station_name": "蛟河",
+          "altitude_m": 295.0,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 43.72,
+          "lng": 127.34
+        },
+        {
+          "name": "桦甸市",
+          "code": "220282",
+          "station_name": "桦甸",
+          "altitude_m": 263.8,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 42.97,
+          "lng": 126.75
+        },
+        {
+          "name": "舒兰市",
+          "code": "220283",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.41,
+          "lng": 126.97
+        },
+        {
+          "name": "磐石市",
+          "code": "220284",
+          "station_name": "磐石县烟筒山",
+          "altitude_m": 271.6,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 42.95,
+          "lng": 126.06
+        },
+        {
+          "name": "四平市",
+          "code": "220300",
+          "station_name": "四平市",
+          "altitude_m": 164.2,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 43.17,
+          "lng": 124.35
+        },
+        {
+          "name": "公主岭市",
+          "code": "220381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 43.5,
+          "lng": 124.82
+        },
+        {
+          "name": "双辽市",
+          "code": "220382",
+          "station_name": "双辽",
+          "altitude_m": 114.9,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 43.52,
+          "lng": 123.5
+        },
+        {
+          "name": "辽源市",
+          "code": "220400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 42.89,
+          "lng": 125.14
+        },
+        {
+          "name": "通化市",
+          "code": "220500",
+          "station_name": "通化市",
+          "altitude_m": 402.9,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 41.73,
+          "lng": 125.94
+        },
+        {
+          "name": "梅河口市",
+          "code": "220581",
+          "station_name": "梅河口市",
+          "altitude_m": 339.9,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 42.54,
+          "lng": 125.66
+        },
+        {
+          "name": "集安市",
+          "code": "220582",
+          "station_name": "集安市",
+          "altitude_m": 177.7,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 41.13,
+          "lng": 126.19
+        },
+        {
+          "name": "白山市",
+          "code": "220600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.94,
+          "lng": 126.42
+        },
+        {
+          "name": "临江市",
+          "code": "220681",
+          "station_name": "浑江市临江",
+          "altitude_m": 332.7,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 41.81,
+          "lng": 126.92
+        },
+        {
+          "name": "松原市",
+          "code": "220700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 45.14,
+          "lng": 124.83
+        },
+        {
+          "name": "白城市",
+          "code": "220800",
+          "station_name": "白城市",
+          "altitude_m": 155.4,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 45.62,
+          "lng": 122.84
+        },
+        {
+          "name": "洮南市",
+          "code": "220881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 45.34,
+          "lng": 122.78
+        },
+        {
+          "name": "大安市",
+          "code": "220882",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 45.51,
+          "lng": 124.29
+        },
+        {
+          "name": "延吉市",
+          "code": "222401",
+          "station_name": "延吉市",
+          "altitude_m": 176.8,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 42.91,
+          "lng": 129.53
+        },
+        {
+          "name": "图们市",
+          "code": "222402",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 43.03,
+          "lng": 129.79
+        },
+        {
+          "name": "敦化市",
+          "code": "222403",
+          "station_name": "敦化市",
+          "altitude_m": 523.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 43.36,
+          "lng": 128.21
+        },
+        {
+          "name": "珲春市",
+          "code": "222404",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 42.86,
+          "lng": 130.37
+        },
+        {
+          "name": "龙井市",
+          "code": "222405",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 42.74,
+          "lng": 129.46
+        },
+        {
+          "name": "和龙市",
+          "code": "222406",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 42.55,
+          "lng": 129.01
+        }
+      ]
+    },
+    {
+      "name": "黑龙江省",
+      "code": "230000",
+      "cities": [
+        {
+          "name": "哈尔滨市",
+          "code": "230100",
+          "station_name": "哈尔滨市",
+          "altitude_m": 142.3,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 45.8,
+          "lng": 126.53
+        },
+        {
+          "name": "尚志市",
+          "code": "230183",
+          "station_name": "尚志",
+          "altitude_m": 189.7,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 45.21,
+          "lng": 128.01
+        },
+        {
+          "name": "五常市",
+          "code": "230184",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.93,
+          "lng": 127.17
+        },
+        {
+          "name": "齐齐哈尔市",
+          "code": "230200",
+          "station_name": "齐齐哈尔市",
+          "altitude_m": 145.9,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 47.35,
+          "lng": 123.92
+        },
+        {
+          "name": "讷河市",
+          "code": "230281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 48.48,
+          "lng": 124.88
+        },
+        {
+          "name": "鸡西市",
+          "code": "230300",
+          "station_name": "鸡西市",
+          "altitude_m": 233.6,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 45.3,
+          "lng": 130.97
+        },
+        {
+          "name": "虎林市",
+          "code": "230381",
+          "station_name": "虎林",
+          "altitude_m": 100.2,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 45.76,
+          "lng": 132.94
+        },
+        {
+          "name": "密山市",
+          "code": "230382",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 45.62,
+          "lng": 131.92
+        },
+        {
+          "name": "鹤岗市",
+          "code": "230400",
+          "station_name": "鹤岗市",
+          "altitude_m": 227.9,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 47.35,
+          "lng": 130.3
+        },
+        {
+          "name": "双鸭山市",
+          "code": "230500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 46.65,
+          "lng": 131.16
+        },
+        {
+          "name": "大庆市",
+          "code": "230600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 46.59,
+          "lng": 125.1
+        },
+        {
+          "name": "伊春市",
+          "code": "230700",
+          "station_name": "伊春市",
+          "altitude_m": 240.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 47.73,
+          "lng": 128.84
+        },
+        {
+          "name": "铁力市",
+          "code": "230781",
+          "station_name": "铁力",
+          "altitude_m": 210.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 46.99,
+          "lng": 128.03
+        },
+        {
+          "name": "佳木斯市",
+          "code": "230800",
+          "station_name": "佳木斯市",
+          "altitude_m": 81.2,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 46.8,
+          "lng": 130.32
+        },
+        {
+          "name": "同江市",
+          "code": "230881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 46.8,
+          "lng": 130.36
+        },
+        {
+          "name": "富锦市",
+          "code": "230882",
+          "station_name": "富锦",
+          "altitude_m": 64.2,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 47.25,
+          "lng": 132.04
+        },
+        {
+          "name": "抚远市",
+          "code": "230883",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 48.36,
+          "lng": 134.31
+        },
+        {
+          "name": "七台河市",
+          "code": "230900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 45.77,
+          "lng": 131.0
+        },
+        {
+          "name": "牡丹江市",
+          "code": "231000",
+          "station_name": "牡丹江市",
+          "altitude_m": 241.4,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 44.55,
+          "lng": 129.63
+        },
+        {
+          "name": "绥芬河市",
+          "code": "231081",
+          "station_name": "绥芬河市",
+          "altitude_m": 496.7,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 44.41,
+          "lng": 131.15
+        },
+        {
+          "name": "海林市",
+          "code": "231083",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.59,
+          "lng": 129.38
+        },
+        {
+          "name": "宁安市",
+          "code": "231084",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.34,
+          "lng": 129.48
+        },
+        {
+          "name": "穆棱市",
+          "code": "231085",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.92,
+          "lng": 130.52
+        },
+        {
+          "name": "东宁市",
+          "code": "231086",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.09,
+          "lng": 131.12
+        },
+        {
+          "name": "黑河市",
+          "code": "231100",
+          "station_name": "黑河市",
+          "altitude_m": 166.4,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 50.25,
+          "lng": 127.53
+        },
+        {
+          "name": "北安市",
+          "code": "231181",
+          "station_name": "北安市",
+          "altitude_m": 269.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 48.24,
+          "lng": 126.49
+        },
+        {
+          "name": "五大连池市",
+          "code": "231182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 48.52,
+          "lng": 126.21
+        },
+        {
+          "name": "绥化市",
+          "code": "231200",
+          "station_name": "绥化市",
+          "altitude_m": 179.6,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 46.65,
+          "lng": 126.97
+        },
+        {
+          "name": "安达市",
+          "code": "231281",
+          "station_name": "安达市",
+          "altitude_m": 149.3,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 46.42,
+          "lng": 125.35
+        },
+        {
+          "name": "肇东市",
+          "code": "231282",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 46.05,
+          "lng": 125.96
+        },
+        {
+          "name": "海伦市",
+          "code": "231283",
+          "station_name": "海伦",
+          "altitude_m": 239.2,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 47.46,
+          "lng": 126.97
+        }
+      ]
+    },
+    {
+      "name": "上海市",
+      "code": "310000",
+      "cities": [
+        {
+          "name": "上海市",
+          "code": "310000",
+          "station_name": "上海市",
+          "altitude_m": 2.8,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 31.23,
+          "lng": 121.47
+        }
+      ]
+    },
+    {
+      "name": "江苏省",
+      "code": "320000",
+      "cities": [
+        {
+          "name": "南京市",
+          "code": "320100",
+          "station_name": "南京市",
+          "altitude_m": 8.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.06,
+          "lng": 118.8
+        },
+        {
+          "name": "无锡市",
+          "code": "320200",
+          "station_name": "无锡",
+          "altitude_m": 6.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 31.49,
+          "lng": 120.31
+        },
+        {
+          "name": "江阴市",
+          "code": "320281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.92,
+          "lng": 120.28
+        },
+        {
+          "name": "宜兴市",
+          "code": "320282",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.34,
+          "lng": 119.82
+        },
+        {
+          "name": "徐州市",
+          "code": "320300",
+          "station_name": "徐州市",
+          "altitude_m": 41.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 34.21,
+          "lng": 117.28
+        },
+        {
+          "name": "新沂市",
+          "code": "320381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.37,
+          "lng": 118.35
+        },
+        {
+          "name": "邳州市",
+          "code": "320382",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.34,
+          "lng": 118.01
+        },
+        {
+          "name": "常州市",
+          "code": "320400",
+          "station_name": "常州市",
+          "altitude_m": 4.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 31.81,
+          "lng": 119.97
+        },
+        {
+          "name": "溧阳市",
+          "code": "320481",
+          "station_name": "溧阳",
+          "altitude_m": 7.2,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 31.42,
+          "lng": 119.48
+        },
+        {
+          "name": "苏州市",
+          "code": "320500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.3,
+          "lng": 120.59
+        },
+        {
+          "name": "常熟市",
+          "code": "320581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.65,
+          "lng": 120.75
+        },
+        {
+          "name": "张家港市",
+          "code": "320582",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.87,
+          "lng": 120.52
+        },
+        {
+          "name": "昆山市",
+          "code": "320583",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.39,
+          "lng": 120.98
+        },
+        {
+          "name": "太仓市",
+          "code": "320585",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.46,
+          "lng": 121.13
+        },
+        {
+          "name": "南通市",
+          "code": "320600",
+          "station_name": "南通市",
+          "altitude_m": 5.3,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 31.98,
+          "lng": 120.89
+        },
+        {
+          "name": "启东市",
+          "code": "320681",
+          "station_name": "启东县吕泗",
+          "altitude_m": 5.5,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 31.81,
+          "lng": 121.66
+        },
+        {
+          "name": "如皋市",
+          "code": "320682",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.37,
+          "lng": 120.57
+        },
+        {
+          "name": "海门市",
+          "code": "320684",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.9,
+          "lng": 121.15
+        },
+        {
+          "name": "连云港市",
+          "code": "320700",
+          "station_name": "连云港",
+          "altitude_m": 3.7,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 34.6,
+          "lng": 119.22
+        },
+        {
+          "name": "淮安市",
+          "code": "320800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.61,
+          "lng": 119.02
+        },
+        {
+          "name": "盐城市",
+          "code": "320900",
+          "station_name": "盐城",
+          "altitude_m": 3.6,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 33.35,
+          "lng": 120.16
+        },
+        {
+          "name": "东台市",
+          "code": "320981",
+          "station_name": "东台市",
+          "altitude_m": 4.3,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 32.87,
+          "lng": 120.32
+        },
+        {
+          "name": "扬州市",
+          "code": "321000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.39,
+          "lng": 119.41
+        },
+        {
+          "name": "仪征市",
+          "code": "321081",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.27,
+          "lng": 119.18
+        },
+        {
+          "name": "高邮市",
+          "code": "321084",
+          "station_name": "高邮",
+          "altitude_m": 5.4,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.78,
+          "lng": 119.46
+        },
+        {
+          "name": "镇江市",
+          "code": "321100",
+          "station_name": "镇江",
+          "altitude_m": 26.5,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 32.19,
+          "lng": 119.43
+        },
+        {
+          "name": "丹阳市",
+          "code": "321181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.01,
+          "lng": 119.61
+        },
+        {
+          "name": "扬中市",
+          "code": "321182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.23,
+          "lng": 119.8
+        },
+        {
+          "name": "句容市",
+          "code": "321183",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.94,
+          "lng": 119.17
+        },
+        {
+          "name": "泰州市",
+          "code": "321200",
+          "station_name": "泰州",
+          "altitude_m": 6.6,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.46,
+          "lng": 119.92
+        },
+        {
+          "name": "兴化市",
+          "code": "321281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.91,
+          "lng": 119.85
+        },
+        {
+          "name": "靖江市",
+          "code": "321282",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.98,
+          "lng": 120.28
+        },
+        {
+          "name": "泰兴市",
+          "code": "321283",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.26,
+          "lng": 120.01
+        },
+        {
+          "name": "宿迁市",
+          "code": "321300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.96,
+          "lng": 118.28
+        }
+      ]
+    },
+    {
+      "name": "浙江省",
+      "code": "330000",
+      "cities": [
+        {
+          "name": "杭州市",
+          "code": "330100",
+          "station_name": "杭州市",
+          "altitude_m": 41.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 30.27,
+          "lng": 120.16
+        },
+        {
+          "name": "建德市",
+          "code": "330182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.47,
+          "lng": 119.28
+        },
+        {
+          "name": "临安市",
+          "code": "330185",
+          "station_name": "临安县天目山",
+          "altitude_m": 1505.9,
+          "w0_10yr_kn_m2": 0.55,
+          "lat": 30.23,
+          "lng": 119.72
+        },
+        {
+          "name": "宁波市",
+          "code": "330200",
+          "station_name": "宁波市",
+          "altitude_m": 4.2,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 29.87,
+          "lng": 121.55
+        },
+        {
+          "name": "余姚市",
+          "code": "330281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.04,
+          "lng": 121.15
+        },
+        {
+          "name": "慈溪市",
+          "code": "330282",
+          "station_name": "慈溪市",
+          "altitude_m": 7.1,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 30.17,
+          "lng": 121.3
+        },
+        {
+          "name": "奉化市",
+          "code": "330283",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.66,
+          "lng": 121.41
+        },
+        {
+          "name": "温州市",
+          "code": "330300",
+          "station_name": "温州市",
+          "altitude_m": 6.0,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 27.99,
+          "lng": 120.7
+        },
+        {
+          "name": "瑞安市",
+          "code": "330381",
+          "station_name": "瑞安市北麂",
+          "altitude_m": 42.3,
+          "w0_10yr_kn_m2": 1.0,
+          "lat": 27.78,
+          "lng": 120.66
+        },
+        {
+          "name": "乐清市",
+          "code": "330382",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.12,
+          "lng": 120.97
+        },
+        {
+          "name": "嘉兴市",
+          "code": "330400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.75,
+          "lng": 120.76
+        },
+        {
+          "name": "海宁市",
+          "code": "330481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.51,
+          "lng": 120.68
+        },
+        {
+          "name": "平湖市",
+          "code": "330482",
+          "station_name": "平湖县乍浦",
+          "altitude_m": 5.4,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 30.68,
+          "lng": 121.02
+        },
+        {
+          "name": "桐乡市",
+          "code": "330483",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.63,
+          "lng": 120.57
+        },
+        {
+          "name": "湖州市",
+          "code": "330500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.89,
+          "lng": 120.09
+        },
+        {
+          "name": "绍兴市",
+          "code": "330600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.03,
+          "lng": 120.58
+        },
+        {
+          "name": "诸暨市",
+          "code": "330681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.71,
+          "lng": 120.25
+        },
+        {
+          "name": "上虞市",
+          "code": "330682",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.03,
+          "lng": 120.87
+        },
+        {
+          "name": "嵊州市",
+          "code": "330683",
+          "station_name": "嵊县",
+          "altitude_m": 104.3,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.56,
+          "lng": 120.83
+        },
+        {
+          "name": "金华市",
+          "code": "330700",
+          "station_name": "金华市",
+          "altitude_m": 62.6,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.08,
+          "lng": 119.65
+        },
+        {
+          "name": "兰溪市",
+          "code": "330781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.21,
+          "lng": 119.46
+        },
+        {
+          "name": "义乌市",
+          "code": "330782",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.31,
+          "lng": 120.08
+        },
+        {
+          "name": "东阳市",
+          "code": "330783",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.29,
+          "lng": 120.24
+        },
+        {
+          "name": "永康市",
+          "code": "330784",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.89,
+          "lng": 120.05
+        },
+        {
+          "name": "衢州市",
+          "code": "330800",
+          "station_name": "衢州市",
+          "altitude_m": 66.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 28.97,
+          "lng": 118.86
+        },
+        {
+          "name": "江山市",
+          "code": "330881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.74,
+          "lng": 118.63
+        },
+        {
+          "name": "舟山市",
+          "code": "330900",
+          "station_name": "舟山市",
+          "altitude_m": 35.7,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 29.99,
+          "lng": 122.21
+        },
+        {
+          "name": "台州市",
+          "code": "331000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.66,
+          "lng": 121.42
+        },
+        {
+          "name": "温岭市",
+          "code": "331081",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.37,
+          "lng": 121.39
+        },
+        {
+          "name": "临海市",
+          "code": "331082",
+          "station_name": "临海市括苍山",
+          "altitude_m": 1383.1,
+          "w0_10yr_kn_m2": 0.6,
+          "lat": 28.86,
+          "lng": 121.15
+        },
+        {
+          "name": "丽水市",
+          "code": "331100",
+          "station_name": "丽水市",
+          "altitude_m": 60.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 28.47,
+          "lng": 119.92
+        },
+        {
+          "name": "龙泉市",
+          "code": "331181",
+          "station_name": "龙泉",
+          "altitude_m": 198.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.86,
+          "lng": 120.19
+        }
+      ]
+    },
+    {
+      "name": "安徽省",
+      "code": "340000",
+      "cities": [
+        {
+          "name": "合肥市",
+          "code": "340100",
+          "station_name": "合肥市",
+          "altitude_m": 27.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 31.82,
+          "lng": 117.23
+        },
+        {
+          "name": "巢湖市",
+          "code": "340181",
+          "station_name": "巢湖",
+          "altitude_m": 22.4,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 31.6,
+          "lng": 117.86
+        },
+        {
+          "name": "芜湖市",
+          "code": "340200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.35,
+          "lng": 118.43
+        },
+        {
+          "name": "蚌埠市",
+          "code": "340300",
+          "station_name": "蚌埠市",
+          "altitude_m": 18.7,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.92,
+          "lng": 117.39
+        },
+        {
+          "name": "淮南市",
+          "code": "340400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.63,
+          "lng": 117.0
+        },
+        {
+          "name": "马鞍山市",
+          "code": "340500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.67,
+          "lng": 118.51
+        },
+        {
+          "name": "淮北市",
+          "code": "340600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.96,
+          "lng": 116.8
+        },
+        {
+          "name": "铜陵市",
+          "code": "340700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.95,
+          "lng": 117.81
+        },
+        {
+          "name": "安庆市",
+          "code": "340800",
+          "station_name": "安庆市",
+          "altitude_m": 19.8,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 30.54,
+          "lng": 117.06
+        },
+        {
+          "name": "桐城市",
+          "code": "340881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.04,
+          "lng": 116.97
+        },
+        {
+          "name": "黄山市",
+          "code": "341000",
+          "station_name": "黄山",
+          "altitude_m": 1840.4,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 29.71,
+          "lng": 118.34
+        },
+        {
+          "name": "滁州市",
+          "code": "341100",
+          "station_name": "滁县",
+          "altitude_m": 25.3,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.3,
+          "lng": 118.32
+        },
+        {
+          "name": "天长市",
+          "code": "341181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.67,
+          "lng": 119.0
+        },
+        {
+          "name": "明光市",
+          "code": "341182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.78,
+          "lng": 118.02
+        },
+        {
+          "name": "阜阳市",
+          "code": "341200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.89,
+          "lng": 115.81
+        },
+        {
+          "name": "界首市",
+          "code": "341282",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.26,
+          "lng": 115.37
+        },
+        {
+          "name": "宿州市",
+          "code": "341300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.65,
+          "lng": 116.96
+        },
+        {
+          "name": "六安市",
+          "code": "341500",
+          "station_name": "六安市",
+          "altitude_m": 60.5,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 31.73,
+          "lng": 116.52
+        },
+        {
+          "name": "亳州市",
+          "code": "341600",
+          "station_name": "亳州市",
+          "altitude_m": 37.7,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 33.84,
+          "lng": 115.78
+        },
+        {
+          "name": "池州市",
+          "code": "341700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.66,
+          "lng": 117.49
+        },
+        {
+          "name": "宣城市",
+          "code": "341800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.94,
+          "lng": 118.76
+        },
+        {
+          "name": "宁国市",
+          "code": "341881",
+          "station_name": "宁国",
+          "altitude_m": 89.4,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 30.63,
+          "lng": 118.98
+        }
+      ]
+    },
+    {
+      "name": "福建省",
+      "code": "350000",
+      "cities": [
+        {
+          "name": "福州市",
+          "code": "350100",
+          "station_name": "福州市",
+          "altitude_m": 83.8,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 26.07,
+          "lng": 119.3
+        },
+        {
+          "name": "福清市",
+          "code": "350181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.72,
+          "lng": 119.38
+        },
+        {
+          "name": "长乐市",
+          "code": "350182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.96,
+          "lng": 119.52
+        },
+        {
+          "name": "厦门市",
+          "code": "350200",
+          "station_name": "厦门市",
+          "altitude_m": 139.4,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 24.48,
+          "lng": 118.09
+        },
+        {
+          "name": "莆田市",
+          "code": "350300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.45,
+          "lng": 119.01
+        },
+        {
+          "name": "三明市",
+          "code": "350400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.26,
+          "lng": 117.64
+        },
+        {
+          "name": "永安市",
+          "code": "350481",
+          "station_name": "永安市",
+          "altitude_m": 206.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 25.94,
+          "lng": 117.37
+        },
+        {
+          "name": "泉州市",
+          "code": "350500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.87,
+          "lng": 118.68
+        },
+        {
+          "name": "石狮市",
+          "code": "350581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.73,
+          "lng": 118.65
+        },
+        {
+          "name": "晋江市",
+          "code": "350582",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.78,
+          "lng": 118.55
+        },
+        {
+          "name": "南安市",
+          "code": "350583",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.96,
+          "lng": 118.39
+        },
+        {
+          "name": "漳州市",
+          "code": "350600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.51,
+          "lng": 117.65
+        },
+        {
+          "name": "龙海市",
+          "code": "350681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.45,
+          "lng": 117.82
+        },
+        {
+          "name": "南平市",
+          "code": "350700",
+          "station_name": "南平市",
+          "altitude_m": 125.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 26.64,
+          "lng": 118.18
+        },
+        {
+          "name": "邵武市",
+          "code": "350781",
+          "station_name": "邵武市",
+          "altitude_m": 191.5,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.34,
+          "lng": 117.49
+        },
+        {
+          "name": "武夷山市",
+          "code": "350782",
+          "station_name": "崇安县七仙山",
+          "altitude_m": 1401.9,
+          "w0_10yr_kn_m2": 0.55,
+          "lat": 27.76,
+          "lng": 118.04
+        },
+        {
+          "name": "建瓯市",
+          "code": "350783",
+          "station_name": "建瓯",
+          "altitude_m": 154.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 27.02,
+          "lng": 118.3
+        },
+        {
+          "name": "龙岩市",
+          "code": "350800",
+          "station_name": "龙岩市",
+          "altitude_m": 342.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.08,
+          "lng": 117.02
+        },
+        {
+          "name": "漳平市",
+          "code": "350881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.29,
+          "lng": 117.42
+        },
+        {
+          "name": "宁德市",
+          "code": "350900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.67,
+          "lng": 119.55
+        },
+        {
+          "name": "福安市",
+          "code": "350981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.09,
+          "lng": 119.65
+        },
+        {
+          "name": "福鼎市",
+          "code": "350982",
+          "station_name": "福鼎",
+          "altitude_m": 36.2,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 27.32,
+          "lng": 120.22
+        }
+      ]
+    },
+    {
+      "name": "江西省",
+      "code": "360000",
+      "cities": [
+        {
+          "name": "南昌市",
+          "code": "360100",
+          "station_name": "南昌市",
+          "altitude_m": 46.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 28.68,
+          "lng": 115.86
+        },
+        {
+          "name": "景德镇市",
+          "code": "360200",
+          "station_name": "景德镇市",
+          "altitude_m": 61.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.27,
+          "lng": 117.18
+        },
+        {
+          "name": "乐平市",
+          "code": "360281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.98,
+          "lng": 117.15
+        },
+        {
+          "name": "萍乡市",
+          "code": "360300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.62,
+          "lng": 113.85
+        },
+        {
+          "name": "九江市",
+          "code": "360400",
+          "station_name": "九江",
+          "altitude_m": 36.1,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.71,
+          "lng": 116.0
+        },
+        {
+          "name": "瑞昌市",
+          "code": "360481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.67,
+          "lng": 115.63
+        },
+        {
+          "name": "共青城市",
+          "code": "360482",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.25,
+          "lng": 115.81
+        },
+        {
+          "name": "庐山市",
+          "code": "360483",
+          "station_name": "庐山",
+          "altitude_m": 1164.5,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 29.45,
+          "lng": 116.05
+        },
+        {
+          "name": "新余市",
+          "code": "360500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.82,
+          "lng": 114.92
+        },
+        {
+          "name": "鹰潭市",
+          "code": "360600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.26,
+          "lng": 117.07
+        },
+        {
+          "name": "贵溪市",
+          "code": "360681",
+          "station_name": "贵溪",
+          "altitude_m": 51.2,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 28.27,
+          "lng": 117.17
+        },
+        {
+          "name": "赣州市",
+          "code": "360700",
+          "station_name": "赣州市",
+          "altitude_m": 123.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.83,
+          "lng": 114.94
+        },
+        {
+          "name": "瑞金市",
+          "code": "360781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.89,
+          "lng": 116.03
+        },
+        {
+          "name": "吉安市",
+          "code": "360800",
+          "station_name": "吉安",
+          "altitude_m": 76.4,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 27.11,
+          "lng": 114.99
+        },
+        {
+          "name": "井冈山市",
+          "code": "360881",
+          "station_name": "宁冈",
+          "altitude_m": 263.1,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 26.73,
+          "lng": 114.28
+        },
+        {
+          "name": "宜春市",
+          "code": "360900",
+          "station_name": "宜春市",
+          "altitude_m": 131.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.82,
+          "lng": 114.42
+        },
+        {
+          "name": "丰城市",
+          "code": "360981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.21,
+          "lng": 115.73
+        },
+        {
+          "name": "樟树市",
+          "code": "360982",
+          "station_name": "樟树市",
+          "altitude_m": 30.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 28.05,
+          "lng": 115.56
+        },
+        {
+          "name": "高安市",
+          "code": "360983",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.46,
+          "lng": 115.43
+        },
+        {
+          "name": "抚州市",
+          "code": "361000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.95,
+          "lng": 116.36
+        },
+        {
+          "name": "上饶市",
+          "code": "361100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.45,
+          "lng": 117.94
+        },
+        {
+          "name": "德兴市",
+          "code": "361181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.95,
+          "lng": 117.58
+        }
+      ]
+    },
+    {
+      "name": "山东省",
+      "code": "370000",
+      "cities": [
+        {
+          "name": "济南市",
+          "code": "370100",
+          "station_name": "济南市",
+          "altitude_m": 51.6,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 36.65,
+          "lng": 117.12
+        },
+        {
+          "name": "章丘市",
+          "code": "370181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.68,
+          "lng": 117.53
+        },
+        {
+          "name": "青岛市",
+          "code": "370200",
+          "station_name": "青岛市",
+          "altitude_m": 76.0,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 36.07,
+          "lng": 120.38
+        },
+        {
+          "name": "胶州市",
+          "code": "370281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.26,
+          "lng": 120.03
+        },
+        {
+          "name": "即墨市",
+          "code": "370282",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.39,
+          "lng": 120.45
+        },
+        {
+          "name": "平度市",
+          "code": "370283",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.78,
+          "lng": 119.99
+        },
+        {
+          "name": "莱西市",
+          "code": "370285",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.89,
+          "lng": 120.52
+        },
+        {
+          "name": "淄博市",
+          "code": "370300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.81,
+          "lng": 118.05
+        },
+        {
+          "name": "枣庄市",
+          "code": "370400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.81,
+          "lng": 117.32
+        },
+        {
+          "name": "滕州市",
+          "code": "370481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.11,
+          "lng": 117.17
+        },
+        {
+          "name": "东营市",
+          "code": "370500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.43,
+          "lng": 118.67
+        },
+        {
+          "name": "烟台市",
+          "code": "370600",
+          "station_name": "烟台市",
+          "altitude_m": 46.7,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 37.46,
+          "lng": 121.45
+        },
+        {
+          "name": "龙口市",
+          "code": "370681",
+          "station_name": "龙口市",
+          "altitude_m": 4.8,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 37.65,
+          "lng": 120.48
+        },
+        {
+          "name": "莱阳市",
+          "code": "370682",
+          "station_name": "莱阳市",
+          "altitude_m": 30.5,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 36.98,
+          "lng": 120.71
+        },
+        {
+          "name": "莱州市",
+          "code": "370683",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.18,
+          "lng": 119.94
+        },
+        {
+          "name": "蓬莱市",
+          "code": "370684",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.81,
+          "lng": 120.76
+        },
+        {
+          "name": "招远市",
+          "code": "370685",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.36,
+          "lng": 120.43
+        },
+        {
+          "name": "栖霞市",
+          "code": "370686",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.34,
+          "lng": 120.85
+        },
+        {
+          "name": "海阳市",
+          "code": "370687",
+          "station_name": "海阳",
+          "altitude_m": 65.2,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 36.78,
+          "lng": 121.16
+        },
+        {
+          "name": "潍坊市",
+          "code": "370700",
+          "station_name": "潍坊市",
+          "altitude_m": 44.1,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 36.71,
+          "lng": 119.16
+        },
+        {
+          "name": "青州市",
+          "code": "370781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.68,
+          "lng": 118.48
+        },
+        {
+          "name": "诸城市",
+          "code": "370782",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.0,
+          "lng": 119.41
+        },
+        {
+          "name": "寿光市",
+          "code": "370783",
+          "station_name": "寿光县羊角沟",
+          "altitude_m": 4.4,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 36.86,
+          "lng": 118.79
+        },
+        {
+          "name": "安丘市",
+          "code": "370784",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.48,
+          "lng": 119.22
+        },
+        {
+          "name": "高密市",
+          "code": "370785",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.38,
+          "lng": 119.76
+        },
+        {
+          "name": "昌邑市",
+          "code": "370786",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.86,
+          "lng": 119.4
+        },
+        {
+          "name": "济宁市",
+          "code": "370800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.41,
+          "lng": 116.59
+        },
+        {
+          "name": "曲阜市",
+          "code": "370881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.58,
+          "lng": 116.99
+        },
+        {
+          "name": "邹城市",
+          "code": "370883",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.41,
+          "lng": 117.0
+        },
+        {
+          "name": "泰安市",
+          "code": "370900",
+          "station_name": "泰安市",
+          "altitude_m": 128.8,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 36.2,
+          "lng": 117.09
+        },
+        {
+          "name": "新泰市",
+          "code": "370982",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.91,
+          "lng": 117.77
+        },
+        {
+          "name": "肥城市",
+          "code": "370983",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.18,
+          "lng": 116.77
+        },
+        {
+          "name": "威海市",
+          "code": "371000",
+          "station_name": "威海市",
+          "altitude_m": 46.6,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 37.51,
+          "lng": 122.12
+        },
+        {
+          "name": "荣成市",
+          "code": "371082",
+          "station_name": "荣成市成山头",
+          "altitude_m": 47.7,
+          "w0_10yr_kn_m2": 0.6,
+          "lat": 37.17,
+          "lng": 122.49
+        },
+        {
+          "name": "乳山市",
+          "code": "371083",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.92,
+          "lng": 121.54
+        },
+        {
+          "name": "日照市",
+          "code": "371100",
+          "station_name": "日照市",
+          "altitude_m": 16.1,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 35.42,
+          "lng": 119.53
+        },
+        {
+          "name": "莱芜市",
+          "code": "371200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.21,
+          "lng": 117.68
+        },
+        {
+          "name": "临沂市",
+          "code": "371300",
+          "station_name": "临沂",
+          "altitude_m": 87.9,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 35.1,
+          "lng": 118.36
+        },
+        {
+          "name": "德州市",
+          "code": "371400",
+          "station_name": "德州市",
+          "altitude_m": 21.2,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 37.43,
+          "lng": 116.36
+        },
+        {
+          "name": "乐陵市",
+          "code": "371481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.73,
+          "lng": 117.23
+        },
+        {
+          "name": "禹城市",
+          "code": "371482",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.93,
+          "lng": 116.64
+        },
+        {
+          "name": "聊城市",
+          "code": "371500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.46,
+          "lng": 115.99
+        },
+        {
+          "name": "临清市",
+          "code": "371581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.84,
+          "lng": 115.7
+        },
+        {
+          "name": "滨州市",
+          "code": "371600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.38,
+          "lng": 117.97
+        },
+        {
+          "name": "菏泽市",
+          "code": "371700",
+          "station_name": "菏泽市",
+          "altitude_m": 49.7,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 35.23,
+          "lng": 115.48
+        }
+      ]
+    },
+    {
+      "name": "河南省",
+      "code": "410000",
+      "cities": [
+        {
+          "name": "郑州市",
+          "code": "410100",
+          "station_name": "郑州市",
+          "altitude_m": 110.4,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 34.75,
+          "lng": 113.63
+        },
+        {
+          "name": "巩义市",
+          "code": "410181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.75,
+          "lng": 113.02
+        },
+        {
+          "name": "荥阳市",
+          "code": "410182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.79,
+          "lng": 113.38
+        },
+        {
+          "name": "新密市",
+          "code": "410183",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.54,
+          "lng": 113.39
+        },
+        {
+          "name": "新郑市",
+          "code": "410184",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.4,
+          "lng": 113.74
+        },
+        {
+          "name": "登封市",
+          "code": "410185",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.45,
+          "lng": 113.05
+        },
+        {
+          "name": "开封市",
+          "code": "410200",
+          "station_name": "开封市",
+          "altitude_m": 72.5,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 34.8,
+          "lng": 114.31
+        },
+        {
+          "name": "洛阳市",
+          "code": "410300",
+          "station_name": "洛阳市",
+          "altitude_m": 137.1,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 34.62,
+          "lng": 112.45
+        },
+        {
+          "name": "偃师市",
+          "code": "410381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.73,
+          "lng": 112.79
+        },
+        {
+          "name": "平顶山市",
+          "code": "410400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.77,
+          "lng": 113.19
+        },
+        {
+          "name": "舞钢市",
+          "code": "410481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.31,
+          "lng": 113.52
+        },
+        {
+          "name": "汝州市",
+          "code": "410482",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.17,
+          "lng": 112.84
+        },
+        {
+          "name": "安阳市",
+          "code": "410500",
+          "station_name": "安阳市",
+          "altitude_m": 75.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 36.1,
+          "lng": 114.39
+        },
+        {
+          "name": "林州市",
+          "code": "410581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.08,
+          "lng": 113.82
+        },
+        {
+          "name": "鹤壁市",
+          "code": "410600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.75,
+          "lng": 114.3
+        },
+        {
+          "name": "新乡市",
+          "code": "410700",
+          "station_name": "新乡市",
+          "altitude_m": 72.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 35.3,
+          "lng": 113.93
+        },
+        {
+          "name": "卫辉市",
+          "code": "410781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.4,
+          "lng": 114.06
+        },
+        {
+          "name": "辉县市",
+          "code": "410782",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.12,
+          "lng": 114.25
+        },
+        {
+          "name": "焦作市",
+          "code": "410800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.22,
+          "lng": 113.24
+        },
+        {
+          "name": "沁阳市",
+          "code": "410882",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.09,
+          "lng": 112.95
+        },
+        {
+          "name": "孟州市",
+          "code": "410883",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.91,
+          "lng": 112.79
+        },
+        {
+          "name": "濮阳市",
+          "code": "410900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.76,
+          "lng": 115.03
+        },
+        {
+          "name": "许昌市",
+          "code": "411000",
+          "station_name": "许昌市",
+          "altitude_m": 66.8,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 34.04,
+          "lng": 113.85
+        },
+        {
+          "name": "禹州市",
+          "code": "411081",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.14,
+          "lng": 113.49
+        },
+        {
+          "name": "长葛市",
+          "code": "411082",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.19,
+          "lng": 113.82
+        },
+        {
+          "name": "漯河市",
+          "code": "411100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.58,
+          "lng": 114.02
+        },
+        {
+          "name": "三门峡市",
+          "code": "411200",
+          "station_name": "三门峡市",
+          "altitude_m": 410.1,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 34.77,
+          "lng": 111.2
+        },
+        {
+          "name": "义马市",
+          "code": "411281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.75,
+          "lng": 111.87
+        },
+        {
+          "name": "灵宝市",
+          "code": "411282",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.53,
+          "lng": 110.89
+        },
+        {
+          "name": "南阳市",
+          "code": "411300",
+          "station_name": "南阳市",
+          "altitude_m": 129.2,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.99,
+          "lng": 112.53
+        },
+        {
+          "name": "邓州市",
+          "code": "411381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.69,
+          "lng": 112.09
+        },
+        {
+          "name": "商丘市",
+          "code": "411400",
+          "station_name": "商丘市",
+          "altitude_m": 50.1,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 34.41,
+          "lng": 115.66
+        },
+        {
+          "name": "永城市",
+          "code": "411481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.93,
+          "lng": 116.45
+        },
+        {
+          "name": "信阳市",
+          "code": "411500",
+          "station_name": "信阳市",
+          "altitude_m": 114.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.15,
+          "lng": 114.09
+        },
+        {
+          "name": "周口市",
+          "code": "411600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.63,
+          "lng": 114.7
+        },
+        {
+          "name": "项城市",
+          "code": "411681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.47,
+          "lng": 114.88
+        },
+        {
+          "name": "驻马店市",
+          "code": "411700",
+          "station_name": "驻马店市",
+          "altitude_m": 82.7,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 33.01,
+          "lng": 114.02
+        },
+        {
+          "name": "济源市",
+          "code": "419001",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.07,
+          "lng": 112.6
+        }
+      ]
+    },
+    {
+      "name": "湖北省",
+      "code": "420000",
+      "cities": [
+        {
+          "name": "武汉市",
+          "code": "420100",
+          "station_name": "武汉市",
+          "altitude_m": 23.3,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 30.59,
+          "lng": 114.31
+        },
+        {
+          "name": "黄石市",
+          "code": "420200",
+          "station_name": "黄石市",
+          "altitude_m": 19.6,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 30.2,
+          "lng": 115.04
+        },
+        {
+          "name": "大冶市",
+          "code": "420281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.1,
+          "lng": 114.98
+        },
+        {
+          "name": "十堰市",
+          "code": "420300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.63,
+          "lng": 110.8
+        },
+        {
+          "name": "丹江口市",
+          "code": "420381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.54,
+          "lng": 111.51
+        },
+        {
+          "name": "宜昌市",
+          "code": "420500",
+          "station_name": "宜昌市",
+          "altitude_m": 133.1,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.69,
+          "lng": 111.29
+        },
+        {
+          "name": "宜都市",
+          "code": "420581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.38,
+          "lng": 111.45
+        },
+        {
+          "name": "当阳市",
+          "code": "420582",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.82,
+          "lng": 111.79
+        },
+        {
+          "name": "枝江市",
+          "code": "420583",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.43,
+          "lng": 111.76
+        },
+        {
+          "name": "襄阳市",
+          "code": "420600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.01,
+          "lng": 112.12
+        },
+        {
+          "name": "老河口市",
+          "code": "420682",
+          "station_name": "老河口市",
+          "altitude_m": 90.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 32.36,
+          "lng": 111.68
+        },
+        {
+          "name": "枣阳市",
+          "code": "420683",
+          "station_name": "枣阳",
+          "altitude_m": 125.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 32.13,
+          "lng": 112.77
+        },
+        {
+          "name": "宜城市",
+          "code": "420684",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.72,
+          "lng": 112.26
+        },
+        {
+          "name": "鄂州市",
+          "code": "420700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.39,
+          "lng": 114.89
+        },
+        {
+          "name": "荆门市",
+          "code": "420800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.04,
+          "lng": 112.2
+        },
+        {
+          "name": "钟祥市",
+          "code": "420881",
+          "station_name": "钟祥",
+          "altitude_m": 65.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 31.28,
+          "lng": 112.56
+        },
+        {
+          "name": "孝感市",
+          "code": "420900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.92,
+          "lng": 113.92
+        },
+        {
+          "name": "应城市",
+          "code": "420981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.93,
+          "lng": 113.57
+        },
+        {
+          "name": "安陆市",
+          "code": "420982",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.26,
+          "lng": 113.69
+        },
+        {
+          "name": "汉川市",
+          "code": "420984",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.67,
+          "lng": 113.92
+        },
+        {
+          "name": "荆州市",
+          "code": "421000",
+          "station_name": "荆州",
+          "altitude_m": 32.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.34,
+          "lng": 112.24
+        },
+        {
+          "name": "石首市",
+          "code": "421081",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.72,
+          "lng": 112.43
+        },
+        {
+          "name": "洪湖市",
+          "code": "421083",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.83,
+          "lng": 113.48
+        },
+        {
+          "name": "松滋市",
+          "code": "421087",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.01,
+          "lng": 111.84
+        },
+        {
+          "name": "黄冈市",
+          "code": "421100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.45,
+          "lng": 114.87
+        },
+        {
+          "name": "麻城市",
+          "code": "421181",
+          "station_name": "麻城市",
+          "altitude_m": 59.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 31.18,
+          "lng": 115.03
+        },
+        {
+          "name": "武穴市",
+          "code": "421182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.84,
+          "lng": 115.56
+        },
+        {
+          "name": "咸宁市",
+          "code": "421200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.84,
+          "lng": 114.32
+        },
+        {
+          "name": "赤壁市",
+          "code": "421281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.72,
+          "lng": 113.9
+        },
+        {
+          "name": "随州市",
+          "code": "421300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.69,
+          "lng": 113.38
+        },
+        {
+          "name": "广水市",
+          "code": "421381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.62,
+          "lng": 113.83
+        },
+        {
+          "name": "恩施市",
+          "code": "422801",
+          "station_name": "恩施市",
+          "altitude_m": 457.1,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.27,
+          "lng": 109.49
+        },
+        {
+          "name": "利川市",
+          "code": "422802",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.29,
+          "lng": 108.94
+        },
+        {
+          "name": "仙桃市",
+          "code": "429004",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.33,
+          "lng": 113.44
+        },
+        {
+          "name": "潜江市",
+          "code": "429005",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.4,
+          "lng": 112.9
+        },
+        {
+          "name": "天门市",
+          "code": "429006",
+          "station_name": "天门市",
+          "altitude_m": 34.1,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.66,
+          "lng": 113.17
+        }
+      ]
+    },
+    {
+      "name": "湖南省",
+      "code": "430000",
+      "cities": [
+        {
+          "name": "长沙市",
+          "code": "430100",
+          "station_name": "长沙市",
+          "altitude_m": 44.9,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 28.23,
+          "lng": 112.94
+        },
+        {
+          "name": "浏阳市",
+          "code": "430181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.16,
+          "lng": 113.64
+        },
+        {
+          "name": "株洲市",
+          "code": "430200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.83,
+          "lng": 113.13
+        },
+        {
+          "name": "醴陵市",
+          "code": "430281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.66,
+          "lng": 113.5
+        },
+        {
+          "name": "湘潭市",
+          "code": "430300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.83,
+          "lng": 112.94
+        },
+        {
+          "name": "湘乡市",
+          "code": "430381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.73,
+          "lng": 112.54
+        },
+        {
+          "name": "韶山市",
+          "code": "430382",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.92,
+          "lng": 112.53
+        },
+        {
+          "name": "衡阳市",
+          "code": "430400",
+          "station_name": "衡阳市",
+          "altitude_m": 103.2,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 26.89,
+          "lng": 112.57
+        },
+        {
+          "name": "耒阳市",
+          "code": "430481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.42,
+          "lng": 112.86
+        },
+        {
+          "name": "常宁市",
+          "code": "430482",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.42,
+          "lng": 112.4
+        },
+        {
+          "name": "邵阳市",
+          "code": "430500",
+          "station_name": "邵阳市",
+          "altitude_m": 248.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.24,
+          "lng": 111.47
+        },
+        {
+          "name": "武冈市",
+          "code": "430581",
+          "station_name": "武岗",
+          "altitude_m": 341.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 26.73,
+          "lng": 110.63
+        },
+        {
+          "name": "岳阳市",
+          "code": "430600",
+          "station_name": "岳阳市",
+          "altitude_m": 53.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.36,
+          "lng": 113.13
+        },
+        {
+          "name": "汨罗市",
+          "code": "430681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.81,
+          "lng": 113.07
+        },
+        {
+          "name": "临湘市",
+          "code": "430682",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.48,
+          "lng": 113.45
+        },
+        {
+          "name": "常德市",
+          "code": "430700",
+          "station_name": "常德市",
+          "altitude_m": 35.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.03,
+          "lng": 111.7
+        },
+        {
+          "name": "津市市",
+          "code": "430781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.6,
+          "lng": 111.87
+        },
+        {
+          "name": "张家界市",
+          "code": "430800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.12,
+          "lng": 110.48
+        },
+        {
+          "name": "益阳市",
+          "code": "430900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.55,
+          "lng": 112.36
+        },
+        {
+          "name": "沅江市",
+          "code": "430981",
+          "station_name": "沅江市",
+          "altitude_m": 36.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 28.85,
+          "lng": 112.36
+        },
+        {
+          "name": "郴州市",
+          "code": "431000",
+          "station_name": "郴州市",
+          "altitude_m": 184.9,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.77,
+          "lng": 113.01
+        },
+        {
+          "name": "资兴市",
+          "code": "431081",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.98,
+          "lng": 113.24
+        },
+        {
+          "name": "永州市",
+          "code": "431100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.42,
+          "lng": 111.61
+        },
+        {
+          "name": "怀化市",
+          "code": "431200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.55,
+          "lng": 110.0
+        },
+        {
+          "name": "洪江市",
+          "code": "431281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.21,
+          "lng": 109.84
+        },
+        {
+          "name": "娄底市",
+          "code": "431300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.7,
+          "lng": 111.99
+        },
+        {
+          "name": "冷水江市",
+          "code": "431381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.69,
+          "lng": 111.44
+        },
+        {
+          "name": "涟源市",
+          "code": "431382",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.69,
+          "lng": 111.66
+        },
+        {
+          "name": "吉首市",
+          "code": "433101",
+          "station_name": "吉首市",
+          "altitude_m": 206.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 28.26,
+          "lng": 109.7
+        }
+      ]
+    },
+    {
+      "name": "广东省",
+      "code": "440000",
+      "cities": [
+        {
+          "name": "广州市",
+          "code": "440100",
+          "station_name": "广州市",
+          "altitude_m": 6.6,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 23.13,
+          "lng": 113.26
+        },
+        {
+          "name": "韶关市",
+          "code": "440200",
+          "station_name": "韶关",
+          "altitude_m": 69.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 24.81,
+          "lng": 113.6
+        },
+        {
+          "name": "乐昌市",
+          "code": "440281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.13,
+          "lng": 113.35
+        },
+        {
+          "name": "南雄市",
+          "code": "440282",
+          "station_name": "南雄",
+          "altitude_m": 133.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.12,
+          "lng": 114.31
+        },
+        {
+          "name": "深圳市",
+          "code": "440300",
+          "station_name": "深圳市",
+          "altitude_m": 18.2,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 22.54,
+          "lng": 114.06
+        },
+        {
+          "name": "珠海市",
+          "code": "440400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.27,
+          "lng": 113.58
+        },
+        {
+          "name": "汕头市",
+          "code": "440500",
+          "station_name": "汕头市",
+          "altitude_m": 1.1,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 23.35,
+          "lng": 116.68
+        },
+        {
+          "name": "佛山市",
+          "code": "440600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.02,
+          "lng": 113.12
+        },
+        {
+          "name": "江门市",
+          "code": "440700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.58,
+          "lng": 113.08
+        },
+        {
+          "name": "台山市",
+          "code": "440781",
+          "station_name": "台山",
+          "altitude_m": 32.7,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 22.25,
+          "lng": 112.79
+        },
+        {
+          "name": "开平市",
+          "code": "440783",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.38,
+          "lng": 112.7
+        },
+        {
+          "name": "鹤山市",
+          "code": "440784",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.77,
+          "lng": 112.96
+        },
+        {
+          "name": "恩平市",
+          "code": "440785",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.18,
+          "lng": 112.31
+        },
+        {
+          "name": "湛江市",
+          "code": "440800",
+          "station_name": "湛江市",
+          "altitude_m": 25.3,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 21.27,
+          "lng": 110.36
+        },
+        {
+          "name": "廉江市",
+          "code": "440881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 21.63,
+          "lng": 110.11
+        },
+        {
+          "name": "雷州市",
+          "code": "440882",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 20.91,
+          "lng": 110.1
+        },
+        {
+          "name": "吴川市",
+          "code": "440883",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 21.44,
+          "lng": 110.78
+        },
+        {
+          "name": "茂名市",
+          "code": "440900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 21.66,
+          "lng": 110.93
+        },
+        {
+          "name": "高州市",
+          "code": "440981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 21.92,
+          "lng": 110.85
+        },
+        {
+          "name": "化州市",
+          "code": "440982",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 21.66,
+          "lng": 110.64
+        },
+        {
+          "name": "信宜市",
+          "code": "440983",
+          "station_name": "信宜",
+          "altitude_m": 84.6,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 22.2,
+          "lng": 110.87
+        },
+        {
+          "name": "肇庆市",
+          "code": "441200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.05,
+          "lng": 112.47
+        },
+        {
+          "name": "四会市",
+          "code": "441284",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.33,
+          "lng": 112.73
+        },
+        {
+          "name": "惠州市",
+          "code": "441300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.11,
+          "lng": 114.42
+        },
+        {
+          "name": "梅州市",
+          "code": "441400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.29,
+          "lng": 116.12
+        },
+        {
+          "name": "兴宁市",
+          "code": "441481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.14,
+          "lng": 115.73
+        },
+        {
+          "name": "汕尾市",
+          "code": "441500",
+          "station_name": "汕尾",
+          "altitude_m": 4.6,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 22.79,
+          "lng": 115.38
+        },
+        {
+          "name": "陆丰市",
+          "code": "441581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.92,
+          "lng": 115.65
+        },
+        {
+          "name": "河源市",
+          "code": "441600",
+          "station_name": "河源",
+          "altitude_m": 40.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 23.74,
+          "lng": 114.7
+        },
+        {
+          "name": "阳江市",
+          "code": "441700",
+          "station_name": "阳江",
+          "altitude_m": 23.3,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 21.86,
+          "lng": 111.98
+        },
+        {
+          "name": "阳春市",
+          "code": "441781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.17,
+          "lng": 111.79
+        },
+        {
+          "name": "清远市",
+          "code": "441800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.68,
+          "lng": 113.06
+        },
+        {
+          "name": "英德市",
+          "code": "441881",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.21,
+          "lng": 113.4
+        },
+        {
+          "name": "连州市",
+          "code": "441882",
+          "station_name": "连县",
+          "altitude_m": 97.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 24.78,
+          "lng": 112.38
+        },
+        {
+          "name": "东莞市",
+          "code": "441900",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.02,
+          "lng": 113.75
+        },
+        {
+          "name": "中山市",
+          "code": "442000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.52,
+          "lng": 113.39
+        },
+        {
+          "name": "潮州市",
+          "code": "445100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.66,
+          "lng": 116.62
+        },
+        {
+          "name": "揭阳市",
+          "code": "445200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.55,
+          "lng": 116.37
+        },
+        {
+          "name": "普宁市",
+          "code": "445281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.3,
+          "lng": 116.17
+        },
+        {
+          "name": "云浮市",
+          "code": "445300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.92,
+          "lng": 112.04
+        },
+        {
+          "name": "罗定市",
+          "code": "445381",
+          "station_name": "罗定",
+          "altitude_m": 53.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 22.77,
+          "lng": 111.57
+        }
+      ]
+    },
+    {
+      "name": "广西壮族自治区",
+      "code": "450000",
+      "cities": [
+        {
+          "name": "南宁市",
+          "code": "450100",
+          "station_name": "南宁市",
+          "altitude_m": 73.1,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 22.82,
+          "lng": 108.37
+        },
+        {
+          "name": "柳州市",
+          "code": "450200",
+          "station_name": "柳州市",
+          "altitude_m": 96.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 24.33,
+          "lng": 109.42
+        },
+        {
+          "name": "桂林市",
+          "code": "450300",
+          "station_name": "桂林市",
+          "altitude_m": 164.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.27,
+          "lng": 110.29
+        },
+        {
+          "name": "梧州市",
+          "code": "450400",
+          "station_name": "梧州市",
+          "altitude_m": 114.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 23.48,
+          "lng": 111.28
+        },
+        {
+          "name": "岑溪市",
+          "code": "450481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.92,
+          "lng": 110.99
+        },
+        {
+          "name": "北海市",
+          "code": "450500",
+          "station_name": "北海市",
+          "altitude_m": 15.3,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 21.48,
+          "lng": 109.12
+        },
+        {
+          "name": "防城港市",
+          "code": "450600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 21.69,
+          "lng": 108.35
+        },
+        {
+          "name": "东兴市",
+          "code": "450681",
+          "station_name": "东兴",
+          "altitude_m": 18.2,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 21.55,
+          "lng": 107.97
+        },
+        {
+          "name": "钦州市",
+          "code": "450700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 21.98,
+          "lng": 108.65
+        },
+        {
+          "name": "贵港市",
+          "code": "450800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.11,
+          "lng": 109.6
+        },
+        {
+          "name": "桂平市",
+          "code": "450881",
+          "station_name": "桂平",
+          "altitude_m": 42.5,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 23.39,
+          "lng": 110.08
+        },
+        {
+          "name": "玉林市",
+          "code": "450900",
+          "station_name": "玉林",
+          "altitude_m": 81.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 22.64,
+          "lng": 110.16
+        },
+        {
+          "name": "北流市",
+          "code": "450981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.71,
+          "lng": 110.35
+        },
+        {
+          "name": "百色市",
+          "code": "451000",
+          "station_name": "百色市",
+          "altitude_m": 173.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 23.9,
+          "lng": 106.62
+        },
+        {
+          "name": "靖西市",
+          "code": "451081",
+          "station_name": "靖西",
+          "altitude_m": 739.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 23.13,
+          "lng": 106.42
+        },
+        {
+          "name": "贺州市",
+          "code": "451100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.4,
+          "lng": 111.57
+        },
+        {
+          "name": "河池市",
+          "code": "451200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.69,
+          "lng": 108.09
+        },
+        {
+          "name": "宜州市",
+          "code": "451281",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.49,
+          "lng": 108.64
+        },
+        {
+          "name": "来宾市",
+          "code": "451300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.75,
+          "lng": 109.22
+        },
+        {
+          "name": "合山市",
+          "code": "451381",
+          "station_name": "贺山",
+          "altitude_m": 108.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 23.81,
+          "lng": 108.89
+        },
+        {
+          "name": "崇左市",
+          "code": "451400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.38,
+          "lng": 107.36
+        },
+        {
+          "name": "凭祥市",
+          "code": "451481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.09,
+          "lng": 106.77
+        }
+      ]
+    },
+    {
+      "name": "海南省",
+      "code": "460000",
+      "cities": [
+        {
+          "name": "海口市",
+          "code": "460100",
+          "station_name": "海口市",
+          "altitude_m": 14.1,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 20.04,
+          "lng": 110.2
+        },
+        {
+          "name": "三亚市",
+          "code": "460200",
+          "station_name": "三亚市",
+          "altitude_m": 5.5,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 18.25,
+          "lng": 109.51
+        },
+        {
+          "name": "五指山市",
+          "code": "469001",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 18.78,
+          "lng": 109.52
+        },
+        {
+          "name": "琼海市",
+          "code": "469002",
+          "station_name": "琼海",
+          "altitude_m": 24.0,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 19.26,
+          "lng": 110.47
+        },
+        {
+          "name": "儋州市",
+          "code": "469003",
+          "station_name": "儋县",
+          "altitude_m": 168.7,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 20.02,
+          "lng": 110.35
+        },
+        {
+          "name": "文昌市",
+          "code": "469005",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 19.54,
+          "lng": 110.8
+        },
+        {
+          "name": "万宁市",
+          "code": "469006",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 18.8,
+          "lng": 110.39
+        },
+        {
+          "name": "东方市",
+          "code": "469007",
+          "station_name": "东方",
+          "altitude_m": 8.4,
+          "w0_10yr_kn_m2": 0.55,
+          "lat": 19.1,
+          "lng": 108.65
+        }
+      ]
+    },
+    {
+      "name": "重庆市",
+      "code": "500000",
+      "cities": [
+        {
+          "name": "重庆市",
+          "code": "500000",
+          "station_name": "重庆市",
+          "altitude_m": 259.1,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.56,
+          "lng": 106.55
+        }
+      ]
+    },
+    {
+      "name": "四川省",
+      "code": "510000",
+      "cities": [
+        {
+          "name": "成都市",
+          "code": "510100",
+          "station_name": "成都市",
+          "altitude_m": 506.1,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.57,
+          "lng": 104.07
+        },
+        {
+          "name": "都江堰市",
+          "code": "510181",
+          "station_name": "都江堰市",
+          "altitude_m": 706.7,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.99,
+          "lng": 103.65
+        },
+        {
+          "name": "彭州市",
+          "code": "510182",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.99,
+          "lng": 103.96
+        },
+        {
+          "name": "邛崃市",
+          "code": "510183",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.41,
+          "lng": 103.46
+        },
+        {
+          "name": "崇州市",
+          "code": "510184",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.63,
+          "lng": 103.67
+        },
+        {
+          "name": "简阳市",
+          "code": "510185",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.41,
+          "lng": 104.55
+        },
+        {
+          "name": "自贡市",
+          "code": "510300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.34,
+          "lng": 104.78
+        },
+        {
+          "name": "攀枝花市",
+          "code": "510400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.58,
+          "lng": 101.72
+        },
+        {
+          "name": "泸州市",
+          "code": "510500",
+          "station_name": "泸州市",
+          "altitude_m": 334.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 28.87,
+          "lng": 105.44
+        },
+        {
+          "name": "德阳市",
+          "code": "510600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.13,
+          "lng": 104.4
+        },
+        {
+          "name": "广汉市",
+          "code": "510681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.98,
+          "lng": 104.28
+        },
+        {
+          "name": "什邡市",
+          "code": "510682",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.13,
+          "lng": 104.17
+        },
+        {
+          "name": "绵竹市",
+          "code": "510683",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.34,
+          "lng": 104.22
+        },
+        {
+          "name": "绵阳市",
+          "code": "510700",
+          "station_name": "绵阳市",
+          "altitude_m": 470.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 31.47,
+          "lng": 104.68
+        },
+        {
+          "name": "江油市",
+          "code": "510781",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.78,
+          "lng": 104.75
+        },
+        {
+          "name": "广元市",
+          "code": "510800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 32.44,
+          "lng": 105.84
+        },
+        {
+          "name": "遂宁市",
+          "code": "510900",
+          "station_name": "遂宁市",
+          "altitude_m": 278.2,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.53,
+          "lng": 105.59
+        },
+        {
+          "name": "内江市",
+          "code": "511000",
+          "station_name": "内江市",
+          "altitude_m": 347.1,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.58,
+          "lng": 105.06
+        },
+        {
+          "name": "乐山市",
+          "code": "511100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.55,
+          "lng": 103.77
+        },
+        {
+          "name": "峨眉山市",
+          "code": "511181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.6,
+          "lng": 103.48
+        },
+        {
+          "name": "南充市",
+          "code": "511300",
+          "station_name": "南充市",
+          "altitude_m": 309.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.84,
+          "lng": 106.11
+        },
+        {
+          "name": "阆中市",
+          "code": "511381",
+          "station_name": "阆中",
+          "altitude_m": 382.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 31.56,
+          "lng": 106.01
+        },
+        {
+          "name": "眉山市",
+          "code": "511400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.08,
+          "lng": 103.85
+        },
+        {
+          "name": "宜宾市",
+          "code": "511500",
+          "station_name": "宜宾市",
+          "altitude_m": 340.8,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 28.75,
+          "lng": 104.64
+        },
+        {
+          "name": "广安市",
+          "code": "511600",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.46,
+          "lng": 106.63
+        },
+        {
+          "name": "华蓥市",
+          "code": "511681",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 30.39,
+          "lng": 106.78
+        },
+        {
+          "name": "达州市",
+          "code": "511700",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.21,
+          "lng": 107.47
+        },
+        {
+          "name": "万源市",
+          "code": "511781",
+          "station_name": "万源",
+          "altitude_m": 674.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 32.08,
+          "lng": 108.03
+        },
+        {
+          "name": "雅安市",
+          "code": "511800",
+          "station_name": "雅安市",
+          "altitude_m": 627.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 29.98,
+          "lng": 103.01
+        },
+        {
+          "name": "巴中市",
+          "code": "511900",
+          "station_name": "巴中",
+          "altitude_m": 358.9,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 31.87,
+          "lng": 106.75
+        },
+        {
+          "name": "资阳市",
+          "code": "512000",
+          "station_name": "资阳",
+          "altitude_m": 357.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 30.13,
+          "lng": 104.63
+        },
+        {
+          "name": "马尔康市",
+          "code": "513201",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 31.91,
+          "lng": 102.21
+        },
+        {
+          "name": "康定市",
+          "code": "513301",
+          "station_name": "康定",
+          "altitude_m": 2615.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 30.0,
+          "lng": 101.96
+        },
+        {
+          "name": "西昌市",
+          "code": "513401",
+          "station_name": "西昌市",
+          "altitude_m": 1590.9,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.89,
+          "lng": 102.26
+        }
+      ]
+    },
+    {
+      "name": "贵州省",
+      "code": "520000",
+      "cities": [
+        {
+          "name": "贵阳市",
+          "code": "520100",
+          "station_name": "贵阳市",
+          "altitude_m": 1074.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 26.65,
+          "lng": 106.63
+        },
+        {
+          "name": "清镇市",
+          "code": "520181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.56,
+          "lng": 106.47
+        },
+        {
+          "name": "六盘水市",
+          "code": "520200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.59,
+          "lng": 104.83
+        },
+        {
+          "name": "遵义市",
+          "code": "520300",
+          "station_name": "遵义市",
+          "altitude_m": 843.9,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.73,
+          "lng": 106.93
+        },
+        {
+          "name": "赤水市",
+          "code": "520381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 28.59,
+          "lng": 105.7
+        },
+        {
+          "name": "仁怀市",
+          "code": "520382",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 27.79,
+          "lng": 106.4
+        },
+        {
+          "name": "安顺市",
+          "code": "520400",
+          "station_name": "安顺市",
+          "altitude_m": 1392.9,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 26.25,
+          "lng": 105.95
+        },
+        {
+          "name": "毕节市",
+          "code": "520500",
+          "station_name": "毕节",
+          "altitude_m": 1510.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.3,
+          "lng": 105.28
+        },
+        {
+          "name": "铜仁市",
+          "code": "520600",
+          "station_name": "铜仁",
+          "altitude_m": 279.7,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.73,
+          "lng": 109.19
+        },
+        {
+          "name": "兴义市",
+          "code": "522301",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.09,
+          "lng": 104.9
+        },
+        {
+          "name": "凯里市",
+          "code": "522601",
+          "station_name": "凯里市",
+          "altitude_m": 720.3,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 26.57,
+          "lng": 107.98
+        },
+        {
+          "name": "都匀市",
+          "code": "522701",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.26,
+          "lng": 107.52
+        },
+        {
+          "name": "福泉市",
+          "code": "522702",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.69,
+          "lng": 107.52
+        }
+      ]
+    },
+    {
+      "name": "云南省",
+      "code": "530000",
+      "cities": [
+        {
+          "name": "昆明市",
+          "code": "530100",
+          "station_name": "昆明市",
+          "altitude_m": 1891.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 24.88,
+          "lng": 102.83
+        },
+        {
+          "name": "安宁市",
+          "code": "530181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.88,
+          "lng": 102.83
+        },
+        {
+          "name": "曲靖市",
+          "code": "530300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 25.49,
+          "lng": 103.8
+        },
+        {
+          "name": "宣威市",
+          "code": "530381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 26.22,
+          "lng": 104.1
+        },
+        {
+          "name": "玉溪市",
+          "code": "530400",
+          "station_name": "玉溪",
+          "altitude_m": 1636.7,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 24.35,
+          "lng": 102.55
+        },
+        {
+          "name": "保山市",
+          "code": "530500",
+          "station_name": "保山市",
+          "altitude_m": 1653.5,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.11,
+          "lng": 99.16
+        },
+        {
+          "name": "腾冲市",
+          "code": "530581",
+          "station_name": "腾冲",
+          "altitude_m": 1654.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.02,
+          "lng": 98.5
+        },
+        {
+          "name": "昭通市",
+          "code": "530600",
+          "station_name": "昭通市",
+          "altitude_m": 1949.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 27.34,
+          "lng": 103.72
+        },
+        {
+          "name": "丽江市",
+          "code": "530700",
+          "station_name": "丽江",
+          "altitude_m": 2393.2,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 26.86,
+          "lng": 100.23
+        },
+        {
+          "name": "普洱市",
+          "code": "530800",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 22.83,
+          "lng": 100.97
+        },
+        {
+          "name": "临沧市",
+          "code": "530900",
+          "station_name": "临沧",
+          "altitude_m": 1502.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 23.88,
+          "lng": 100.08
+        },
+        {
+          "name": "楚雄市",
+          "code": "532301",
+          "station_name": "楚雄市",
+          "altitude_m": 1772.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.05,
+          "lng": 101.53
+        },
+        {
+          "name": "个旧市",
+          "code": "532501",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.36,
+          "lng": 103.16
+        },
+        {
+          "name": "开远市",
+          "code": "532502",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 23.71,
+          "lng": 103.27
+        },
+        {
+          "name": "蒙自市",
+          "code": "532503",
+          "station_name": "蒙自",
+          "altitude_m": 1300.7,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 23.4,
+          "lng": 103.36
+        },
+        {
+          "name": "文山市",
+          "code": "532601",
+          "station_name": "文山",
+          "altitude_m": 1271.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 23.4,
+          "lng": 104.22
+        },
+        {
+          "name": "景洪市",
+          "code": "532801",
+          "station_name": "景洪",
+          "altitude_m": 552.7,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 22.0,
+          "lng": 100.77
+        },
+        {
+          "name": "大理市",
+          "code": "532901",
+          "station_name": "大理市",
+          "altitude_m": 1990.5,
+          "w0_10yr_kn_m2": 0.45,
+          "lat": 25.61,
+          "lng": 100.27
+        },
+        {
+          "name": "瑞丽市",
+          "code": "533102",
+          "station_name": "瑞丽",
+          "altitude_m": 776.6,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 24.02,
+          "lng": 97.86
+        },
+        {
+          "name": "芒市",
+          "code": "533103",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 24.43,
+          "lng": 98.59
+        },
+        {
+          "name": "泸水市",
+          "code": "533301",
+          "station_name": "泸水",
+          "altitude_m": 1804.9,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 25.85,
+          "lng": 98.85
+        },
+        {
+          "name": "香格里拉市",
+          "code": "533401",
+          "station_name": "中甸",
+          "altitude_m": 3276.1,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 27.83,
+          "lng": 99.7
+        }
+      ]
+    },
+    {
+      "name": "西藏自治区",
+      "code": "540000",
+      "cities": [
+        {
+          "name": "拉萨市",
+          "code": "540100",
+          "station_name": "拉萨市",
+          "altitude_m": 3658.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 29.65,
+          "lng": 91.14
+        },
+        {
+          "name": "日喀则市",
+          "code": "540200",
+          "station_name": "日喀则市",
+          "altitude_m": 3836.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 29.27,
+          "lng": 88.88
+        },
+        {
+          "name": "昌都市",
+          "code": "540300",
+          "station_name": "昌都",
+          "altitude_m": 3306.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 31.14,
+          "lng": 97.17
+        },
+        {
+          "name": "林芝市",
+          "code": "540400",
+          "station_name": "林芝",
+          "altitude_m": 3000.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 29.65,
+          "lng": 94.36
+        },
+        {
+          "name": "山南市",
+          "code": "540500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 29.65,
+          "lng": 91.12
+        }
+      ]
+    },
+    {
+      "name": "陕西省",
+      "code": "610000",
+      "cities": [
+        {
+          "name": "西安市",
+          "code": "610100",
+          "station_name": "西安市",
+          "altitude_m": 397.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 34.34,
+          "lng": 108.94
+        },
+        {
+          "name": "铜川市",
+          "code": "610200",
+          "station_name": "铜川市",
+          "altitude_m": 978.9,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 34.9,
+          "lng": 108.95
+        },
+        {
+          "name": "宝鸡市",
+          "code": "610300",
+          "station_name": "宝鸡市",
+          "altitude_m": 612.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 34.36,
+          "lng": 107.24
+        },
+        {
+          "name": "咸阳市",
+          "code": "610400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.33,
+          "lng": 108.71
+        },
+        {
+          "name": "兴平市",
+          "code": "610481",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.3,
+          "lng": 108.49
+        },
+        {
+          "name": "渭南市",
+          "code": "610500",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 34.5,
+          "lng": 109.51
+        },
+        {
+          "name": "韩城市",
+          "code": "610581",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.48,
+          "lng": 110.44
+        },
+        {
+          "name": "华阴市",
+          "code": "610582",
+          "station_name": "华阴县华山",
+          "altitude_m": 2064.9,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 34.57,
+          "lng": 110.09
+        },
+        {
+          "name": "延安市",
+          "code": "610600",
+          "station_name": "延安市",
+          "altitude_m": 957.8,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 36.59,
+          "lng": 109.49
+        },
+        {
+          "name": "汉中市",
+          "code": "610700",
+          "station_name": "汉中市",
+          "altitude_m": 508.4,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 33.07,
+          "lng": 107.02
+        },
+        {
+          "name": "榆林市",
+          "code": "610800",
+          "station_name": "榆林市",
+          "altitude_m": 1057.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 38.29,
+          "lng": 109.73
+        },
+        {
+          "name": "安康市",
+          "code": "610900",
+          "station_name": "安康市",
+          "altitude_m": 290.8,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 32.68,
+          "lng": 109.03
+        },
+        {
+          "name": "商洛市",
+          "code": "611000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.87,
+          "lng": 109.94
+        }
+      ]
+    },
+    {
+      "name": "甘肃省",
+      "code": "620000",
+      "cities": [
+        {
+          "name": "兰州市",
+          "code": "620100",
+          "station_name": "兰州",
+          "altitude_m": 1517.2,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 36.06,
+          "lng": 103.83
+        },
+        {
+          "name": "嘉峪关市",
+          "code": "620200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.77,
+          "lng": 98.29
+        },
+        {
+          "name": "金昌市",
+          "code": "620300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.52,
+          "lng": 102.19
+        },
+        {
+          "name": "白银市",
+          "code": "620400",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 36.54,
+          "lng": 104.14
+        },
+        {
+          "name": "天水市",
+          "code": "620500",
+          "station_name": "天水市",
+          "altitude_m": 1141.7,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 34.58,
+          "lng": 105.72
+        },
+        {
+          "name": "武威市",
+          "code": "620600",
+          "station_name": "武威市",
+          "altitude_m": 1530.9,
+          "w0_10yr_kn_m2": 0.35,
+          "lat": 37.93,
+          "lng": 102.64
+        },
+        {
+          "name": "张掖市",
+          "code": "620700",
+          "station_name": "张掖市",
+          "altitude_m": 1482.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 38.93,
+          "lng": 100.45
+        },
+        {
+          "name": "平凉市",
+          "code": "620800",
+          "station_name": "平凉市",
+          "altitude_m": 1346.6,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 35.54,
+          "lng": 106.67
+        },
+        {
+          "name": "酒泉市",
+          "code": "620900",
+          "station_name": "酒泉市",
+          "altitude_m": 1477.2,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 39.73,
+          "lng": 98.49
+        },
+        {
+          "name": "玉门市",
+          "code": "620981",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.29,
+          "lng": 97.05
+        },
+        {
+          "name": "敦煌市",
+          "code": "620982",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.14,
+          "lng": 94.66
+        },
+        {
+          "name": "庆阳市",
+          "code": "621000",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.71,
+          "lng": 107.64
+        },
+        {
+          "name": "定西市",
+          "code": "621100",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 35.58,
+          "lng": 104.63
+        },
+        {
+          "name": "陇南市",
+          "code": "621200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 33.4,
+          "lng": 104.92
+        },
+        {
+          "name": "临夏市",
+          "code": "622901",
+          "station_name": "临夏市",
+          "altitude_m": 1917.0,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 35.6,
+          "lng": 103.21
+        },
+        {
+          "name": "合作市",
+          "code": "623001",
+          "station_name": "夏河县合作",
+          "altitude_m": 2910.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 34.95,
+          "lng": 102.91
+        }
+      ]
+    },
+    {
+      "name": "青海省",
+      "code": "630000",
+      "cities": [
+        {
+          "name": "西宁市",
+          "code": "630100",
+          "station_name": "西宁",
+          "altitude_m": 2261.2,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 36.62,
+          "lng": 101.78
+        },
+        {
+          "name": "玉树市",
+          "code": "632701",
+          "station_name": "玉树",
+          "altitude_m": 3681.2,
+          "w0_10yr_kn_m2": 0.2,
+          "lat": 33.01,
+          "lng": 97.09
+        },
+        {
+          "name": "格尔木市",
+          "code": "632801",
+          "station_name": "格尔木市小灶火",
+          "altitude_m": 2767.0,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 36.41,
+          "lng": 94.93
+        },
+        {
+          "name": "德令哈市",
+          "code": "632802",
+          "station_name": "德令哈市",
+          "altitude_m": 2981.5,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 37.37,
+          "lng": 97.36
+        }
+      ]
+    },
+    {
+      "name": "宁夏回族自治区",
+      "code": "640000",
+      "cities": [
+        {
+          "name": "银川市",
+          "code": "640100",
+          "station_name": "银川",
+          "altitude_m": 1111.4,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 38.49,
+          "lng": 106.23
+        },
+        {
+          "name": "灵武市",
+          "code": "640181",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.49,
+          "lng": 106.23
+        },
+        {
+          "name": "石嘴山市",
+          "code": "640200",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.98,
+          "lng": 106.38
+        },
+        {
+          "name": "吴忠市",
+          "code": "640300",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.0,
+          "lng": 106.2
+        },
+        {
+          "name": "青铜峡市",
+          "code": "640381",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 38.02,
+          "lng": 106.08
+        },
+        {
+          "name": "固原市",
+          "code": "640400",
+          "station_name": "固原",
+          "altitude_m": 1753.0,
+          "w0_10yr_kn_m2": 0.25,
+          "lat": 36.02,
+          "lng": 106.24
+        },
+        {
+          "name": "中卫市",
+          "code": "640500",
+          "station_name": "中卫",
+          "altitude_m": 1225.7,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 37.5,
+          "lng": 105.2
+        }
+      ]
+    },
+    {
+      "name": "新疆维吾尔自治区",
+      "code": "650000",
+      "cities": [
+        {
+          "name": "乌鲁木齐市",
+          "code": "650100",
+          "station_name": "乌鲁木齐市",
+          "altitude_m": 917.9,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 43.83,
+          "lng": 87.62
+        },
+        {
+          "name": "克拉玛依市",
+          "code": "650200",
+          "station_name": "克拉玛依市",
+          "altitude_m": 427.3,
+          "w0_10yr_kn_m2": 0.65,
+          "lat": 45.58,
+          "lng": 84.89
+        },
+        {
+          "name": "吐鲁番市",
+          "code": "650400",
+          "station_name": "吐鲁番市",
+          "altitude_m": 34.5,
+          "w0_10yr_kn_m2": 0.5,
+          "lat": 42.95,
+          "lng": 89.19
+        },
+        {
+          "name": "哈密市",
+          "code": "650500",
+          "station_name": "哈密",
+          "altitude_m": 737.2,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 42.82,
+          "lng": 93.51
+        },
+        {
+          "name": "昌吉市",
+          "code": "652301",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.01,
+          "lng": 87.31
+        },
+        {
+          "name": "阜康市",
+          "code": "652302",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.17,
+          "lng": 87.95
+        },
+        {
+          "name": "博乐市",
+          "code": "652701",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.85,
+          "lng": 82.05
+        },
+        {
+          "name": "阿拉山口市",
+          "code": "652702",
+          "station_name": "阿拉山口",
+          "altitude_m": 284.8,
+          "w0_10yr_kn_m2": 0.95,
+          "lat": 45.17,
+          "lng": 82.56
+        },
+        {
+          "name": "库尔勒市",
+          "code": "652801",
+          "station_name": "库尔勒",
+          "altitude_m": 931.5,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 41.76,
+          "lng": 86.05
+        },
+        {
+          "name": "阿克苏市",
+          "code": "652901",
+          "station_name": "阿克苏市",
+          "altitude_m": 1103.8,
+          "w0_10yr_kn_m2": 0.3,
+          "lat": 41.17,
+          "lng": 80.26
+        },
+        {
+          "name": "阿图什市",
+          "code": "653001",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.72,
+          "lng": 76.17
+        },
+        {
+          "name": "喀什市",
+          "code": "653101",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.47,
+          "lng": 75.99
+        },
+        {
+          "name": "和田市",
+          "code": "653201",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 37.11,
+          "lng": 79.92
+        },
+        {
+          "name": "伊宁市",
+          "code": "654002",
+          "station_name": "伊宁市",
+          "altitude_m": 662.5,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 43.93,
+          "lng": 81.37
+        },
+        {
+          "name": "奎屯市",
+          "code": "654003",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.43,
+          "lng": 84.9
+        },
+        {
+          "name": "霍尔果斯市",
+          "code": "654004",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.2,
+          "lng": 80.42
+        },
+        {
+          "name": "塔城市",
+          "code": "654201",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 46.75,
+          "lng": 82.98
+        },
+        {
+          "name": "乌苏市",
+          "code": "654202",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.42,
+          "lng": 84.71
+        },
+        {
+          "name": "阿勒泰市",
+          "code": "654301",
+          "station_name": "阿勒泰市",
+          "altitude_m": 735.3,
+          "w0_10yr_kn_m2": 0.4,
+          "lat": 47.84,
+          "lng": 88.14
+        },
+        {
+          "name": "石河子市",
+          "code": "659001",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.31,
+          "lng": 86.08
+        },
+        {
+          "name": "阿拉尔市",
+          "code": "659002",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 40.55,
+          "lng": 81.28
+        },
+        {
+          "name": "图木舒克市",
+          "code": "659003",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.87,
+          "lng": 79.07
+        },
+        {
+          "name": "五家渠市",
+          "code": "659004",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.17,
+          "lng": 87.54
+        },
+        {
+          "name": "北屯市",
+          "code": "659005",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 47.83,
+          "lng": 88.13
+        },
+        {
+          "name": "铁门关市",
+          "code": "659006",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 41.86,
+          "lng": 85.67
+        },
+        {
+          "name": "双河市",
+          "code": "659007",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.0,
+          "lng": 87.32
+        },
+        {
+          "name": "可克达拉市",
+          "code": "659008",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 44.19,
+          "lng": 80.76
+        },
+        {
+          "name": "昆玉市",
+          "code": "659009",
+          "station_name": null,
+          "altitude_m": null,
+          "w0_10yr_kn_m2": null,
+          "lat": 39.47,
+          "lng": 75.99
+        }
+      ]
+    },
+    {
+      "name": "台湾省",
+      "code": "710000",
+      "cities": []
+    },
+    {
+      "name": "香港特别行政区",
+      "code": "810000",
+      "cities": []
+    },
+    {
+      "name": "澳门特别行政区",
+      "code": "820000",
+      "cities": []
+    }
+  ]
+}
